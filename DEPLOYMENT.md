@@ -21,7 +21,7 @@ This guide will help you deploy the Arttoo application to Netlify.
 The build settings are already configured in `netlify.toml`:
 
 - **Build command:** `npm run build`
-- **Publish directory:** `.next`
+- **Publish directory:** Automatically managed by `@netlify/plugin-nextjs`
 - **Node version:** 20
 
 ### 3. Configure Environment Variables

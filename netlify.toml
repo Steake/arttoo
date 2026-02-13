@@ -1,5 +1,6 @@
 [build]
   command = "npm run build"
+  # Note: publish directory is automatically managed by @netlify/plugin-nextjs
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
