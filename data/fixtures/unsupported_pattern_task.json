@@ -1,0 +1,27 @@
+{
+  "task_id": "unsupported_pattern_task",
+  "train": [
+    {
+      "input": [[1, 0, 1], [0, 0, 0], [0, 0, 0]],
+      "output": [[1, 1]]
+    },
+    {
+      "input": [[2, 0, 2], [0, 0, 0], [0, 0, 0]],
+      "output": [[2, 2]]
+    }
+  ],
+  "test": [
+    {
+      "input": [[3, 0, 3], [0, 0, 0], [0, 0, 0]]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [[3, 3]]
+    ],
+    "ranking_prefix": [],
+    "notes": "Unsupported object-counting pattern used to exercise failure analysis.",
+    "expect_exact": false,
+    "failure_tags": ["unsupported_pattern", "object_count_mismatch"]
+  }
+}

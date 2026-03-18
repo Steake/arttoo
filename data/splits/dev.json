@@ -1,0 +1,12 @@
+{
+  "task_ids": [
+    "color_map_task",
+    "crop_bbox_task",
+    "crop_rotate_task",
+    "identity_task",
+    "reflect_task",
+    "rotate_task",
+    "tile_task",
+    "translate_task"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "task_id": "tile_task",
+  "train": [
+    {
+      "input": [[1, 2]],
+      "output": [[1, 2, 1, 2], [1, 2, 1, 2]]
+    },
+    {
+      "input": [[3], [4]],
+      "output": [[3, 3], [4, 4], [3, 3], [4, 4]]
+    }
+  ],
+  "test": [
+    {
+      "input": [[5, 6]]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [[5, 6, 5, 6], [5, 6, 5, 6]]
+    ],
+    "ranking_prefix": ["tile_2x2"],
+    "notes": "Repeat motif by fixed row and column factors."
+  }
+}

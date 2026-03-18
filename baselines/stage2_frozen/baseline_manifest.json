@@ -1,0 +1,15 @@
+{
+  "baseline_rate": 0.7142857142857143,
+  "determinism_result": {
+    "stable_metrics": true,
+    "stable_outputs": true,
+    "stable_rankings": true
+  },
+  "exact_rate": 0.7857142857142857,
+  "git_commit": "596c643d4f6b6edab97715a3e137197b41610c15",
+  "lift": 0.0714285714285714,
+  "report_generation_timestamp_utc": "2026-03-18T23:44:31.734221+00:00",
+  "snapshot_name": "stage2_frozen",
+  "source_reports_dir": "/workspace/arttoo/reports",
+  "task_set_used": "all"
+}

@@ -1,0 +1,25 @@
+{
+  "task_id": "identity_task",
+  "train": [
+    {
+      "input": [[1, 0], [0, 1]],
+      "output": [[1, 0], [0, 1]]
+    },
+    {
+      "input": [[2, 2], [3, 0]],
+      "output": [[2, 2], [3, 0]]
+    }
+  ],
+  "test": [
+    {
+      "input": [[4, 0], [0, 4]]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [[4, 0], [0, 4]]
+    ],
+    "ranking_prefix": ["identity"],
+    "notes": "Identity should dominate with zero refinement."
+  }
+}

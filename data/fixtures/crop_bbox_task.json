@@ -1,0 +1,25 @@
+{
+  "task_id": "crop_bbox_task",
+  "train": [
+    {
+      "input": [[0, 0, 0, 0], [0, 2, 2, 0], [0, 2, 0, 0], [0, 0, 0, 0]],
+      "output": [[2, 2], [2, 0]]
+    },
+    {
+      "input": [[0, 0, 0], [0, 3, 0], [0, 3, 3]],
+      "output": [[3, 0], [3, 3]]
+    }
+  ],
+  "test": [
+    {
+      "input": [[0, 0, 0, 0], [0, 4, 4, 0], [0, 4, 0, 0], [0, 0, 0, 0]]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [[4, 4], [4, 0]]
+    ],
+    "ranking_prefix": ["crop_to_content"],
+    "notes": "Crop to non-background bounding box."
+  }
+}

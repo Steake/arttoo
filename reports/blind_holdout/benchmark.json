@@ -1,0 +1,2864 @@
+{
+  "aggregate": {
+    "attempt_1_exact_rate": 1.0,
+    "attempt_1_or_2_exact_rate": 1.0,
+    "attempt_2_rescue_count": 0,
+    "average_belief": 1.0,
+    "average_disbelief": 0.0,
+    "average_first_pass_survivor_count": 7.333333333333333,
+    "average_generated_count": 9.333333333333334,
+    "average_refined_count": 36.0,
+    "average_runtime_ms": 13.971607333284433,
+    "average_uncertainty": 0.0,
+    "average_winning_score": 1.15,
+    "contradiction_dominated_failure_count": 0,
+    "failure_primary_class_counts": {},
+    "failure_tag_counts": {},
+    "family_win_counts": {
+      "geometry": 1,
+      "symmetry": 2
+    },
+    "generated_at_utc": "2026-03-18T23:45:00.547188+00:00",
+    "max_runtime_ms": 29.375257000083366,
+    "no_viable_hypothesis_count": 0,
+    "shape_mismatch_failure_count": 24,
+    "split": "blind_holdout",
+    "task_count": 3,
+    "test_case_count": 3,
+    "transform_crash_count": 0,
+    "unresolved_high_uncertainty_failure_count": 0,
+    "variant": "full_epistemic_coagency"
+  },
+  "per_task": [
+    {
+      "attempt_1": [
+        [
+          0,
+          9
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "attempt_2": [
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "evaluation_count": 102,
+      "expected_output": [
+        [
+          0,
+          9
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "failure_primary_class": null,
+      "failure_tags": [],
+      "first_pass_survivor_count": 6,
+      "generated_count": 9,
+      "guardrail_messages": [],
+      "guardrail_ok": true,
+      "refined_count": 36,
+      "runtime_ms": 8.744228999603365,
+      "second_hypothesis": "identity -> flip_vertical",
+      "shape_mismatch_count": 24,
+      "split": "blind_holdout",
+      "success_attempt_1": true,
+      "success_attempt_2": true,
+      "task_id": "holdout_flip_vertical_task",
+      "telemetry": {
+        "agent_disagreements": {
+          "divergent_families": 2,
+          "top_family_votes": {
+            "geometry": 2,
+            "symmetry": 3
+          },
+          "top_score_band": [
+            1.15,
+            -0.39,
+            -0.39,
+            -0.39,
+            -0.4
+          ]
+        },
+        "confidence": {
+          "belief": 1.0,
+          "disbelief": 0.0,
+          "score": 1.15,
+          "uncertainty": 0.0
+        },
+        "deterministic_fingerprint": "b7d29acc9c8933f276161d6c6952b2ca279662a74882110eea494f12f45199ae",
+        "expected_fingerprint": [
+          [
+            0,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        "final_pruned": [
+          {
+            "description": "flip_horizontal -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "crop_to_content -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "crop_to_content -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "crop_to_content -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "crop_to_content -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin -> rotate90",
+            "reason": "keep_cap_reached"
+          }
+        ],
+        "final_ranking": [
+          {
+            "belief": 1.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "crop_to_content -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "translate_to_origin -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 0,
+            "contradiction_count": 0,
+            "description": "identity",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "crop_to_content",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "translate_to_origin",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "crop_to_content -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "translate_to_origin -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "crop_to_content -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "crop_to_content -> rotate180",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "translate_to_origin -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "translate_to_origin -> rotate180",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "crop_to_content -> rotate270",
+            "disbelief": 1.0,
+            "family": "geometry",
+            "score": -0.97,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "crop_to_content -> rotate90",
+            "disbelief": 1.0,
+            "family": "geometry",
+            "score": -0.97,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 2,
+            "description": "identity -> rotate270",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 2,
+            "description": "identity -> rotate90",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "flip_horizontal -> rotate270",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "flip_horizontal -> rotate90",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "flip_vertical -> rotate270",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "flip_vertical -> rotate90",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "rotate180 -> rotate270",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "rotate180 -> rotate90",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "translate_to_origin -> rotate270",
+            "disbelief": 1.0,
+            "family": "geometry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "translate_to_origin -> rotate90",
+            "disbelief": 1.0,
+            "family": "geometry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          }
+        ],
+        "first_pass_pruned": [
+          {
+            "description": "largest_object",
+            "reason": "contradiction_dominated"
+          },
+          {
+            "description": "rotate270",
+            "reason": "contradiction_dominated"
+          },
+          {
+            "description": "rotate90",
+            "reason": "contradiction_dominated"
+          }
+        ],
+        "first_pass_ranking": [
+          {
+            "belief": 1.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 0,
+            "contradiction_count": 0,
+            "description": "identity",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "crop_to_content",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "translate_to_origin",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.39,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.4,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 2,
+            "description": "largest_object",
+            "disbelief": 1.0,
+            "family": "objects",
+            "score": -0.97,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 2,
+            "description": "rotate270",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 2,
+            "description": "rotate90",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -1.0,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          }
+        ],
+        "generated_candidates": [
+          "identity",
+          "flip_horizontal",
+          "flip_vertical",
+          "rotate90",
+          "rotate180",
+          "rotate270",
+          "crop_to_content",
+          "translate_to_origin",
+          "largest_object"
+        ],
+        "refined_candidates": [
+          "flip_vertical -> flip_horizontal",
+          "flip_vertical -> flip_vertical",
+          "flip_vertical -> rotate90",
+          "flip_vertical -> rotate180",
+          "flip_vertical -> rotate270",
+          "flip_vertical -> crop_to_content",
+          "identity -> flip_horizontal",
+          "identity -> flip_vertical",
+          "identity -> rotate90",
+          "identity -> rotate180",
+          "identity -> rotate270",
+          "identity -> crop_to_content",
+          "crop_to_content -> flip_horizontal",
+          "crop_to_content -> flip_vertical",
+          "crop_to_content -> rotate90",
+          "crop_to_content -> rotate180",
+          "crop_to_content -> rotate270",
+          "crop_to_content -> crop_to_content",
+          "translate_to_origin -> flip_horizontal",
+          "translate_to_origin -> flip_vertical",
+          "translate_to_origin -> rotate90",
+          "translate_to_origin -> rotate180",
+          "translate_to_origin -> rotate270",
+          "translate_to_origin -> crop_to_content",
+          "flip_horizontal -> flip_horizontal",
+          "flip_horizontal -> flip_vertical",
+          "flip_horizontal -> rotate90",
+          "flip_horizontal -> rotate180",
+          "flip_horizontal -> rotate270",
+          "flip_horizontal -> crop_to_content",
+          "rotate180 -> flip_horizontal",
+          "rotate180 -> flip_vertical",
+          "rotate180 -> rotate90",
+          "rotate180 -> rotate180",
+          "rotate180 -> rotate270",
+          "rotate180 -> crop_to_content"
+        ],
+        "selection": {
+          "attempt_1_hypothesis": "flip_vertical",
+          "attempt_2_hypothesis": "identity -> flip_vertical",
+          "selected_hypotheses": [
+            "flip_vertical",
+            "identity"
+          ]
+        },
+        "step_counts": {
+          "evaluation_count": 102,
+          "final_survivor_count": 12,
+          "first_pass_scored_count": 9,
+          "first_pass_survivor_count": 6,
+          "generated_count": 9,
+          "refined_count": 36,
+          "second_pass_scored_count": 42
+        }
+      },
+      "transform_crash_count": 0,
+      "variant": "full_epistemic_coagency",
+      "winning_belief": 1.0,
+      "winning_disbelief": 0.0,
+      "winning_family": "symmetry",
+      "winning_hypothesis": "flip_vertical",
+      "winning_score": 1.15,
+      "winning_uncertainty": 0.0
+    },
+    {
+      "attempt_1": [
+        [
+          1,
+          0
+        ],
+        [
+          9,
+          8
+        ]
+      ],
+      "attempt_2": [
+        [
+          8,
+          9
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "evaluation_count": 110,
+      "expected_output": [
+        [
+          1,
+          0
+        ],
+        [
+          9,
+          8
+        ]
+      ],
+      "failure_primary_class": null,
+      "failure_tags": [],
+      "first_pass_survivor_count": 9,
+      "generated_count": 10,
+      "guardrail_messages": [],
+      "guardrail_ok": true,
+      "refined_count": 36,
+      "runtime_ms": 3.7953360001665715,
+      "second_hypothesis": "identity -> rotate180",
+      "shape_mismatch_count": 0,
+      "split": "blind_holdout",
+      "success_attempt_1": true,
+      "success_attempt_2": true,
+      "task_id": "holdout_rotate180_task",
+      "telemetry": {
+        "agent_disagreements": {
+          "divergent_families": 3,
+          "top_family_votes": {
+            "color": 1,
+            "geometry": 1,
+            "symmetry": 3
+          },
+          "top_score_band": [
+            1.15,
+            1.15,
+            -0.41,
+            -0.41,
+            -0.41
+          ]
+        },
+        "confidence": {
+          "belief": 1.0,
+          "disbelief": 0.0,
+          "score": 1.15,
+          "uncertainty": 0.0
+        },
+        "deterministic_fingerprint": "17532ef4124f24d834b84a80b13787b964a6804b81c1d1a690950469e561f352",
+        "expected_fingerprint": [
+          [
+            1,
+            0
+          ],
+          [
+            9,
+            8
+          ]
+        ],
+        "final_pruned": [
+          {
+            "description": "identity",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "crop_to_content -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "crop_to_content -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "crop_to_content -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "crop_to_content -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "crop_to_content -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> rotate90",
+            "reason": "keep_cap_reached"
+          }
+        ],
+        "final_ranking": [
+          {
+            "belief": 1.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "crop_to_content -> rotate180",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 8,
+            "contradiction_count": 0,
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]",
+            "disbelief": 0.0,
+            "family": "color",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 10,
+            "contradiction_count": 0,
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "color",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.38,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.38,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.38,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.38,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 0,
+            "contradiction_count": 0,
+            "description": "identity",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "crop_to_content",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "translate_to_origin",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "crop_to_content -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "crop_to_content -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "crop_to_content -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "crop_to_content -> rotate270",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "crop_to_content -> rotate90",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> crop_to_content",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 10,
+            "contradiction_count": 0,
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "color",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 10,
+            "contradiction_count": 0,
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "color",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 10,
+            "contradiction_count": 0,
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> rotate180",
+            "disbelief": 0.0,
+            "family": "color",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 10,
+            "contradiction_count": 0,
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> rotate270",
+            "disbelief": 0.0,
+            "family": "color",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 10,
+            "contradiction_count": 0,
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> rotate90",
+            "disbelief": 0.0,
+            "family": "color",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          }
+        ],
+        "first_pass_pruned": [
+          {
+            "description": "largest_object",
+            "reason": "contradiction_dominated"
+          }
+        ],
+        "first_pass_ranking": [
+          {
+            "belief": 1.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 1.0,
+            "complexity": 8,
+            "contradiction_count": 0,
+            "description": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]",
+            "disbelief": 0.0,
+            "family": "color",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 0,
+            "contradiction_count": 0,
+            "description": "identity",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "crop_to_content",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "translate_to_origin",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.41000000000000003,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 2,
+            "description": "largest_object",
+            "disbelief": 1.0,
+            "family": "objects",
+            "score": -0.97,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          }
+        ],
+        "generated_candidates": [
+          "identity",
+          "flip_horizontal",
+          "flip_vertical",
+          "rotate90",
+          "rotate180",
+          "rotate270",
+          "crop_to_content",
+          "translate_to_origin",
+          "largest_object",
+          "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]"
+        ],
+        "refined_candidates": [
+          "rotate180 -> flip_horizontal",
+          "rotate180 -> flip_vertical",
+          "rotate180 -> rotate90",
+          "rotate180 -> rotate180",
+          "rotate180 -> rotate270",
+          "rotate180 -> crop_to_content",
+          "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> flip_horizontal",
+          "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> flip_vertical",
+          "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> rotate90",
+          "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> rotate180",
+          "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> rotate270",
+          "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)] -> crop_to_content",
+          "identity -> flip_horizontal",
+          "identity -> flip_vertical",
+          "identity -> rotate90",
+          "identity -> rotate180",
+          "identity -> rotate270",
+          "identity -> crop_to_content",
+          "crop_to_content -> flip_horizontal",
+          "crop_to_content -> flip_vertical",
+          "crop_to_content -> rotate90",
+          "crop_to_content -> rotate180",
+          "crop_to_content -> rotate270",
+          "crop_to_content -> crop_to_content",
+          "flip_horizontal -> flip_horizontal",
+          "flip_horizontal -> flip_vertical",
+          "flip_horizontal -> rotate90",
+          "flip_horizontal -> rotate180",
+          "flip_horizontal -> rotate270",
+          "flip_horizontal -> crop_to_content",
+          "flip_vertical -> flip_horizontal",
+          "flip_vertical -> flip_vertical",
+          "flip_vertical -> rotate90",
+          "flip_vertical -> rotate180",
+          "flip_vertical -> rotate270",
+          "flip_vertical -> crop_to_content"
+        ],
+        "selection": {
+          "attempt_1_hypothesis": "rotate180",
+          "attempt_2_hypothesis": "identity -> rotate180",
+          "selected_hypotheses": [
+            "rotate180",
+            "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]"
+          ]
+        },
+        "step_counts": {
+          "evaluation_count": 110,
+          "final_survivor_count": 12,
+          "first_pass_scored_count": 10,
+          "first_pass_survivor_count": 9,
+          "generated_count": 10,
+          "refined_count": 36,
+          "second_pass_scored_count": 45
+        }
+      },
+      "transform_crash_count": 0,
+      "variant": "full_epistemic_coagency",
+      "winning_belief": 1.0,
+      "winning_disbelief": 0.0,
+      "winning_family": "symmetry",
+      "winning_hypothesis": "rotate180",
+      "winning_score": 1.15,
+      "winning_uncertainty": 0.0
+    },
+    {
+      "attempt_1": [
+        [
+          7,
+          7,
+          0
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "attempt_2": [
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          7,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "evaluation_count": 104,
+      "expected_output": [
+        [
+          7,
+          7,
+          0
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "failure_primary_class": null,
+      "failure_tags": [],
+      "first_pass_survivor_count": 7,
+      "generated_count": 9,
+      "guardrail_messages": [],
+      "guardrail_ok": true,
+      "refined_count": 36,
+      "runtime_ms": 29.375257000083366,
+      "second_hypothesis": "flip_horizontal -> rotate270",
+      "shape_mismatch_count": 0,
+      "split": "blind_holdout",
+      "success_attempt_1": true,
+      "success_attempt_2": true,
+      "task_id": "holdout_translate_task",
+      "telemetry": {
+        "agent_disagreements": {
+          "divergent_families": 2,
+          "top_family_votes": {
+            "geometry": 1,
+            "symmetry": 4
+          },
+          "top_score_band": [
+            1.15,
+            -0.360417,
+            -0.364167,
+            -0.370833,
+            -0.374583
+          ]
+        },
+        "confidence": {
+          "belief": 1.0,
+          "disbelief": 0.0,
+          "score": 1.15,
+          "uncertainty": 0.0
+        },
+        "deterministic_fingerprint": "7bf681c3a07db6803d78f591a72fcd2efaeb9aab727eee8217f6976588e55e7c",
+        "expected_fingerprint": [
+          [
+            7,
+            7,
+            0
+          ],
+          [
+            0,
+            7,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "final_pruned": [
+          {
+            "description": "translate_to_origin -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> flip_vertical",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate270 -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate270 -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate270 -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin -> flip_horizontal",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin -> rotate180",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin -> rotate270",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin -> rotate90",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "identity -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_horizontal -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "flip_vertical -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate180 -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "rotate270 -> crop_to_content",
+            "reason": "keep_cap_reached"
+          },
+          {
+            "description": "translate_to_origin -> crop_to_content",
+            "reason": "keep_cap_reached"
+          }
+        ],
+        "final_ranking": [
+          {
+            "belief": 1.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "translate_to_origin",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.5,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 0.39249999999999996,
+            "support_count": 1,
+            "uncertainty": 0.5,
+            "unresolved_count": 1
+          },
+          {
+            "belief": 0.5,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 0.39249999999999996,
+            "support_count": 1,
+            "uncertainty": 0.5,
+            "unresolved_count": 1
+          },
+          {
+            "belief": 0.5,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate270 -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": 0.39249999999999996,
+            "support_count": 1,
+            "uncertainty": 0.5,
+            "unresolved_count": 1
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.36041666666666666,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.36041666666666666,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.36041666666666666,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.36041666666666666,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate270 -> rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.36041666666666666,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.36416666666666664,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.36416666666666664,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.36416666666666664,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "translate_to_origin -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.36791666666666667,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.37083333333333335,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.37083333333333335,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.37083333333333335,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.37083333333333335,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 0,
+            "contradiction_count": 0,
+            "description": "identity",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 0,
+            "description": "identity -> rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_horizontal -> rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "flip_vertical -> rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate180 -> rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate270 -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate270 -> rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "rotate270 -> rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "translate_to_origin -> flip_horizontal",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "translate_to_origin -> rotate180",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "translate_to_origin -> rotate270",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 0,
+            "description": "translate_to_origin -> rotate90",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 2,
+            "contradiction_count": 2,
+            "description": "identity -> crop_to_content",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -0.976,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "flip_horizontal -> crop_to_content",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -0.976,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "flip_vertical -> crop_to_content",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -0.976,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "rotate180 -> crop_to_content",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -0.976,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "rotate270 -> crop_to_content",
+            "disbelief": 1.0,
+            "family": "symmetry",
+            "score": -0.976,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 3,
+            "contradiction_count": 2,
+            "description": "translate_to_origin -> crop_to_content",
+            "disbelief": 1.0,
+            "family": "geometry",
+            "score": -0.976,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          }
+        ],
+        "first_pass_pruned": [
+          {
+            "description": "crop_to_content",
+            "reason": "contradiction_dominated"
+          },
+          {
+            "description": "largest_object",
+            "reason": "contradiction_dominated"
+          }
+        ],
+        "first_pass_ranking": [
+          {
+            "belief": 1.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "translate_to_origin",
+            "disbelief": 0.0,
+            "family": "geometry",
+            "score": 1.15,
+            "support_count": 2,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate180",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.36041666666666666,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate270",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.36416666666666664,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_vertical",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.37083333333333335,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 0,
+            "contradiction_count": 0,
+            "description": "identity",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "flip_horizontal",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 0,
+            "description": "rotate90",
+            "disbelief": 0.0,
+            "family": "symmetry",
+            "score": -0.3745833333333334,
+            "support_count": 0,
+            "uncertainty": 1.0,
+            "unresolved_count": 2
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 2,
+            "description": "crop_to_content",
+            "disbelief": 1.0,
+            "family": "geometry",
+            "score": -0.976,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          },
+          {
+            "belief": 0.0,
+            "complexity": 1,
+            "contradiction_count": 2,
+            "description": "largest_object",
+            "disbelief": 1.0,
+            "family": "objects",
+            "score": -0.976,
+            "support_count": 0,
+            "uncertainty": 0.0,
+            "unresolved_count": 0
+          }
+        ],
+        "generated_candidates": [
+          "identity",
+          "flip_horizontal",
+          "flip_vertical",
+          "rotate90",
+          "rotate180",
+          "rotate270",
+          "crop_to_content",
+          "translate_to_origin",
+          "largest_object"
+        ],
+        "refined_candidates": [
+          "translate_to_origin -> flip_horizontal",
+          "translate_to_origin -> flip_vertical",
+          "translate_to_origin -> rotate90",
+          "translate_to_origin -> rotate180",
+          "translate_to_origin -> rotate270",
+          "translate_to_origin -> crop_to_content",
+          "rotate180 -> flip_horizontal",
+          "rotate180 -> flip_vertical",
+          "rotate180 -> rotate90",
+          "rotate180 -> rotate180",
+          "rotate180 -> rotate270",
+          "rotate180 -> crop_to_content",
+          "rotate270 -> flip_horizontal",
+          "rotate270 -> flip_vertical",
+          "rotate270 -> rotate90",
+          "rotate270 -> rotate180",
+          "rotate270 -> rotate270",
+          "rotate270 -> crop_to_content",
+          "flip_vertical -> flip_horizontal",
+          "flip_vertical -> flip_vertical",
+          "flip_vertical -> rotate90",
+          "flip_vertical -> rotate180",
+          "flip_vertical -> rotate270",
+          "flip_vertical -> crop_to_content",
+          "identity -> flip_horizontal",
+          "identity -> flip_vertical",
+          "identity -> rotate90",
+          "identity -> rotate180",
+          "identity -> rotate270",
+          "identity -> crop_to_content",
+          "flip_horizontal -> flip_horizontal",
+          "flip_horizontal -> flip_vertical",
+          "flip_horizontal -> rotate90",
+          "flip_horizontal -> rotate180",
+          "flip_horizontal -> rotate270",
+          "flip_horizontal -> crop_to_content"
+        ],
+        "selection": {
+          "attempt_1_hypothesis": "translate_to_origin",
+          "attempt_2_hypothesis": "flip_horizontal -> rotate270",
+          "selected_hypotheses": [
+            "translate_to_origin",
+            "rotate180"
+          ]
+        },
+        "step_counts": {
+          "evaluation_count": 104,
+          "final_survivor_count": 12,
+          "first_pass_scored_count": 9,
+          "first_pass_survivor_count": 7,
+          "generated_count": 9,
+          "refined_count": 36,
+          "second_pass_scored_count": 43
+        }
+      },
+      "transform_crash_count": 0,
+      "variant": "full_epistemic_coagency",
+      "winning_belief": 1.0,
+      "winning_disbelief": 0.0,
+      "winning_family": "geometry",
+      "winning_hypothesis": "translate_to_origin",
+      "winning_score": 1.15,
+      "winning_uncertainty": 0.0
+    }
+  ],
+  "ranking_prefix_mismatches": [],
+  "split": "blind_holdout"
+}

@@ -1,0 +1,394 @@
+{
+  "regressions": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "tests.test_regressions"
+    ],
+    "returncode": 0,
+    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.020s\n\nOK\n",
+    "stdout": ""
+  },
+  "split_runs": {
+    "all": {
+      "ablation": {
+        "command": [
+          "python",
+          "tools/run_ablation.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "all",
+          "--report",
+          "/workspace/arttoo/reports/ablation.md",
+          "--json",
+          "/workspace/arttoo/reports/ablation.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "benchmark": {
+        "command": [
+          "python",
+          "tools/run_benchmarks.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "all",
+          "--report",
+          "/workspace/arttoo/reports/benchmark.md",
+          "--json",
+          "/workspace/arttoo/reports/benchmark.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "determinism": {
+        "command": [
+          "python",
+          "tools/check_determinism.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "all",
+          "--runs",
+          "5",
+          "--report",
+          "/workspace/arttoo/reports/determinism.md",
+          "--json",
+          "/workspace/arttoo/reports/determinism.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "failures": {
+        "command": [
+          "python",
+          "tools/summarize_failures.py",
+          "--input",
+          "/workspace/arttoo/reports/benchmark.json",
+          "--output",
+          "/workspace/arttoo/reports/failures.md",
+          "--json",
+          "/workspace/arttoo/reports/failures.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "scorecard": {
+        "command": [
+          "python",
+          "tools/generate_scorecard.py",
+          "--benchmark",
+          "/workspace/arttoo/reports/benchmark.json",
+          "--ablation",
+          "/workspace/arttoo/reports/ablation.json",
+          "--determinism",
+          "/workspace/arttoo/reports/determinism.json",
+          "--failures",
+          "/workspace/arttoo/reports/failures.json",
+          "--output",
+          "/workspace/arttoo/reports/scorecard.json",
+          "--markdown",
+          "/workspace/arttoo/reports/scorecard.md"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      }
+    },
+    "blind_holdout": {
+      "ablation": {
+        "command": [
+          "python",
+          "tools/run_ablation.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "blind_holdout",
+          "--report",
+          "/workspace/arttoo/reports/blind_holdout/ablation.md",
+          "--json",
+          "/workspace/arttoo/reports/blind_holdout/ablation.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "benchmark": {
+        "command": [
+          "python",
+          "tools/run_benchmarks.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "blind_holdout",
+          "--report",
+          "/workspace/arttoo/reports/blind_holdout/benchmark.md",
+          "--json",
+          "/workspace/arttoo/reports/blind_holdout/benchmark.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "determinism": {
+        "command": [
+          "python",
+          "tools/check_determinism.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "blind_holdout",
+          "--runs",
+          "5",
+          "--report",
+          "/workspace/arttoo/reports/blind_holdout/determinism.md",
+          "--json",
+          "/workspace/arttoo/reports/blind_holdout/determinism.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "failures": {
+        "command": [
+          "python",
+          "tools/summarize_failures.py",
+          "--input",
+          "/workspace/arttoo/reports/blind_holdout/benchmark.json",
+          "--output",
+          "/workspace/arttoo/reports/blind_holdout/failures.md",
+          "--json",
+          "/workspace/arttoo/reports/blind_holdout/failures.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "scorecard": {
+        "command": [
+          "python",
+          "tools/generate_scorecard.py",
+          "--benchmark",
+          "/workspace/arttoo/reports/blind_holdout/benchmark.json",
+          "--ablation",
+          "/workspace/arttoo/reports/blind_holdout/ablation.json",
+          "--determinism",
+          "/workspace/arttoo/reports/blind_holdout/determinism.json",
+          "--failures",
+          "/workspace/arttoo/reports/blind_holdout/failures.json",
+          "--output",
+          "/workspace/arttoo/reports/blind_holdout/scorecard.json",
+          "--markdown",
+          "/workspace/arttoo/reports/blind_holdout/scorecard.md"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      }
+    },
+    "dev": {
+      "ablation": {
+        "command": [
+          "python",
+          "tools/run_ablation.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "dev",
+          "--report",
+          "/workspace/arttoo/reports/dev/ablation.md",
+          "--json",
+          "/workspace/arttoo/reports/dev/ablation.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "benchmark": {
+        "command": [
+          "python",
+          "tools/run_benchmarks.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "dev",
+          "--report",
+          "/workspace/arttoo/reports/dev/benchmark.md",
+          "--json",
+          "/workspace/arttoo/reports/dev/benchmark.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "determinism": {
+        "command": [
+          "python",
+          "tools/check_determinism.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "dev",
+          "--runs",
+          "5",
+          "--report",
+          "/workspace/arttoo/reports/dev/determinism.md",
+          "--json",
+          "/workspace/arttoo/reports/dev/determinism.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "failures": {
+        "command": [
+          "python",
+          "tools/summarize_failures.py",
+          "--input",
+          "/workspace/arttoo/reports/dev/benchmark.json",
+          "--output",
+          "/workspace/arttoo/reports/dev/failures.md",
+          "--json",
+          "/workspace/arttoo/reports/dev/failures.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "scorecard": {
+        "command": [
+          "python",
+          "tools/generate_scorecard.py",
+          "--benchmark",
+          "/workspace/arttoo/reports/dev/benchmark.json",
+          "--ablation",
+          "/workspace/arttoo/reports/dev/ablation.json",
+          "--determinism",
+          "/workspace/arttoo/reports/dev/determinism.json",
+          "--failures",
+          "/workspace/arttoo/reports/dev/failures.json",
+          "--output",
+          "/workspace/arttoo/reports/dev/scorecard.json",
+          "--markdown",
+          "/workspace/arttoo/reports/dev/scorecard.md"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      }
+    },
+    "regression": {
+      "ablation": {
+        "command": [
+          "python",
+          "tools/run_ablation.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "regression",
+          "--report",
+          "/workspace/arttoo/reports/regression/ablation.md",
+          "--json",
+          "/workspace/arttoo/reports/regression/ablation.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "benchmark": {
+        "command": [
+          "python",
+          "tools/run_benchmarks.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "regression",
+          "--report",
+          "/workspace/arttoo/reports/regression/benchmark.md",
+          "--json",
+          "/workspace/arttoo/reports/regression/benchmark.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "determinism": {
+        "command": [
+          "python",
+          "tools/check_determinism.py",
+          "--tasks",
+          "data/fixtures",
+          "--split",
+          "regression",
+          "--runs",
+          "5",
+          "--report",
+          "/workspace/arttoo/reports/regression/determinism.md",
+          "--json",
+          "/workspace/arttoo/reports/regression/determinism.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "failures": {
+        "command": [
+          "python",
+          "tools/summarize_failures.py",
+          "--input",
+          "/workspace/arttoo/reports/regression/benchmark.json",
+          "--output",
+          "/workspace/arttoo/reports/regression/failures.md",
+          "--json",
+          "/workspace/arttoo/reports/regression/failures.json"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "scorecard": {
+        "command": [
+          "python",
+          "tools/generate_scorecard.py",
+          "--benchmark",
+          "/workspace/arttoo/reports/regression/benchmark.json",
+          "--ablation",
+          "/workspace/arttoo/reports/regression/ablation.json",
+          "--determinism",
+          "/workspace/arttoo/reports/regression/determinism.json",
+          "--failures",
+          "/workspace/arttoo/reports/regression/failures.json",
+          "--output",
+          "/workspace/arttoo/reports/regression/scorecard.json",
+          "--markdown",
+          "/workspace/arttoo/reports/regression/scorecard.md"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      }
+    }
+  },
+  "unit_and_integration": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py"
+    ],
+    "returncode": 0,
+    "stderr": "............................\n----------------------------------------------------------------------\nRan 28 tests in 0.113s\n\nOK\n",
+    "stdout": ""
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "checked_process_restarts": true,
+  "checked_seed_perturbations": true,
+  "checked_shuffled_order": true,
+  "nondeterministic_tasks": [],
+  "runs": 5,
+  "split": "blind_holdout",
+  "stable_metrics": true,
+  "stable_outputs": true,
+  "stable_rankings": true
+}

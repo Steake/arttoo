@@ -1,0 +1,26 @@
+{
+  "task_id": "holdout_translate_task",
+  "train": [
+    {
+      "input": [[0, 0, 0], [0, 2, 0], [0, 2, 2]],
+      "output": [[2, 0, 0], [2, 2, 0], [0, 0, 0]]
+    },
+    {
+      "input": [[0, 0, 0, 0], [0, 0, 0, 0], [0, 5, 5, 0], [0, 0, 5, 0]],
+      "output": [[5, 5, 0, 0], [0, 5, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+    }
+  ],
+  "test": [
+    {
+      "input": [[0, 0, 0], [0, 7, 7], [0, 0, 7]]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [[7, 7, 0], [0, 7, 0], [0, 0, 0]]
+    ],
+    "ranking_prefix": ["translate_to_origin"],
+    "notes": "Blind holdout translation to origin.",
+    "expect_exact": true
+  }
+}

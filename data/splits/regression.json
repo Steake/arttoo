@@ -1,0 +1,8 @@
+{
+  "task_ids": [
+    "crop_rotate_task",
+    "unsupported_pattern_task",
+    "unsupported_pattern_three_objects_task",
+    "unsupported_pattern_four_objects_task"
+  ]
+}
