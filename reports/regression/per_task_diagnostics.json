@@ -38,7 +38,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 27.51376200001232,
+    "runtime_ms": 14.307336999991094,
     "second_hypothesis": "crop_to_content -> flip_horizontal",
     "shape_mismatch_count": 26,
     "split": "regression",
@@ -544,6 +544,7 @@
         "identity -> rotate270",
         "identity -> crop_to_content"
       ],
+      "runtime_ms": 14.3073,
       "selection": {
         "attempt_1_hypothesis": "crop_to_content -> rotate90",
         "attempt_2_hypothesis": "crop_to_content -> flip_horizontal",
@@ -649,7 +650,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 4.543576999992638,
+    "runtime_ms": 5.958557999974801,
     "second_hypothesis": "tile_1x1",
     "shape_mismatch_count": 20,
     "split": "regression",
@@ -1540,6 +1541,7 @@
         "rotate180 -> rotate270",
         "rotate180 -> crop_to_content"
       ],
+      "runtime_ms": 5.9586,
       "selection": {
         "attempt_1_hypothesis": "identity",
         "attempt_2_hypothesis": "tile_1x1",
@@ -1602,7 +1604,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 3.3922360000246954,
+    "runtime_ms": 4.324037999992925,
     "second_hypothesis": "largest_object",
     "shape_mismatch_count": 26,
     "split": "regression",
@@ -2096,6 +2098,7 @@
         "identity -> rotate270",
         "identity -> crop_to_content"
       ],
+      "runtime_ms": 4.324,
       "selection": {
         "attempt_1_hypothesis": "crop_to_content",
         "attempt_2_hypothesis": "largest_object",
@@ -2166,7 +2169,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 3.7702989999957026,
+    "runtime_ms": 4.531745999997838,
     "second_hypothesis": "largest_object",
     "shape_mismatch_count": 26,
     "split": "regression",
@@ -2692,6 +2695,7 @@
         "identity -> rotate270",
         "identity -> crop_to_content"
       ],
+      "runtime_ms": 4.5317,
       "selection": {
         "attempt_1_hypothesis": "crop_to_content",
         "attempt_2_hypothesis": "largest_object",
@@ -2750,7 +2754,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 3.2033859999955894,
+    "runtime_ms": 3.185524000002715,
     "second_hypothesis": "largest_object",
     "shape_mismatch_count": 26,
     "split": "regression",
@@ -3240,6 +3244,7 @@
         "identity -> rotate270",
         "identity -> crop_to_content"
       ],
+      "runtime_ms": 3.1855,
       "selection": {
         "attempt_1_hypothesis": "crop_to_content",
         "attempt_2_hypothesis": "largest_object",
@@ -3311,7 +3316,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 3.3157639999785715,
+    "runtime_ms": 3.3643069999698128,
     "second_hypothesis": "identity -> crop_to_content",
     "shape_mismatch_count": 26,
     "split": "regression",
@@ -3825,6 +3830,7 @@
         "identity -> rotate270",
         "identity -> crop_to_content"
       ],
+      "runtime_ms": 3.3643,
       "selection": {
         "attempt_1_hypothesis": "crop_to_content",
         "attempt_2_hypothesis": "identity -> crop_to_content",

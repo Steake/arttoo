@@ -167,30 +167,40 @@ def categorize_failure(fixture: FixtureTask, result: SolveResult) -> FailureTypi
     return FailureTyping("ranking_error", tuple(sorted(tags)), _failure_root_cause("ranking_error"))
 
 
-def _telemetry(result: SolveResult, expected: Grid) -> dict[str, Any]:
+def _telemetry(result: SolveResult, expected: Grid, runtime_ms: float = 0.0) -> dict[str, Any]:
     winning = result.ranked_hypotheses[0] if result.ranked_hypotheses else None
     second = result.ranked_hypotheses[1] if len(result.ranked_hypotheses) > 1 else None
     disagreements = result.loop_diagnostics.agent_disagreements
     return {
         "deterministic_fingerprint": result.run_fingerprint,
+        "expected_fingerprint": expected.fingerprint(),
+        # Runtime is measured outside the solver loop to include serialisation overhead
+        "runtime_ms": round(runtime_ms, 4),
         "generated_candidates": list(result.loop_diagnostics.generated_candidates),
         "refined_candidates": list(result.loop_diagnostics.refined_candidates),
+        # first_pass_ranking: hypothesis snapshots after first evaluation pass (before refinement)
         "first_pass_ranking": list(result.loop_diagnostics.first_pass_ranking),
+        # final_ranking: hypothesis snapshots after second evaluation pass (after refinement)
         "final_ranking": list(result.loop_diagnostics.final_ranking),
+        # pruning: reasons why hypotheses were dropped at each pass
         "first_pass_pruned": list(result.loop_diagnostics.first_pass_pruned),
         "final_pruned": list(result.loop_diagnostics.final_pruned),
+        # agent_disagreements: divergence among top-5 hypothesis families
         "agent_disagreements": disagreements,
+        # selection: which hypotheses were chosen as attempt_1 and attempt_2
         "selection": {
             "attempt_1_hypothesis": winning.description if winning else "",
             "attempt_2_hypothesis": second.description if second else "",
             "selected_hypotheses": list(result.selected_hypotheses),
         },
+        # confidence: epistemic values for the winning hypothesis
         "confidence": {
             "belief": winning.belief if winning else 0.0,
             "disbelief": winning.disbelief if winning else 0.0,
             "uncertainty": winning.uncertainty if winning else 1.0,
             "score": winning.score if winning else -1.0,
         },
+        # step_counts: search breadth and depth statistics
         "step_counts": {
             "generated_count": result.loop_diagnostics.generated_count,
             "first_pass_scored_count": result.loop_diagnostics.first_pass_scored_count,
@@ -200,7 +210,6 @@ def _telemetry(result: SolveResult, expected: Grid) -> dict[str, Any]:
             "final_survivor_count": result.loop_diagnostics.final_survivor_count,
             "evaluation_count": result.loop_diagnostics.evaluation_count,
         },
-        "expected_fingerprint": expected.fingerprint(),
     }
 
 
@@ -242,7 +251,7 @@ def _case_diagnostic(fixture: FixtureTask, config: SolverConfig, split: str) -> 
         failure_primary_class=failure.primary_class,
         failure_tags=failure.tags,
         winning_family=winning.provenance[0] if winning and winning.provenance else "none",
-        telemetry=_telemetry(result, expected),
+        telemetry=_telemetry(result, expected, runtime_ms=runtime_ms),
     )
     return (diagnostic, result)
 

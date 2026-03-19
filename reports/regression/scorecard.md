@@ -14,7 +14,7 @@
 | unsupported_pattern_exit_count | 3 |
 | average_winning_uncertainty | 0.3333333333333333 |
 | average_winning_belief | 0.5 |
-| average_runtime_ms | 7.623170666666586 |
-| worst_case_runtime_ms | 27.51376200001232 |
+| average_runtime_ms | 5.9452516666548645 |
+| worst_case_runtime_ms | 14.307336999991094 |
 | evaluated_tasks | 6 |
-| timestamp_utc | 2026-03-19T00:04:16.830757+00:00 |
+| timestamp_utc | 2026-03-19T00:41:12.682975+00:00 |

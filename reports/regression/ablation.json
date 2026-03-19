@@ -2,17 +2,17 @@
   "baseline": "primitive_baseline_only",
   "deltas": {
     "epistemic_no_refinement": {
-      "runtime_delta_ms_vs_baseline": -1.819268833315846,
+      "runtime_delta_ms_vs_baseline": -1.943768499993818,
       "solve_rate_delta_vs_baseline": 0.0,
       "winning_score_delta_vs_baseline": -0.1941666666666667
     },
     "full_epistemic_coagency": {
-      "runtime_delta_ms_vs_baseline": 0.5489255000081052,
+      "runtime_delta_ms_vs_baseline": 0.40894499999429446,
       "solve_rate_delta_vs_baseline": 0.16666666666666669,
       "winning_score_delta_vs_baseline": 0.06583333333333324
     },
     "primitive_plus_bounded_compositions": {
-      "runtime_delta_ms_vs_baseline": 0.8722946666731937,
+      "runtime_delta_ms_vs_baseline": 0.7392195000098427,
       "solve_rate_delta_vs_baseline": 0.16666666666666669,
       "winning_score_delta_vs_baseline": 0.16999999999999998
     }
@@ -29,7 +29,7 @@
         "average_first_pass_survivor_count": 3.8333333333333335,
         "average_generated_count": 9.333333333333334,
         "average_refined_count": 0.0,
-        "average_runtime_ms": 1.1961940000067746,
+        "average_runtime_ms": 1.2189058333357632,
         "average_uncertainty": 0.5,
         "average_winning_score": 0.0004166666666666208,
         "contradiction_dominated_failure_count": 0,
@@ -47,8 +47,8 @@
           "geometry": 5,
           "symmetry": 1
         },
-        "generated_at_utc": "2026-03-19T00:04:17.027178+00:00",
-        "max_runtime_ms": 1.3943729999823518,
+        "generated_at_utc": "2026-03-19T00:41:12.885710+00:00",
+        "max_runtime_ms": 1.4741809999918587,
         "no_viable_hypothesis_count": 1,
         "shape_mismatch_failure_count": 84,
         "split": "regression",
@@ -95,7 +95,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.3943729999823518,
+          "runtime_ms": 1.440957999989223,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "regression",
@@ -313,6 +313,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.441,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -418,7 +419,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.3591969999993125,
+          "runtime_ms": 1.4741809999918587,
           "second_hypothesis": "tile_1x1",
           "shape_mismatch_count": 4,
           "split": "regression",
@@ -711,6 +712,7 @@
               "tile_1x1"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.4742,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "tile_1x1",
@@ -773,7 +775,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 0.9578710000255342,
+          "runtime_ms": 0.9465159999990647,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "regression",
@@ -991,6 +993,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 0.9465,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -1061,7 +1064,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.2487420000297789,
+          "runtime_ms": 1.2516649999838592,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "regression",
@@ -1279,6 +1282,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.2517,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -1337,7 +1341,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.0481979999781288,
+          "runtime_ms": 1.0494080000285066,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "regression",
@@ -1555,6 +1559,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.0494,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -1619,7 +1624,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.1687830000255417,
+          "runtime_ms": 1.1507070000220665,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "regression",
@@ -1837,6 +1842,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.1507,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -1880,7 +1886,7 @@
         "average_first_pass_survivor_count": 3.8333333333333335,
         "average_generated_count": 9.333333333333334,
         "average_refined_count": 21.0,
-        "average_runtime_ms": 3.564388333330726,
+        "average_runtime_ms": 3.5716193333238757,
         "average_uncertainty": 0.3333333333333333,
         "average_winning_score": 0.2604166666666666,
         "contradiction_dominated_failure_count": 0,
@@ -1896,8 +1902,8 @@
           "geometry": 5,
           "symmetry": 1
         },
-        "generated_at_utc": "2026-03-19T00:04:17.049400+00:00",
-        "max_runtime_ms": 4.187515000012354,
+        "generated_at_utc": "2026-03-19T00:41:12.908010+00:00",
+        "max_runtime_ms": 4.209243999980572,
         "no_viable_hypothesis_count": 0,
         "shape_mismatch_failure_count": 150,
         "split": "regression",
@@ -1947,7 +1953,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.925397999978486,
+          "runtime_ms": 3.9524040000173954,
           "second_hypothesis": "crop_to_content -> flip_horizontal",
           "shape_mismatch_count": 26,
           "split": "regression",
@@ -2453,6 +2459,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.9524,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content -> rotate90",
               "attempt_2_hypothesis": "crop_to_content -> flip_horizontal",
@@ -2558,7 +2565,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.187515000012354,
+          "runtime_ms": 4.209243999980572,
           "second_hypothesis": "tile_1x1",
           "shape_mismatch_count": 20,
           "split": "regression",
@@ -3449,6 +3456,7 @@
               "rotate180 -> rotate270",
               "rotate180 -> crop_to_content"
             ],
+            "runtime_ms": 4.2092,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "tile_1x1",
@@ -3511,7 +3519,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.2593700000234094,
+          "runtime_ms": 3.2641810000200167,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "regression",
@@ -4005,6 +4013,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.2642,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -4075,7 +4084,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.7187030000040977,
+          "runtime_ms": 3.7255319999758285,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "regression",
@@ -4601,6 +4610,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.7255,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -4659,7 +4669,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.0724119999945287,
+          "runtime_ms": 3.0417259999921953,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "regression",
@@ -5149,6 +5159,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.0417,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -5220,7 +5231,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.222931999971479,
+          "runtime_ms": 3.2366289999572473,
           "second_hypothesis": "identity -> crop_to_content",
           "shape_mismatch_count": 26,
           "split": "regression",
@@ -5734,6 +5745,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.2366,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "identity -> crop_to_content",
@@ -5775,7 +5787,7 @@
         "average_first_pass_survivor_count": 3.8333333333333335,
         "average_generated_count": 9.333333333333334,
         "average_refined_count": 0.0,
-        "average_runtime_ms": 3.0154628333226206,
+        "average_runtime_ms": 3.1626743333295813,
         "average_uncertainty": 0.5,
         "average_winning_score": 0.19458333333333333,
         "contradiction_dominated_failure_count": 0,
@@ -5793,8 +5805,8 @@
           "geometry": 5,
           "symmetry": 1
         },
-        "generated_at_utc": "2026-03-19T00:04:16.993794+00:00",
-        "max_runtime_ms": 10.29756399998405,
+        "generated_at_utc": "2026-03-19T00:41:12.852074+00:00",
+        "max_runtime_ms": 10.987069999998766,
         "no_viable_hypothesis_count": 1,
         "shape_mismatch_failure_count": 84,
         "split": "regression",
@@ -5841,7 +5853,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 10.29756399998405,
+          "runtime_ms": 10.987069999998766,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "regression",
@@ -6059,6 +6071,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 10.9871,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -6173,7 +6186,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.9115439999950468,
+          "runtime_ms": 1.9361829999979818,
           "second_hypothesis": "tile_1x1",
           "shape_mismatch_count": 4,
           "split": "regression",
@@ -6466,6 +6479,7 @@
               "tile_1x1"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.9362,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "tile_1x1",
@@ -6528,7 +6542,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.2236249999659776,
+          "runtime_ms": 1.2956470000062836,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "regression",
@@ -6746,6 +6760,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.2956,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -6816,7 +6831,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.7133559999820136,
+          "runtime_ms": 1.7581000000177482,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "regression",
@@ -7034,6 +7049,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.7581,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -7092,7 +7108,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.4357289999793466,
+          "runtime_ms": 1.4598639999690022,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "regression",
@@ -7310,6 +7326,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.4599,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -7374,7 +7391,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.5109590000292883,
+          "runtime_ms": 1.5391819999877043,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "regression",
@@ -7592,6 +7609,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.5392,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -7635,7 +7653,7 @@
         "average_first_pass_survivor_count": 3.8333333333333335,
         "average_generated_count": 9.333333333333334,
         "average_refined_count": 21.0,
-        "average_runtime_ms": 3.887757499995814,
+        "average_runtime_ms": 3.901893833339424,
         "average_uncertainty": 0.3333333333333333,
         "average_winning_score": 0.3645833333333333,
         "contradiction_dominated_failure_count": 0,
@@ -7651,8 +7669,8 @@
           "geometry": 5,
           "symmetry": 1
         },
-        "generated_at_utc": "2026-03-19T00:04:17.018342+00:00",
-        "max_runtime_ms": 5.267713000023377,
+        "generated_at_utc": "2026-03-19T00:41:12.876729+00:00",
+        "max_runtime_ms": 5.244285000003401,
         "no_viable_hypothesis_count": 0,
         "shape_mismatch_failure_count": 154,
         "split": "regression",
@@ -7702,7 +7720,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 5.267713000023377,
+          "runtime_ms": 5.244285000003401,
           "second_hypothesis": "crop_to_content -> flip_horizontal",
           "shape_mismatch_count": 26,
           "split": "regression",
@@ -8208,6 +8226,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 5.2443,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content -> rotate90",
               "attempt_2_hypothesis": "crop_to_content -> flip_horizontal",
@@ -8322,7 +8341,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.509773999984645,
+          "runtime_ms": 4.5902850000061335,
           "second_hypothesis": "tile_1x1",
           "shape_mismatch_count": 24,
           "split": "regression",
@@ -9213,6 +9232,7 @@
               "flip_horizontal -> rotate270",
               "flip_horizontal -> crop_to_content"
             ],
+            "runtime_ms": 4.5903,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "tile_1x1",
@@ -9275,7 +9295,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.401612999994086,
+          "runtime_ms": 3.313372000036452,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "regression",
@@ -9769,6 +9789,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.3134,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -9839,7 +9860,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.6538329999871166,
+          "runtime_ms": 3.8183849999882113,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "regression",
@@ -10365,6 +10386,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.8184,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -10423,7 +10445,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.1564579999781017,
+          "runtime_ms": 3.1266739999864512,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "regression",
@@ -10913,6 +10935,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.1267,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -10984,7 +11007,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.3371540000075584,
+          "runtime_ms": 3.3183620000158953,
           "second_hypothesis": "identity -> crop_to_content",
           "shape_mismatch_count": 26,
           "split": "regression",
@@ -11498,6 +11521,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.3184,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "identity -> crop_to_content",

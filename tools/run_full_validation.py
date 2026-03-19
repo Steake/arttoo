@@ -143,6 +143,22 @@ def main(argv: list[str] | None = None) -> int:
             multi_split_summary_markdown(split_scorecards),
         )
 
+    # Generate final split diagnostics table (A+B: machine-readable + blind holdout verdict)
+    final_diag = _run(
+        ["python", "tools/generate_final_split_diagnostics.py", "--reports", str(reports_dir)],
+        repo_root,
+    )
+    if final_diag["returncode"] != 0:
+        print(f"[WARN] generate_final_split_diagnostics failed: {final_diag['stderr']}")
+
+    # Generate uncertainty audit (D: uncertainty usefulness check)
+    uncertainty_audit = _run(
+        ["python", "tools/generate_uncertainty_audit.py", "--reports", str(reports_dir)],
+        repo_root,
+    )
+    if uncertainty_audit["returncode"] != 0:
+        print(f"[WARN] generate_uncertainty_audit failed: {uncertainty_audit['stderr']}")
+
     failed = any(results[name]["returncode"] != 0 for name in ("unit_and_integration", "regressions"))
     for suite in results["split_runs"].values():
         failed = failed or any(payload["returncode"] != 0 for payload in suite.values())

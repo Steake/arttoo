@@ -8,7 +8,7 @@
     "average_first_pass_survivor_count": 7.333333333333333,
     "average_generated_count": 9.333333333333334,
     "average_refined_count": 36.0,
-    "average_runtime_ms": 8.885054333328904,
+    "average_runtime_ms": 8.965542333347306,
     "average_uncertainty": 0.0,
     "average_winning_score": 1.15,
     "contradiction_dominated_failure_count": 0,
@@ -18,8 +18,8 @@
       "geometry": 1,
       "symmetry": 2
     },
-    "generated_at_utc": "2026-03-19T00:04:18.211510+00:00",
-    "max_runtime_ms": 14.188457000045673,
+    "generated_at_utc": "2026-03-19T00:41:14.078710+00:00",
+    "max_runtime_ms": 14.414847000011832,
     "no_viable_hypothesis_count": 0,
     "shape_mismatch_failure_count": 24,
     "split": "blind_holdout",
@@ -81,7 +81,7 @@
       "guardrail_messages": [],
       "guardrail_ok": true,
       "refined_count": 36,
-      "runtime_ms": 14.188457000045673,
+      "runtime_ms": 14.414847000011832,
       "second_hypothesis": "identity -> flip_vertical",
       "shape_mismatch_count": 24,
       "split": "blind_holdout",
@@ -912,6 +912,7 @@
           "rotate180 -> rotate270",
           "rotate180 -> crop_to_content"
         ],
+        "runtime_ms": 14.4148,
         "selection": {
           "attempt_1_hypothesis": "flip_vertical",
           "attempt_2_hypothesis": "identity -> flip_vertical",
@@ -978,7 +979,7 @@
       "guardrail_messages": [],
       "guardrail_ok": true,
       "refined_count": 36,
-      "runtime_ms": 6.552190999968843,
+      "runtime_ms": 6.562224999981936,
       "second_hypothesis": "identity -> rotate180",
       "shape_mismatch_count": 0,
       "split": "blind_holdout",
@@ -1863,6 +1864,7 @@
           "flip_vertical -> rotate270",
           "flip_vertical -> crop_to_content"
         ],
+        "runtime_ms": 6.5622,
         "selection": {
           "attempt_1_hypothesis": "rotate180",
           "attempt_2_hypothesis": "identity -> rotate180",
@@ -1950,7 +1952,7 @@
       "guardrail_messages": [],
       "guardrail_ok": true,
       "refined_count": 36,
-      "runtime_ms": 5.914514999972198,
+      "runtime_ms": 5.919555000048149,
       "second_hypothesis": "flip_horizontal -> rotate270",
       "shape_mismatch_count": 0,
       "split": "blind_holdout",
@@ -2793,6 +2795,7 @@
           "flip_horizontal -> rotate270",
           "flip_horizontal -> crop_to_content"
         ],
+        "runtime_ms": 5.9196,
         "selection": {
           "attempt_1_hypothesis": "translate_to_origin",
           "attempt_2_hypothesis": "flip_horizontal -> rotate270",

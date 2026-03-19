@@ -2,17 +2,17 @@
   "baseline": "primitive_baseline_only",
   "deltas": {
     "epistemic_no_refinement": {
-      "runtime_delta_ms_vs_baseline": -0.8347680625071519,
+      "runtime_delta_ms_vs_baseline": -0.8059951249883568,
       "solve_rate_delta_vs_baseline": 0.0,
       "winning_score_delta_vs_baseline": -0.010312500000000058
     },
     "full_epistemic_coagency": {
-      "runtime_delta_ms_vs_baseline": 1.941127562485434,
+      "runtime_delta_ms_vs_baseline": 1.9348939374985719,
       "solve_rate_delta_vs_baseline": 0.0625,
       "winning_score_delta_vs_baseline": 0.08718749999999986
     },
     "primitive_plus_bounded_compositions": {
-      "runtime_delta_ms_vs_baseline": 1.9830529999858015,
+      "runtime_delta_ms_vs_baseline": 1.926690062511227,
       "solve_rate_delta_vs_baseline": 0.0625,
       "winning_score_delta_vs_baseline": 0.06374999999999997
     }
@@ -29,7 +29,7 @@
         "average_first_pass_survivor_count": 5.875,
         "average_generated_count": 9.5,
         "average_refined_count": 0.0,
-        "average_runtime_ms": 1.3378622500006543,
+        "average_runtime_ms": 1.382629875010366,
         "average_uncertainty": 0.1875,
         "average_winning_score": 0.71890625,
         "contradiction_dominated_failure_count": 0,
@@ -49,8 +49,8 @@
           "patterns": 1,
           "symmetry": 6
         },
-        "generated_at_utc": "2026-03-19T00:04:19.814372+00:00",
-        "max_runtime_ms": 1.8684530000427912,
+        "generated_at_utc": "2026-03-19T00:41:15.755459+00:00",
+        "max_runtime_ms": 2.077787000018816,
         "no_viable_hypothesis_count": 1,
         "shape_mismatch_failure_count": 122,
         "split": "all",
@@ -100,7 +100,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.8684530000427912,
+          "runtime_ms": 2.077787000018816,
           "second_hypothesis": "identity",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -390,6 +390,7 @@
               "color_map_[(0, 0), (1, 3), (2, 4)]"
             ],
             "refined_candidates": [],
+            "runtime_ms": 2.0778,
             "selection": {
               "attempt_1_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)]",
               "attempt_2_hypothesis": "identity",
@@ -472,7 +473,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 0.982507000003352,
+          "runtime_ms": 1.0175489999824094,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -690,6 +691,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.0175,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -753,7 +755,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.3753669999800877,
+          "runtime_ms": 1.4666460000398729,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -971,6 +973,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.4666,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -1049,7 +1052,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.3105869999776587,
+          "runtime_ms": 1.2868710000475403,
           "second_hypothesis": "identity",
           "shape_mismatch_count": 4,
           "split": "all",
@@ -1290,6 +1293,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.2869,
             "selection": {
               "attempt_1_hypothesis": "flip_vertical",
               "attempt_2_hypothesis": "identity",
@@ -1356,7 +1360,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.6180480000116404,
+          "runtime_ms": 1.6845640000155981,
           "second_hypothesis": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -1639,6 +1643,7 @@
               "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.6846,
             "selection": {
               "attempt_1_hypothesis": "rotate180",
               "attempt_2_hypothesis": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]",
@@ -1726,7 +1731,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.3429770000357166,
+          "runtime_ms": 1.3222979999909512,
           "second_hypothesis": "rotate180",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -1975,6 +1980,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.3223,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "rotate180",
@@ -2041,7 +2047,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.6802740000230187,
+          "runtime_ms": 1.750637000043298,
           "second_hypothesis": "crop_to_content",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -2357,6 +2363,7 @@
               "tile_1x1"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.7506,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "crop_to_content",
@@ -2462,7 +2469,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.3962660000288452,
+          "runtime_ms": 1.4041499999848384,
           "second_hypothesis": "tile_1x1",
           "shape_mismatch_count": 4,
           "split": "all",
@@ -2755,6 +2762,7 @@
               "tile_1x1"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.4041,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "tile_1x1",
@@ -2827,7 +2835,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.2645009999801005,
+          "runtime_ms": 1.294023999946603,
           "second_hypothesis": "identity",
           "shape_mismatch_count": 4,
           "split": "all",
@@ -3068,6 +3076,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.294,
             "selection": {
               "attempt_1_hypothesis": "flip_horizontal",
               "attempt_2_hypothesis": "identity",
@@ -3134,7 +3143,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.6545259999816153,
+          "runtime_ms": 1.637285000015254,
           "second_hypothesis": "color_map_[(1, 2), (2, 4), (3, 1), (4, 3), (5, 6), (6, 8), (7, 5), (8, 7)]",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -3416,6 +3425,7 @@
               "color_map_[(1, 2), (2, 4), (3, 1), (4, 3), (5, 6), (6, 8), (7, 5), (8, 7)]"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.6373,
             "selection": {
               "attempt_1_hypothesis": "rotate90",
               "attempt_2_hypothesis": "color_map_[(1, 2), (2, 4), (3, 1), (4, 3), (5, 6), (6, 8), (7, 5), (8, 7)]",
@@ -3478,7 +3488,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.0007610000002387,
+          "runtime_ms": 1.00505500000736,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -3696,6 +3706,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.0051,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -3766,7 +3777,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 0.9970939999561779,
+          "runtime_ms": 0.9985930000198096,
           "second_hypothesis": "crop_to_content",
           "shape_mismatch_count": 14,
           "split": "all",
@@ -4002,6 +4013,7 @@
               "tile_2x2"
             ],
             "refined_candidates": [],
+            "runtime_ms": 0.9986,
             "selection": {
               "attempt_1_hypothesis": "tile_2x2",
               "attempt_2_hypothesis": "crop_to_content",
@@ -4089,7 +4101,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.3104359999829285,
+          "runtime_ms": 1.311737000037283,
           "second_hypothesis": "rotate270",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -4338,6 +4350,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.3117,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "rotate270",
@@ -4408,7 +4421,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.2634789999879104,
+          "runtime_ms": 1.2870310000039353,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -4626,6 +4639,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.287,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -4684,7 +4698,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.1773880000305326,
+          "runtime_ms": 1.1036399999966306,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -4902,6 +4916,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.1036,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -4966,7 +4981,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.1631319999878542,
+          "runtime_ms": 1.4742110000156572,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -5184,6 +5199,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.4742,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -5227,7 +5243,7 @@
         "average_first_pass_survivor_count": 5.875,
         "average_generated_count": 9.5,
         "average_refined_count": 28.125,
-        "average_runtime_ms": 4.11375787499324,
+        "average_runtime_ms": 4.123518937497295,
         "average_uncertainty": 0.125,
         "average_winning_score": 0.8164062499999999,
         "contradiction_dominated_failure_count": 0,
@@ -5245,8 +5261,8 @@
           "patterns": 1,
           "symmetry": 6
         },
-        "generated_at_utc": "2026-03-19T00:04:19.882321+00:00",
-        "max_runtime_ms": 5.243748999987474,
+        "generated_at_utc": "2026-03-19T00:41:15.823620+00:00",
+        "max_runtime_ms": 5.279029999996965,
         "no_viable_hypothesis_count": 0,
         "shape_mismatch_failure_count": 238,
         "split": "all",
@@ -5296,7 +5312,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 5.180029999962699,
+          "runtime_ms": 5.279029999996965,
           "second_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)] -> crop_to_content",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -6192,6 +6208,7 @@
               "flip_vertical -> rotate270",
               "flip_vertical -> crop_to_content"
             ],
+            "runtime_ms": 5.279,
             "selection": {
               "attempt_1_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)]",
               "attempt_2_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)] -> crop_to_content",
@@ -6258,7 +6275,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.534771999966324,
+          "runtime_ms": 3.5519870000371156,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -6748,6 +6765,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.552,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -6814,7 +6832,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.9342549999901166,
+          "runtime_ms": 3.9470049999863477,
           "second_hypothesis": "crop_to_content -> flip_horizontal",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -7320,6 +7338,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.947,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content -> rotate90",
               "attempt_2_hypothesis": "crop_to_content -> flip_horizontal",
@@ -7398,7 +7417,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.106795000041075,
+          "runtime_ms": 4.148490999966725,
           "second_hypothesis": "identity -> flip_vertical",
           "shape_mismatch_count": 24,
           "split": "all",
@@ -8229,6 +8248,7 @@
               "rotate180 -> rotate270",
               "rotate180 -> crop_to_content"
             ],
+            "runtime_ms": 4.1485,
             "selection": {
               "attempt_1_hypothesis": "flip_vertical",
               "attempt_2_hypothesis": "identity -> flip_vertical",
@@ -8295,7 +8315,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.765418999966187,
+          "runtime_ms": 4.7007810000536665,
           "second_hypothesis": "identity -> rotate180",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -9180,6 +9200,7 @@
               "flip_vertical -> rotate270",
               "flip_vertical -> crop_to_content"
             ],
+            "runtime_ms": 4.7008,
             "selection": {
               "attempt_1_hypothesis": "rotate180",
               "attempt_2_hypothesis": "identity -> rotate180",
@@ -9267,7 +9288,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.514963000019634,
+          "runtime_ms": 4.338765999989391,
           "second_hypothesis": "flip_horizontal -> rotate270",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -10110,6 +10131,7 @@
               "flip_horizontal -> rotate270",
               "flip_horizontal -> crop_to_content"
             ],
+            "runtime_ms": 4.3388,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "flip_horizontal -> rotate270",
@@ -10176,7 +10198,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 5.243748999987474,
+          "runtime_ms": 5.221633999951791,
           "second_hypothesis": "crop_to_content",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -11102,6 +11124,7 @@
               "rotate180 -> rotate270",
               "rotate180 -> crop_to_content"
             ],
+            "runtime_ms": 5.2216,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "crop_to_content",
@@ -11207,7 +11230,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.256482000016604,
+          "runtime_ms": 4.261791999965681,
           "second_hypothesis": "tile_1x1",
           "shape_mismatch_count": 20,
           "split": "all",
@@ -12098,6 +12121,7 @@
               "rotate180 -> rotate270",
               "rotate180 -> crop_to_content"
             ],
+            "runtime_ms": 4.2618,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "tile_1x1",
@@ -12170,7 +12194,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 3.974428999981683,
+          "runtime_ms": 4.028796999989481,
           "second_hypothesis": "identity -> flip_horizontal",
           "shape_mismatch_count": 24,
           "split": "all",
@@ -13001,6 +13025,7 @@
               "crop_to_content -> rotate270",
               "crop_to_content -> crop_to_content"
             ],
+            "runtime_ms": 4.0288,
             "selection": {
               "attempt_1_hypothesis": "flip_horizontal",
               "attempt_2_hypothesis": "identity -> flip_horizontal",
@@ -13067,7 +13092,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.99877300001117,
+          "runtime_ms": 4.86979700002621,
           "second_hypothesis": "identity -> rotate90",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -13951,6 +13976,7 @@
               "crop_to_content -> rotate270",
               "crop_to_content -> crop_to_content"
             ],
+            "runtime_ms": 4.8698,
             "selection": {
               "attempt_1_hypothesis": "rotate90",
               "attempt_2_hypothesis": "identity -> rotate90",
@@ -14013,7 +14039,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.340771000011955,
+          "runtime_ms": 3.4820170000102735,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -14507,6 +14533,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.482,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -14585,7 +14612,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.1694420000007995,
+          "runtime_ms": 3.234425000016472,
           "second_hypothesis": "tile_2x2 -> flip_horizontal",
           "shape_mismatch_count": 14,
           "split": "all",
@@ -15121,6 +15148,7 @@
               "largest_object -> rotate270",
               "largest_object -> crop_to_content"
             ],
+            "runtime_ms": 3.2344,
             "selection": {
               "attempt_1_hypothesis": "tile_2x2",
               "attempt_2_hypothesis": "tile_2x2 -> flip_horizontal",
@@ -15208,7 +15236,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.4479989999786085,
+          "runtime_ms": 4.485999999985779,
           "second_hypothesis": "flip_horizontal -> rotate270",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -16051,6 +16079,7 @@
               "flip_horizontal -> rotate270",
               "flip_horizontal -> crop_to_content"
             ],
+            "runtime_ms": 4.486,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "flip_horizontal -> rotate270",
@@ -16121,7 +16150,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.8150529999825267,
+          "runtime_ms": 3.8825419999852784,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -16647,6 +16676,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.8825,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -16705,7 +16735,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.2056499999839616,
+          "runtime_ms": 3.2355170000073485,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -17195,6 +17225,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.2355,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -17266,7 +17297,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.331543999991027,
+          "runtime_ms": 3.307721999988189,
           "second_hypothesis": "identity -> crop_to_content",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -17780,6 +17811,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.3077,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "identity -> crop_to_content",
@@ -17821,7 +17853,7 @@
         "average_first_pass_survivor_count": 5.875,
         "average_generated_count": 9.5,
         "average_refined_count": 0.0,
-        "average_runtime_ms": 2.172630312507806,
+        "average_runtime_ms": 2.188624999998723,
         "average_uncertainty": 0.1875,
         "average_winning_score": 0.72921875,
         "contradiction_dominated_failure_count": 0,
@@ -17841,8 +17873,8 @@
           "patterns": 1,
           "symmetry": 6
         },
-        "generated_at_utc": "2026-03-19T00:04:19.719562+00:00",
-        "max_runtime_ms": 10.944306999988385,
+        "generated_at_utc": "2026-03-19T00:41:15.659461+00:00",
+        "max_runtime_ms": 11.197693999974945,
         "no_viable_hypothesis_count": 1,
         "shape_mismatch_failure_count": 122,
         "split": "all",
@@ -17892,7 +17924,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 10.944306999988385,
+          "runtime_ms": 11.197693999974945,
           "second_hypothesis": "identity",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -18182,6 +18214,7 @@
               "color_map_[(0, 0), (1, 3), (2, 4)]"
             ],
             "refined_candidates": [],
+            "runtime_ms": 11.1977,
             "selection": {
               "attempt_1_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)]",
               "attempt_2_hypothesis": "identity",
@@ -18264,7 +18297,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.380737000033605,
+          "runtime_ms": 1.3612899999770889,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -18482,6 +18515,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.3613,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -18545,7 +18579,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.8989909999618249,
+          "runtime_ms": 1.811029000009512,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -18763,6 +18797,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.811,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -18841,7 +18876,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.7268700000272474,
+          "runtime_ms": 1.6278269999929762,
           "second_hypothesis": "identity",
           "shape_mismatch_count": 4,
           "split": "all",
@@ -19082,6 +19117,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.6278,
             "selection": {
               "attempt_1_hypothesis": "flip_vertical",
               "attempt_2_hypothesis": "identity",
@@ -19148,7 +19184,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 2.1779090000109136,
+          "runtime_ms": 2.1804179999662665,
           "second_hypothesis": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -19431,6 +19467,7 @@
               "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]"
             ],
             "refined_candidates": [],
+            "runtime_ms": 2.1804,
             "selection": {
               "attempt_1_hypothesis": "rotate180",
               "attempt_2_hypothesis": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]",
@@ -19518,7 +19555,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.8070390000275438,
+          "runtime_ms": 1.6949330000102236,
           "second_hypothesis": "rotate180",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -19767,6 +19804,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.6949,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "rotate180",
@@ -19833,7 +19871,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 2.40466100001413,
+          "runtime_ms": 2.375682999968376,
           "second_hypothesis": "crop_to_content",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -20149,6 +20187,7 @@
               "tile_1x1"
             ],
             "refined_candidates": [],
+            "runtime_ms": 2.3757,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "crop_to_content",
@@ -20263,7 +20302,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.833067999996274,
+          "runtime_ms": 1.821489000008114,
           "second_hypothesis": "tile_1x1",
           "shape_mismatch_count": 4,
           "split": "all",
@@ -20556,6 +20595,7 @@
               "tile_1x1"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.8215,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "tile_1x1",
@@ -20628,7 +20668,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.6644849999920552,
+          "runtime_ms": 1.6370440000059716,
           "second_hypothesis": "identity",
           "shape_mismatch_count": 4,
           "split": "all",
@@ -20869,6 +20909,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.637,
             "selection": {
               "attempt_1_hypothesis": "flip_horizontal",
               "attempt_2_hypothesis": "identity",
@@ -20935,7 +20976,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.8015790000163179,
+          "runtime_ms": 2.1438409999632313,
           "second_hypothesis": "color_map_[(1, 2), (2, 4), (3, 1), (4, 3), (5, 6), (6, 8), (7, 5), (8, 7)]",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -21217,6 +21258,7 @@
               "color_map_[(1, 2), (2, 4), (3, 1), (4, 3), (5, 6), (6, 8), (7, 5), (8, 7)]"
             ],
             "refined_candidates": [],
+            "runtime_ms": 2.1438,
             "selection": {
               "attempt_1_hypothesis": "rotate90",
               "attempt_2_hypothesis": "color_map_[(1, 2), (2, 4), (3, 1), (4, 3), (5, 6), (6, 8), (7, 5), (8, 7)]",
@@ -21279,7 +21321,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.0166600000047765,
+          "runtime_ms": 1.2005200000544392,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -21497,6 +21539,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.2005,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -21567,7 +21610,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.036907000013798,
+          "runtime_ms": 1.0310440000012022,
           "second_hypothesis": "crop_to_content",
           "shape_mismatch_count": 14,
           "split": "all",
@@ -21803,6 +21846,7 @@
               "tile_2x2"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.031,
             "selection": {
               "attempt_1_hypothesis": "tile_2x2",
               "attempt_2_hypothesis": "crop_to_content",
@@ -21890,7 +21934,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.3663800000358606,
+          "runtime_ms": 1.3402600000063103,
           "second_hypothesis": "rotate270",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -22139,6 +22183,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.3403,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "rotate270",
@@ -22209,7 +22254,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.3277479999942443,
+          "runtime_ms": 1.2762210000119012,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -22427,6 +22472,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.2762,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -22485,7 +22531,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.1045129999729397,
+          "runtime_ms": 1.119818999995914,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -22703,6 +22749,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.1198,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -22767,7 +22814,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.2702310000349826,
+          "runtime_ms": 1.1988880000330937,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 16,
           "split": "all",
@@ -22985,6 +23032,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.1989,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -23028,7 +23076,7 @@
         "average_first_pass_survivor_count": 5.875,
         "average_generated_count": 9.5,
         "average_refined_count": 28.125,
-        "average_runtime_ms": 4.155683312493608,
+        "average_runtime_ms": 4.11531506250995,
         "average_uncertainty": 0.125,
         "average_winning_score": 0.79296875,
         "contradiction_dominated_failure_count": 0,
@@ -23046,8 +23094,8 @@
           "patterns": 1,
           "symmetry": 6
         },
-        "generated_at_utc": "2026-03-19T00:04:19.788327+00:00",
-        "max_runtime_ms": 5.365354999980809,
+        "generated_at_utc": "2026-03-19T00:41:15.727534+00:00",
+        "max_runtime_ms": 5.258390999983931,
         "no_viable_hypothesis_count": 0,
         "shape_mismatch_failure_count": 242,
         "split": "all",
@@ -23097,7 +23145,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 5.365354999980809,
+          "runtime_ms": 5.229448000022785,
           "second_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)] -> crop_to_content",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -23993,6 +24041,7 @@
               "flip_vertical -> rotate270",
               "flip_vertical -> crop_to_content"
             ],
+            "runtime_ms": 5.2294,
             "selection": {
               "attempt_1_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)]",
               "attempt_2_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)] -> crop_to_content",
@@ -24059,7 +24108,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.548918000035428,
+          "runtime_ms": 3.4886899999833076,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -24549,6 +24598,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.4887,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -24615,7 +24665,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.950343999974848,
+          "runtime_ms": 3.8575880000166762,
           "second_hypothesis": "crop_to_content -> flip_horizontal",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -25121,6 +25171,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.8576,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content -> rotate90",
               "attempt_2_hypothesis": "crop_to_content -> flip_horizontal",
@@ -25199,7 +25250,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.267783999978292,
+          "runtime_ms": 4.080203000000893,
           "second_hypothesis": "identity -> flip_vertical",
           "shape_mismatch_count": 24,
           "split": "all",
@@ -26030,6 +26081,7 @@
               "rotate180 -> rotate270",
               "rotate180 -> crop_to_content"
             ],
+            "runtime_ms": 4.0802,
             "selection": {
               "attempt_1_hypothesis": "flip_vertical",
               "attempt_2_hypothesis": "identity -> flip_vertical",
@@ -26096,7 +26148,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.850105999992138,
+          "runtime_ms": 4.735546000006252,
           "second_hypothesis": "identity -> rotate180",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -26981,6 +27033,7 @@
               "flip_vertical -> rotate270",
               "flip_vertical -> crop_to_content"
             ],
+            "runtime_ms": 4.7355,
             "selection": {
               "attempt_1_hypothesis": "rotate180",
               "attempt_2_hypothesis": "identity -> rotate180",
@@ -27068,7 +27121,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.435125999975753,
+          "runtime_ms": 4.450355000017225,
           "second_hypothesis": "flip_horizontal -> rotate270",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -27911,6 +27964,7 @@
               "flip_horizontal -> rotate270",
               "flip_horizontal -> crop_to_content"
             ],
+            "runtime_ms": 4.4504,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "flip_horizontal -> rotate270",
@@ -27977,7 +28031,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 5.24053199995933,
+          "runtime_ms": 5.258390999983931,
           "second_hypothesis": "crop_to_content",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -28903,6 +28957,7 @@
               "rotate180 -> rotate270",
               "rotate180 -> crop_to_content"
             ],
+            "runtime_ms": 5.2584,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "crop_to_content",
@@ -29017,7 +29072,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.1194579999910275,
+          "runtime_ms": 4.068612000025951,
           "second_hypothesis": "tile_1x1",
           "shape_mismatch_count": 24,
           "split": "all",
@@ -29908,6 +29963,7 @@
               "flip_horizontal -> rotate270",
               "flip_horizontal -> crop_to_content"
             ],
+            "runtime_ms": 4.0686,
             "selection": {
               "attempt_1_hypothesis": "identity",
               "attempt_2_hypothesis": "tile_1x1",
@@ -29980,7 +30036,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.069966999963981,
+          "runtime_ms": 3.975768000032076,
           "second_hypothesis": "identity -> flip_horizontal",
           "shape_mismatch_count": 24,
           "split": "all",
@@ -30811,6 +30867,7 @@
               "crop_to_content -> rotate270",
               "crop_to_content -> crop_to_content"
             ],
+            "runtime_ms": 3.9758,
             "selection": {
               "attempt_1_hypothesis": "flip_horizontal",
               "attempt_2_hypothesis": "identity -> flip_horizontal",
@@ -30877,7 +30934,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.992501000003813,
+          "runtime_ms": 4.867812000043159,
           "second_hypothesis": "identity -> rotate90",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -31761,6 +31818,7 @@
               "crop_to_content -> rotate270",
               "crop_to_content -> crop_to_content"
             ],
+            "runtime_ms": 4.8678,
             "selection": {
               "attempt_1_hypothesis": "rotate90",
               "attempt_2_hypothesis": "identity -> rotate90",
@@ -31823,7 +31881,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.32107500003076,
+          "runtime_ms": 3.2658139999739433,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -32317,6 +32375,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.2658,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -32395,7 +32454,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.215609000051245,
+          "runtime_ms": 3.1320639999989908,
           "second_hypothesis": "tile_2x2 -> flip_horizontal",
           "shape_mismatch_count": 14,
           "split": "all",
@@ -32931,6 +32990,7 @@
               "largest_object -> rotate270",
               "largest_object -> crop_to_content"
             ],
+            "runtime_ms": 3.1321,
             "selection": {
               "attempt_1_hypothesis": "tile_2x2",
               "attempt_2_hypothesis": "tile_2x2 -> flip_horizontal",
@@ -33018,7 +33078,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.508030000010876,
+          "runtime_ms": 4.410319999976764,
           "second_hypothesis": "flip_horizontal -> rotate270",
           "shape_mismatch_count": 0,
           "split": "all",
@@ -33861,6 +33921,7 @@
               "flip_horizontal -> rotate270",
               "flip_horizontal -> crop_to_content"
             ],
+            "runtime_ms": 4.4103,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "flip_horizontal -> rotate270",
@@ -33931,7 +33992,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.898708000008355,
+          "runtime_ms": 3.7463800000523406,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -34457,6 +34518,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.7464,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -34515,7 +34577,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.1337159999793585,
+          "runtime_ms": 3.29188199998498,
           "second_hypothesis": "largest_object",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -35005,6 +35067,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.2919,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "largest_object",
@@ -35076,7 +35139,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 18,
-          "runtime_ms": 3.573703999961708,
+          "runtime_ms": 3.9861680000399247,
           "second_hypothesis": "identity -> crop_to_content",
           "shape_mismatch_count": 26,
           "split": "all",
@@ -35590,6 +35653,7 @@
               "identity -> rotate270",
               "identity -> crop_to_content"
             ],
+            "runtime_ms": 3.9862,
             "selection": {
               "attempt_1_hypothesis": "crop_to_content",
               "attempt_2_hypothesis": "identity -> crop_to_content",

@@ -38,7 +38,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 15.625609999972312,
+    "runtime_ms": 15.812429999982669,
     "second_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)] -> crop_to_content",
     "shape_mismatch_count": 0,
     "split": "dev",
@@ -934,6 +934,7 @@
         "flip_vertical -> rotate270",
         "flip_vertical -> crop_to_content"
       ],
+      "runtime_ms": 15.8124,
       "selection": {
         "attempt_1_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)]",
         "attempt_2_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)] -> crop_to_content",
@@ -1000,7 +1001,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 4.6296069999698375,
+    "runtime_ms": 4.616773999998713,
     "second_hypothesis": "largest_object",
     "shape_mismatch_count": 26,
     "split": "dev",
@@ -1490,6 +1491,7 @@
         "identity -> rotate270",
         "identity -> crop_to_content"
       ],
+      "runtime_ms": 4.6168,
       "selection": {
         "attempt_1_hypothesis": "crop_to_content",
         "attempt_2_hypothesis": "largest_object",
@@ -1556,7 +1558,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 5.164261000004444,
+    "runtime_ms": 5.156169000031241,
     "second_hypothesis": "crop_to_content -> flip_horizontal",
     "shape_mismatch_count": 26,
     "split": "dev",
@@ -2062,6 +2064,7 @@
         "identity -> rotate270",
         "identity -> crop_to_content"
       ],
+      "runtime_ms": 5.1562,
       "selection": {
         "attempt_1_hypothesis": "crop_to_content -> rotate90",
         "attempt_2_hypothesis": "crop_to_content -> flip_horizontal",
@@ -2128,7 +2131,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 5.4791960000102335,
+    "runtime_ms": 5.856925999978557,
     "second_hypothesis": "crop_to_content",
     "shape_mismatch_count": 0,
     "split": "dev",
@@ -3054,6 +3057,7 @@
         "rotate180 -> rotate270",
         "rotate180 -> crop_to_content"
       ],
+      "runtime_ms": 5.8569,
       "selection": {
         "attempt_1_hypothesis": "identity",
         "attempt_2_hypothesis": "crop_to_content",
@@ -3126,7 +3130,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 3.9674459999901046,
+    "runtime_ms": 3.987078000022848,
     "second_hypothesis": "identity -> flip_horizontal",
     "shape_mismatch_count": 24,
     "split": "dev",
@@ -3957,6 +3961,7 @@
         "crop_to_content -> rotate270",
         "crop_to_content -> crop_to_content"
       ],
+      "runtime_ms": 3.9871,
       "selection": {
         "attempt_1_hypothesis": "flip_horizontal",
         "attempt_2_hypothesis": "identity -> flip_horizontal",
@@ -4023,7 +4028,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 4.846579999991718,
+    "runtime_ms": 4.915240000002541,
     "second_hypothesis": "identity -> rotate90",
     "shape_mismatch_count": 0,
     "split": "dev",
@@ -4907,6 +4912,7 @@
         "crop_to_content -> rotate270",
         "crop_to_content -> crop_to_content"
       ],
+      "runtime_ms": 4.9152,
       "selection": {
         "attempt_1_hypothesis": "rotate90",
         "attempt_2_hypothesis": "identity -> rotate90",
@@ -4985,7 +4991,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 3.191162999996777,
+    "runtime_ms": 3.1862140000384898,
     "second_hypothesis": "tile_2x2 -> flip_horizontal",
     "shape_mismatch_count": 14,
     "split": "dev",
@@ -5521,6 +5527,7 @@
         "largest_object -> rotate270",
         "largest_object -> crop_to_content"
       ],
+      "runtime_ms": 3.1862,
       "selection": {
         "attempt_1_hypothesis": "tile_2x2",
         "attempt_2_hypothesis": "tile_2x2 -> flip_horizontal",
@@ -5608,7 +5615,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 4.385823999996319,
+    "runtime_ms": 4.452246000028026,
     "second_hypothesis": "flip_horizontal -> rotate270",
     "shape_mismatch_count": 0,
     "split": "dev",
@@ -6451,6 +6458,7 @@
         "flip_horizontal -> rotate270",
         "flip_horizontal -> crop_to_content"
       ],
+      "runtime_ms": 4.4522,
       "selection": {
         "attempt_1_hypothesis": "translate_to_origin",
         "attempt_2_hypothesis": "flip_horizontal -> rotate270",

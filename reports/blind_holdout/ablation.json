@@ -2,17 +2,17 @@
   "baseline": "primitive_baseline_only",
   "deltas": {
     "epistemic_no_refinement": {
-      "runtime_delta_ms_vs_baseline": -3.3081336667351025,
+      "runtime_delta_ms_vs_baseline": -3.3605176666734833,
       "solve_rate_delta_vs_baseline": 0.0,
       "winning_score_delta_vs_baseline": 0.09999999999999987
     },
     "full_epistemic_coagency": {
-      "runtime_delta_ms_vs_baseline": -0.32429666670926327,
+      "runtime_delta_ms_vs_baseline": -0.3283503333288236,
       "solve_rate_delta_vs_baseline": 0.0,
       "winning_score_delta_vs_baseline": 0.09999999999999987
     },
     "primitive_plus_bounded_compositions": {
-      "runtime_delta_ms_vs_baseline": 0.6933823333004812,
+      "runtime_delta_ms_vs_baseline": 0.7911323333473774,
       "solve_rate_delta_vs_baseline": 0.0,
       "winning_score_delta_vs_baseline": 0.0
     }
@@ -29,7 +29,7 @@
         "average_first_pass_survivor_count": 7.333333333333333,
         "average_generated_count": 9.333333333333334,
         "average_refined_count": 0.0,
-        "average_runtime_ms": 1.4598906666378753,
+        "average_runtime_ms": 1.4584883333175942,
         "average_uncertainty": 0.0,
         "average_winning_score": 1.15,
         "contradiction_dominated_failure_count": 0,
@@ -39,8 +39,8 @@
           "geometry": 1,
           "symmetry": 2
         },
-        "generated_at_utc": "2026-03-19T00:04:18.391825+00:00",
-        "max_runtime_ms": 1.6955319999851781,
+        "generated_at_utc": "2026-03-19T00:41:14.262279+00:00",
+        "max_runtime_ms": 1.6373949999888282,
         "no_viable_hypothesis_count": 0,
         "shape_mismatch_failure_count": 4,
         "split": "blind_holdout",
@@ -102,7 +102,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.3297819999706917,
+          "runtime_ms": 1.3655979999498413,
           "second_hypothesis": "identity",
           "shape_mismatch_count": 4,
           "split": "blind_holdout",
@@ -343,6 +343,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.3656,
             "selection": {
               "attempt_1_hypothesis": "flip_vertical",
               "attempt_2_hypothesis": "identity",
@@ -409,7 +410,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.6955319999851781,
+          "runtime_ms": 1.6373949999888282,
           "second_hypothesis": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]",
           "shape_mismatch_count": 0,
           "split": "blind_holdout",
@@ -692,6 +693,7 @@
               "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.6374,
             "selection": {
               "attempt_1_hypothesis": "rotate180",
               "attempt_2_hypothesis": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]",
@@ -779,7 +781,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.354357999957756,
+          "runtime_ms": 1.3724720000141133,
           "second_hypothesis": "rotate180",
           "shape_mismatch_count": 0,
           "split": "blind_holdout",
@@ -1028,6 +1030,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.3725,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "rotate180",
@@ -1069,7 +1072,7 @@
         "average_first_pass_survivor_count": 7.333333333333333,
         "average_generated_count": 9.333333333333334,
         "average_refined_count": 36.0,
-        "average_runtime_ms": 4.443727666663714,
+        "average_runtime_ms": 4.490655666662254,
         "average_uncertainty": 0.0,
         "average_winning_score": 1.15,
         "contradiction_dominated_failure_count": 0,
@@ -1079,8 +1082,8 @@
           "geometry": 1,
           "symmetry": 2
         },
-        "generated_at_utc": "2026-03-19T00:04:18.405610+00:00",
-        "max_runtime_ms": 4.756493000002138,
+        "generated_at_utc": "2026-03-19T00:41:14.276201+00:00",
+        "max_runtime_ms": 4.8301919999858,
         "no_viable_hypothesis_count": 0,
         "shape_mismatch_failure_count": 24,
         "split": "blind_holdout",
@@ -1142,7 +1145,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.1975930000148765,
+          "runtime_ms": 4.202361000011479,
           "second_hypothesis": "identity -> flip_vertical",
           "shape_mismatch_count": 24,
           "split": "blind_holdout",
@@ -1973,6 +1976,7 @@
               "rotate180 -> rotate270",
               "rotate180 -> crop_to_content"
             ],
+            "runtime_ms": 4.2024,
             "selection": {
               "attempt_1_hypothesis": "flip_vertical",
               "attempt_2_hypothesis": "identity -> flip_vertical",
@@ -2039,7 +2043,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.756493000002138,
+          "runtime_ms": 4.8301919999858,
           "second_hypothesis": "identity -> rotate180",
           "shape_mismatch_count": 0,
           "split": "blind_holdout",
@@ -2924,6 +2928,7 @@
               "flip_vertical -> rotate270",
               "flip_vertical -> crop_to_content"
             ],
+            "runtime_ms": 4.8302,
             "selection": {
               "attempt_1_hypothesis": "rotate180",
               "attempt_2_hypothesis": "identity -> rotate180",
@@ -3011,7 +3016,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.377096999974128,
+          "runtime_ms": 4.439413999989483,
           "second_hypothesis": "flip_horizontal -> rotate270",
           "shape_mismatch_count": 0,
           "split": "blind_holdout",
@@ -3854,6 +3859,7 @@
               "flip_horizontal -> rotate270",
               "flip_horizontal -> crop_to_content"
             ],
+            "runtime_ms": 4.4394,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "flip_horizontal -> rotate270",
@@ -3895,7 +3901,7 @@
         "average_first_pass_survivor_count": 7.333333333333333,
         "average_generated_count": 9.333333333333334,
         "average_refined_count": 0.0,
-        "average_runtime_ms": 4.768024333372978,
+        "average_runtime_ms": 4.819005999991077,
         "average_uncertainty": 0.0,
         "average_winning_score": 1.05,
         "contradiction_dominated_failure_count": 0,
@@ -3905,8 +3911,8 @@
           "geometry": 1,
           "symmetry": 2
         },
-        "generated_at_utc": "2026-03-19T00:04:18.369421+00:00",
-        "max_runtime_ms": 10.167412000043896,
+        "generated_at_utc": "2026-03-19T00:41:14.239437+00:00",
+        "max_runtime_ms": 10.400887999992392,
         "no_viable_hypothesis_count": 0,
         "shape_mismatch_failure_count": 4,
         "split": "blind_holdout",
@@ -3968,7 +3974,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 10.167412000043896,
+          "runtime_ms": 10.400887999992392,
           "second_hypothesis": "identity",
           "shape_mismatch_count": 4,
           "split": "blind_holdout",
@@ -4209,6 +4215,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 10.4009,
             "selection": {
               "attempt_1_hypothesis": "flip_vertical",
               "attempt_2_hypothesis": "identity",
@@ -4275,7 +4282,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 2.3260150000510293,
+          "runtime_ms": 2.2655180000015207,
           "second_hypothesis": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]",
           "shape_mismatch_count": 0,
           "split": "blind_holdout",
@@ -4558,6 +4565,7 @@
               "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]"
             ],
             "refined_candidates": [],
+            "runtime_ms": 2.2655,
             "selection": {
               "attempt_1_hypothesis": "rotate180",
               "attempt_2_hypothesis": "color_map_[(0, 1), (1, 0), (2, 3), (3, 2), (4, 7), (5, 6), (6, 5), (7, 4)]",
@@ -4645,7 +4653,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 0,
-          "runtime_ms": 1.8106460000240077,
+          "runtime_ms": 1.790611999979319,
           "second_hypothesis": "rotate180",
           "shape_mismatch_count": 0,
           "split": "blind_holdout",
@@ -4894,6 +4902,7 @@
               "largest_object"
             ],
             "refined_candidates": [],
+            "runtime_ms": 1.7906,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "rotate180",
@@ -4935,7 +4944,7 @@
         "average_first_pass_survivor_count": 7.333333333333333,
         "average_generated_count": 9.333333333333334,
         "average_refined_count": 36.0,
-        "average_runtime_ms": 5.461406666673459,
+        "average_runtime_ms": 5.610138333338455,
         "average_uncertainty": 0.0,
         "average_winning_score": 1.05,
         "contradiction_dominated_failure_count": 0,
@@ -4945,8 +4954,8 @@
           "geometry": 1,
           "symmetry": 2
         },
-        "generated_at_utc": "2026-03-19T00:04:18.386419+00:00",
-        "max_runtime_ms": 6.213631000036912,
+        "generated_at_utc": "2026-03-19T00:41:14.256900+00:00",
+        "max_runtime_ms": 6.457149000027584,
         "no_viable_hypothesis_count": 0,
         "shape_mismatch_failure_count": 24,
         "split": "blind_holdout",
@@ -5008,7 +5017,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 5.702632000009089,
+          "runtime_ms": 5.667915999993056,
           "second_hypothesis": "identity -> flip_vertical",
           "shape_mismatch_count": 24,
           "split": "blind_holdout",
@@ -5839,6 +5848,7 @@
               "rotate180 -> rotate270",
               "rotate180 -> crop_to_content"
             ],
+            "runtime_ms": 5.6679,
             "selection": {
               "attempt_1_hypothesis": "flip_vertical",
               "attempt_2_hypothesis": "identity -> flip_vertical",
@@ -5905,7 +5915,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 6.213631000036912,
+          "runtime_ms": 6.457149000027584,
           "second_hypothesis": "identity -> rotate180",
           "shape_mismatch_count": 0,
           "split": "blind_holdout",
@@ -6790,6 +6800,7 @@
               "flip_vertical -> rotate270",
               "flip_vertical -> crop_to_content"
             ],
+            "runtime_ms": 6.4571,
             "selection": {
               "attempt_1_hypothesis": "rotate180",
               "attempt_2_hypothesis": "identity -> rotate180",
@@ -6877,7 +6888,7 @@
           "guardrail_messages": [],
           "guardrail_ok": true,
           "refined_count": 36,
-          "runtime_ms": 4.467956999974376,
+          "runtime_ms": 4.7053499999947235,
           "second_hypothesis": "flip_horizontal -> rotate270",
           "shape_mismatch_count": 0,
           "split": "blind_holdout",
@@ -7720,6 +7731,7 @@
               "flip_horizontal -> rotate270",
               "flip_horizontal -> crop_to_content"
             ],
+            "runtime_ms": 4.7053,
             "selection": {
               "attempt_1_hypothesis": "translate_to_origin",
               "attempt_2_hypothesis": "flip_horizontal -> rotate270",
