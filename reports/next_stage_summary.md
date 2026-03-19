@@ -1,19 +1,23 @@
 # Next Stage Summary
 
+> ⚠️  This summary includes blind_holdout data. Do not use these numbers to guide tuning decisions.
+
 ## Current Strengths
 - Split evaluated: all.
 - Determinism status: outputs=True, rankings=True, metrics=True.
-- Current exact solve rate with full solver: 0.786.
-- Most frequent winning families: geometry (7), symmetry (5), color (1).
+- Current exact solve rate with full solver: 0.812.
+- Most frequent winning families: geometry (8), symmetry (6), color (1).
 
 ## Current Weaknesses
 - Dominant failure classes: unsupported_pattern (3).
-- Average uncertainty of winning hypotheses: 0.000.
-- Guardrail-sensitive search load: generated=9.43, refined=28.29.
+- Average uncertainty of winning hypotheses: 0.125.
+- Guardrail-sensitive search load: generated=9.50, refined=28.12.
 
 ## Bottlenecks And Dead Weight
-- Transform crashes observed: 0.
-- Shape mismatch failures observed: 192.
+- Final task failures: 3.
+- Candidate transform crashes: 0.
+- Shape mismatch rejections (search phase): 238.
+- Unsupported pattern exits: 3.
 - Failure tags seen: known_regression_fixture, object_count_mismatch, unsupported_pattern.
 
 ## Recommended Priorities
@@ -22,5 +26,5 @@
 3. Use blind holdout scorecards to judge whether fixes generalise beyond dev/regression.
 
 ## Thesis Assessment
-- Measured solve-rate lift of full epistemic co-agency over primitive baseline: +0.071.
+- Measured solve-rate lift of full epistemic co-agency over primitive baseline: +0.062.
 - Interpret lift jointly with split-specific scorecards and richer failure telemetry before expanding the approach further.

@@ -147,11 +147,21 @@ def failures_markdown(result: dict[str, object]) -> str:
         for category, payload in sorted(result["failure_classes"].items())
     ] or [["none", "0", "", "", ""]]
     tag_rows = [[tag, str(count)] for tag, count in sorted(result["global_tag_counts"].items())] or [["none", "0"]]
+    hygiene_rows = [
+        ["Final task failures", str(result.get("final_task_failure_count", "n/a"))],
+        ["Candidate transform failures", str(result.get("candidate_transform_failure_count", "n/a"))],
+        ["Shape mismatch rejections (search)", str(result.get("shape_mismatch_rejection_count", "n/a"))],
+        ["Unsupported pattern exits", str(result.get("unsupported_pattern_exit_count", "n/a"))],
+    ]
     return "\n".join(
         [
             f"# Failure Summary: {result['split']}",
             "",
             _table(["Primary Class", "Count", "Representatives", "Tags", "Suspected Root Cause"], rows),
+            "",
+            "## Failure Category Breakdown",
+            "",
+            _table(["Category", "Count"], hygiene_rows),
             "",
             "## Global Tags",
             "",
@@ -163,6 +173,38 @@ def failures_markdown(result: dict[str, object]) -> str:
 def scorecard_markdown(result: dict[str, object]) -> str:
     rows = [[key, str(value)] for key, value in result.items()]
     return "\n".join([f"# Scorecard: {result['task_split']}", "", _table(["Field", "Value"], rows)])
+
+
+def multi_split_summary_markdown(
+    split_scorecards: dict[str, dict[str, object]],
+) -> str:
+    """Emit a concise multi-split comparison table. Never collapses into just 'all'."""
+    ordered_splits = ["dev", "regression", "blind_holdout", "all"]
+    rows = []
+    for split in ordered_splits:
+        if split not in split_scorecards:
+            continue
+        sc = split_scorecards[split]
+        rows.append([
+            split,
+            f'{sc.get("exact_solve_rate", 0.0):.3f}',
+            f'{sc.get("primitive_baseline_solve_rate", 0.0):.3f}',
+            f'{sc.get("lift", 0.0):+.3f}',
+            "yes" if sc.get("determinism_pass", False) else "no",
+            str(sc.get("final_task_failure_count", sc.get("failure_counts_by_class", {}))),
+            f'{sc.get("average_winning_uncertainty", sc.get("average_uncertainty", "n/a"))}',
+        ])
+    return "\n".join([
+        "# Multi-Split Scorecard Summary",
+        "",
+        "> Split provenance: dev = tuning fixtures, regression = known-failure regressions, "
+        "blind_holdout = unseen at tuning time, all = aggregate across all splits.",
+        "",
+        _table(
+            ["Split", "Solve rate", "Baseline rate", "Lift", "Determinism", "Final failures", "Avg uncertainty"],
+            rows,
+        ),
+    ])
 
 
 def next_stage_summary_markdown(
@@ -181,24 +223,37 @@ def next_stage_summary_markdown(
     full_variant = ablation["variants"]["full_epistemic_coagency"]["aggregate"]
     baseline_variant = ablation["variants"]["primitive_baseline_only"]["aggregate"]
     lift = full_variant["attempt_1_or_2_exact_rate"] - baseline_variant["attempt_1_or_2_exact_rate"]
+    split_label = benchmark["split"]
+    # Holdout discipline note: surface when this summary contains blind_holdout data.
+    holdout_note = (
+        "⚠️  This summary includes blind_holdout data. Do not use these numbers to guide tuning decisions."
+        if split_label in ("all", "blind_holdout")
+        else f"Split provenance: {split_label} (safe for tuning feedback)."
+    )
     return "\n".join(
         [
             "# Next Stage Summary",
             "",
+            f"> {holdout_note}",
+            "",
             "## Current Strengths",
-            f"- Split evaluated: {benchmark['split']}.",
+            f"- Split evaluated: {split_label}.",
             f"- Determinism status: outputs={determinism['stable_outputs']}, rankings={determinism['stable_rankings']}, metrics={determinism['stable_metrics']}.",
             f"- Current exact solve rate with full solver: {full_variant['attempt_1_or_2_exact_rate']:.3f}.",
             f"- Most frequent winning families: {', '.join(f'{name} ({count})' for name, count in strongest[:3]) or 'none'}.",
             "",
             "## Current Weaknesses",
-            f"- Dominant failure classes: {', '.join(f'{name} ({payload['count']})' for name, payload in top_failures[:3]) or 'none'}.",
+            "- Dominant failure classes: {}.".format(
+                ", ".join(f"{name} ({payload['count']})" for name, payload in top_failures[:3]) or "none"
+            ),
             f"- Average uncertainty of winning hypotheses: {aggregate['average_uncertainty']:.3f}.",
             f"- Guardrail-sensitive search load: generated={aggregate['average_generated_count']:.2f}, refined={aggregate['average_refined_count']:.2f}.",
             "",
             "## Bottlenecks And Dead Weight",
-            f"- Transform crashes observed: {aggregate['transform_crash_count']}.",
-            f"- Shape mismatch failures observed: {aggregate['shape_mismatch_failure_count']}.",
+            f"- Final task failures: {failures.get('final_task_failure_count', len(top_failures))}.",
+            f"- Candidate transform crashes: {aggregate['transform_crash_count']}.",
+            f"- Shape mismatch rejections (search phase): {aggregate['shape_mismatch_failure_count']}.",
+            f"- Unsupported pattern exits: {failures.get('unsupported_pattern_exit_count', 'n/a')}.",
             f"- Failure tags seen: {', '.join(failures['global_tag_counts'].keys()) or 'none'}.",
             "",
             "## Recommended Priorities",

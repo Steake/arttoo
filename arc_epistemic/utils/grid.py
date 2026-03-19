@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 from dataclasses import dataclass
 from typing import Iterable
 
@@ -51,8 +52,12 @@ class Grid:
     def equals(self, other: "Grid") -> bool:
         return self.shape == other.shape and np.array_equal(self.array, other.array)
 
-    def cache_key(self) -> tuple[tuple[int, ...], ...]:
-        return tuple(tuple(int(cell) for cell in row) for row in self.array.tolist())
+    def cache_key(self) -> tuple[tuple[int, int], bytes]:
+        return (self.array.shape, self.array.tobytes())
+
+    def fingerprint(self) -> str:
+        payload = str(self.array.shape).encode() + self.array.tobytes()
+        return hashlib.sha256(payload).hexdigest()[:16]
 
     def unique_colors(self) -> tuple[int, ...]:
         return tuple(int(color) for color in np.unique(self.array))

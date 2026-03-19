@@ -1,12 +1,18 @@
 {
-  "average_runtime_ms": 13.971607333284433,
+  "average_runtime_ms": 8.965542333347306,
+  "average_winning_belief": 1.0,
+  "average_winning_uncertainty": 0.0,
+  "candidate_transform_failure_count": 0,
   "determinism_pass": true,
   "evaluated_tasks": 3,
   "exact_solve_rate": 1.0,
   "failure_counts_by_class": {},
+  "final_task_failure_count": 0,
   "lift": 0.0,
   "primitive_baseline_solve_rate": 1.0,
+  "shape_mismatch_rejection_count": 24,
   "task_split": "blind_holdout",
-  "timestamp_utc": "2026-03-18T23:45:00.547188+00:00",
-  "worst_case_runtime_ms": 29.375257000083366
+  "timestamp_utc": "2026-03-19T00:41:14.078710+00:00",
+  "unsupported_pattern_exit_count": 0,
+  "worst_case_runtime_ms": 14.414847000011832
 }

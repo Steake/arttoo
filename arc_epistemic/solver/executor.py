@@ -50,7 +50,7 @@ def evaluate_hypothesis(hypothesis: Hypothesis, train: tuple[Example, ...]) -> E
             continue
         similarity = 0.6 * shape_similarity(predicted, example.output) + 0.4 * cell_similarity(predicted, example.output)
         partial_scores.append(similarity)
-        if similarity >= 0.45:
+        if similarity >= 0.3:
             unresolved_count += 1
         else:
             contradiction_count += 1

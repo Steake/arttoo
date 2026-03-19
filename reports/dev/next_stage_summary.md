@@ -1,5 +1,7 @@
 # Next Stage Summary
 
+> Split provenance: dev (safe for tuning feedback).
+
 ## Current Strengths
 - Split evaluated: dev.
 - Determinism status: outputs=True, rankings=True, metrics=True.
@@ -12,8 +14,10 @@
 - Guardrail-sensitive search load: generated=9.62, refined=29.25.
 
 ## Bottlenecks And Dead Weight
-- Transform crashes observed: 0.
-- Shape mismatch failures observed: 90.
+- Final task failures: 0.
+- Candidate transform crashes: 0.
+- Shape mismatch rejections (search phase): 90.
+- Unsupported pattern exits: 0.
 - Failure tags seen: none.
 
 ## Recommended Priorities

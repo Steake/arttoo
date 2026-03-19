@@ -1,14 +1,20 @@
 {
-  "average_runtime_ms": 13.889287499864622,
+  "average_runtime_ms": 5.9452516666548645,
+  "average_winning_belief": 0.5,
+  "average_winning_uncertainty": 0.3333333333333333,
+  "candidate_transform_failure_count": 0,
   "determinism_pass": true,
-  "evaluated_tasks": 4,
-  "exact_solve_rate": 0.25,
+  "evaluated_tasks": 6,
+  "exact_solve_rate": 0.5,
   "failure_counts_by_class": {
     "unsupported_pattern": 3
   },
-  "lift": 0.25,
-  "primitive_baseline_solve_rate": 0.0,
+  "final_task_failure_count": 3,
+  "lift": 0.16666666666666669,
+  "primitive_baseline_solve_rate": 0.3333333333333333,
+  "shape_mismatch_rejection_count": 150,
   "task_split": "regression",
-  "timestamp_utc": "2026-03-18T23:44:59.404879+00:00",
-  "worst_case_runtime_ms": 42.213645999709115
+  "timestamp_utc": "2026-03-19T00:41:12.682975+00:00",
+  "unsupported_pattern_exit_count": 3,
+  "worst_case_runtime_ms": 14.307336999991094
 }
