@@ -9,7 +9,14 @@ from pathlib import Path
 from arc_epistemic.solver.agents import FULL_COAGENCY_CONFIG, LoopDiagnostics, SolverConfig, run_coagency_loop
 from arc_epistemic.solver.executor import apply_hypothesis
 from arc_epistemic.solver.hypotheses import Hypothesis
-from arc_epistemic.solver.output_competition import output_uncertainty, select_top_two_output_classes, serialize_output_supports
+from arc_epistemic.solver.output_competition import (
+    output_entropy,
+    output_margin,
+    output_uncertainty,
+    select_top_two_diversity_aware_output_classes,
+    select_top_two_output_classes,
+    serialize_output_supports,
+)
 from arc_epistemic.solver.parser import Task, load_tasks
 from arc_epistemic.solver.selection import select_top_two
 from arc_epistemic.solver.submission import write_submission
@@ -44,12 +51,26 @@ def solve_task_with_diagnostics(task: Task, config: SolverConfig = FULL_COAGENCY
     selected_hypotheses: list[str] = []
     selection_telemetry: dict[str, object] = {"mode": "single_best_hypothesis"}
     for test_case in task.test:
-        if config.use_output_aggregation:
+        if config.use_output_aggregation and config.use_diversity_aware_output_selection:
+            first_hypothesis, second_hypothesis, supports = select_top_two_diversity_aware_output_classes(ranked, test_case.input)
+            selection_telemetry = {
+                "mode": "output_aggregation_diversity",
+                "output_supports": list(serialize_output_supports(supports)),
+                "output_uncertainty": round(output_uncertainty(supports), 6),
+                "output_entropy": round(output_entropy(supports), 6),
+                "output_margin": round(output_margin(supports), 6),
+                "winner_changed_vs_single_best": bool(
+                    ranked and first_hypothesis and ranked[0].description != first_hypothesis.description
+                ),
+            }
+        elif config.use_output_aggregation:
             first_hypothesis, second_hypothesis, supports = select_top_two_output_classes(ranked, test_case.input)
             selection_telemetry = {
                 "mode": "output_aggregation",
                 "output_supports": list(serialize_output_supports(supports)),
                 "output_uncertainty": round(output_uncertainty(supports), 6),
+                "output_entropy": round(output_entropy(supports), 6),
+                "output_margin": round(output_margin(supports), 6),
                 "winner_changed_vs_single_best": bool(
                     ranked and first_hypothesis and ranked[0].description != first_hypothesis.description
                 ),

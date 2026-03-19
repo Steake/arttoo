@@ -1,0 +1,127 @@
+{
+  "task_id": "holdout_v5_control_03_task",
+  "train": [
+    {
+      "input": [
+        [
+          9,
+          7,
+          5
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          4,
+          6,
+          8
+        ]
+      ],
+      "output": [
+        [
+          5,
+          7,
+          9
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          8,
+          6,
+          4
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          9,
+          9,
+          7
+        ],
+        [
+          5,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      "output": [
+        [
+          7,
+          9,
+          9
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          6,
+          4,
+          2
+        ]
+      ]
+    }
+  ],
+  "test": [
+    {
+      "input": [
+        [
+          8,
+          6,
+          4
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          5,
+          7,
+          9
+        ]
+      ]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [
+        [
+          4,
+          6,
+          8
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          9,
+          7,
+          5
+        ]
+      ]
+    ],
+    "ranking_prefix": [
+      "flip_horizontal"
+    ],
+    "notes": "Control task for blind_holdout_v5: sensible selectors should agree and solve this cleanly.",
+    "expect_exact": true,
+    "failure_tags": [
+      "control"
+    ]
+  }
+}

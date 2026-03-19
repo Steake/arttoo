@@ -38,6 +38,7 @@ class SolverConfig:
     use_epistemic_scoring: bool
     use_refinement: bool
     use_output_aggregation: bool = False
+    use_diversity_aware_output_selection: bool = False
     use_margin_gated_refinement: bool = False
     first_pass_keep: int = FIRST_PASS_KEEP
     second_pass_keep: int = SECOND_PASS_KEEP
@@ -45,6 +46,7 @@ class SolverConfig:
     max_refined_hypotheses: int = MAX_REFINED_HYPOTHESES
     max_total_evaluations: int = MAX_TOTAL_EVALUATIONS
     contested_margin_threshold: float = 0.25
+    contested_entropy_threshold: float = 0.55
     contested_output_keep: int = 2
 
 
@@ -331,6 +333,7 @@ def refine_hypotheses(task: Task, survivors: list[Hypothesis], config: SolverCon
 def run_coagency_loop(task: Task, config: SolverConfig = FULL_COAGENCY_CONFIG) -> LoopResult:
     guardrail_messages: list[str] = []
     train_count = len(task.train)
+    output_strategy = "diversity" if config.use_diversity_aware_output_selection else "mass"
 
     generated = generate_hypotheses(task, config=config)
     if len(generated) > config.max_generated_hypotheses:
@@ -357,7 +360,9 @@ def run_coagency_loop(task: Task, config: SolverConfig = FULL_COAGENCY_CONFIG) -
                 survivors,
                 task.test[0].input,
                 margin_threshold=config.contested_margin_threshold,
+                entropy_threshold=config.contested_entropy_threshold,
                 keep_outputs=config.contested_output_keep,
+                strategy=output_strategy,
             )
 
     refined: list[Hypothesis] = []

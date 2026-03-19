@@ -1,0 +1,151 @@
+{
+  "diversity_quality_valid": true,
+  "frozen_overall_solve_rates": {
+    "M0": 0.4444,
+    "M1": 0.4444,
+    "M2": 0.7778,
+    "M3": 0.7222,
+    "M4": 0.6667,
+    "R_anchor": 0.4444
+  },
+  "generated_at_utc": "2026-03-19T05:45:12.790717+00:00",
+  "m2_vs_m0_selector_divergence_frozen": {
+    "ci_lower": 1.0,
+    "ci_upper": 1.0,
+    "estimate": 1.0,
+    "mcnemar_p": 0.001496,
+    "mcnemar_statistic": 10.083333,
+    "method_a": "M0",
+    "method_b": "M2",
+    "name": "m2_vs_m0",
+    "paired_counts": {
+      "both": 0,
+      "neither": 0,
+      "only_a": 0,
+      "only_b": 12
+    },
+    "solve_rate_a": 0.0,
+    "solve_rate_b": 1.0
+  },
+  "m3_vs_m2_diversity_frozen": {
+    "ci_lower": 1.0,
+    "ci_upper": 1.0,
+    "estimate": 1.0,
+    "mcnemar_p": 0.013328,
+    "mcnemar_statistic": 6.125,
+    "method_a": "M2",
+    "method_b": "M3",
+    "name": "m3_vs_m2",
+    "paired_counts": {
+      "both": 0,
+      "neither": 0,
+      "only_a": 0,
+      "only_b": 8
+    },
+    "solve_rate_a": 0.0,
+    "solve_rate_b": 1.0
+  },
+  "m4_vs_anchor_efficiency_native": {
+    "refined_hypotheses": {
+      "ci_lower": -15.6667,
+      "ci_upper": -11.3333,
+      "estimate": -13.5,
+      "field": "refined_hypotheses",
+      "mean_a": 30.0,
+      "mean_b": 16.5,
+      "method_a": "R_anchor",
+      "method_b": "M4",
+      "name": "m4_vs_anchor_refined_hypotheses"
+    },
+    "refined_output_classes": {
+      "ci_lower": 1.6389,
+      "ci_upper": 1.9167,
+      "estimate": 1.7778,
+      "field": "refined_output_classes",
+      "mean_a": 0.0,
+      "mean_b": 1.7778,
+      "method_a": "R_anchor",
+      "method_b": "M4",
+      "name": "m4_vs_anchor_refined_output_classes"
+    },
+    "runtime_ms": {
+      "ci_lower": -1.1261,
+      "ci_upper": -0.477,
+      "estimate": -0.8,
+      "field": "runtime_ms",
+      "mean_a": 4.8635,
+      "mean_b": 4.0635,
+      "method_a": "R_anchor",
+      "method_b": "M4",
+      "name": "m4_vs_anchor_runtime_ms"
+    },
+    "scored_hypotheses": {
+      "ci_lower": -15.6667,
+      "ci_upper": -11.3333,
+      "estimate": -13.5,
+      "field": "scored_hypotheses",
+      "mean_a": 36.8056,
+      "mean_b": 23.3056,
+      "method_a": "R_anchor",
+      "method_b": "M4",
+      "name": "m4_vs_anchor_scored_hypotheses"
+    },
+    "solve_rate": {
+      "ci_lower": 0.0,
+      "ci_upper": 0.3889,
+      "estimate": 0.1944,
+      "mcnemar_p": 0.096092,
+      "mcnemar_statistic": 2.769231,
+      "method_a": "R_anchor",
+      "method_b": "M4",
+      "name": "m4_vs_anchor_solve_rate",
+      "paired_counts": {
+        "both": 13,
+        "neither": 10,
+        "only_a": 3,
+        "only_b": 10
+      },
+      "solve_rate_a": 0.4444,
+      "solve_rate_b": 0.6389
+    }
+  },
+  "methods": {
+    "M0": "single_best_point_estimate",
+    "M1": "local_epistemic_single_best",
+    "M2": "output_mass_selector",
+    "M3": "output_mass_diversity_selector",
+    "M4": "output_mass_diversity_margin_gated",
+    "R_anchor": "broad_refinement_anchor"
+  },
+  "native_overall_solve_rates": {
+    "M0": 0.4444,
+    "M1": 0.4444,
+    "M2": 0.75,
+    "M3": 0.7222,
+    "M4": 0.6389,
+    "R_anchor": 0.4444
+  },
+  "primary_dataset": "blind_holdout_v5",
+  "selector_divergence_quality_valid": true,
+  "split": "blind_holdout_v5",
+  "verdict": {
+    "conviction_level": "high",
+    "diversity_changed_answer": 18,
+    "efficiency_gain": "proven_strongly",
+    "falsified": [
+      "diversity-aware selection is not a generally safe replacement for refinement-composition tasks on this benchmark"
+    ],
+    "generated_at_utc": "2026-03-19T05:45:12.790698+00:00",
+    "output_selection_changed_answer": 12,
+    "proven_strongly": [
+      "output-level selection has an independent causal effect on selector_divergence tasks",
+      "diversity-aware coalition support has an independent causal effect on diversity_sensitive tasks",
+      "margin-gated refinement reduces compute while preserving accuracy"
+    ],
+    "selector_divergence_exercised": true,
+    "status": "proven_strongly",
+    "suggestive": [],
+    "summary": "blind_holdout_v5 passed the mechanism-exercise gates. Uncertainty verdict: proven_strongly. Efficiency verdict: proven_strongly.",
+    "uncertainty_causal_effect": "proven_strongly"
+  }
+}

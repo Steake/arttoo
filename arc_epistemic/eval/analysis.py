@@ -204,6 +204,8 @@ def _telemetry(result: SolveResult, expected: Grid, runtime_ms: float = 0.0) -> 
         "output_confidence": {
             "selection_mode": result.selection_telemetry.get("mode", "single_best_hypothesis"),
             "output_uncertainty": result.selection_telemetry.get("output_uncertainty", 1.0),
+            "output_entropy": result.selection_telemetry.get("output_entropy", 1.0),
+            "output_margin": result.selection_telemetry.get("output_margin", 0.0),
             "winner_changed_vs_single_best": result.selection_telemetry.get("winner_changed_vs_single_best", False),
             "output_supports": result.selection_telemetry.get("output_supports", []),
         },

@@ -1,0 +1,927 @@
+{
+  "frozen": {
+    "control": {
+      "m2_vs_m0": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M0",
+        "method_b": "M2",
+        "name": "m2_vs_m0",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m2_vs_m1": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M1",
+        "method_b": "M2",
+        "name": "m2_vs_m1",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m3_vs_m2": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M2",
+        "method_b": "M3",
+        "name": "m3_vs_m2",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m4_vs_anchor": {
+        "ci_lower": -0.75,
+        "ci_upper": -0.125,
+        "estimate": -0.375,
+        "mcnemar_p": 0.248213,
+        "mcnemar_statistic": 1.333333,
+        "method_a": "R_anchor",
+        "method_b": "M4",
+        "name": "m4_vs_anchor",
+        "paired_counts": {
+          "both": 5,
+          "neither": 0,
+          "only_a": 3,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 0.625
+      },
+      "m4_vs_m3": {
+        "ci_lower": -0.75,
+        "ci_upper": -0.125,
+        "estimate": -0.375,
+        "mcnemar_p": 0.248213,
+        "mcnemar_statistic": 1.333333,
+        "method_a": "M3",
+        "method_b": "M4",
+        "name": "m4_vs_m3",
+        "paired_counts": {
+          "both": 5,
+          "neither": 0,
+          "only_a": 3,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 0.625
+      }
+    },
+    "diversity_sensitive": {
+      "m2_vs_m0": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M0",
+        "method_b": "M2",
+        "name": "m2_vs_m0",
+        "paired_counts": {
+          "both": 0,
+          "neither": 8,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "m2_vs_m1": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M1",
+        "method_b": "M2",
+        "name": "m2_vs_m1",
+        "paired_counts": {
+          "both": 0,
+          "neither": 8,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "m3_vs_m2": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "method_a": "M2",
+        "method_b": "M3",
+        "name": "m3_vs_m2",
+        "paired_counts": {
+          "both": 0,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 8
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "m4_vs_anchor": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "R_anchor",
+        "method_b": "M4",
+        "name": "m4_vs_anchor",
+        "paired_counts": {
+          "both": 0,
+          "neither": 8,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "m4_vs_m3": {
+        "ci_lower": -1.0,
+        "ci_upper": -1.0,
+        "estimate": -1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "method_a": "M3",
+        "method_b": "M4",
+        "name": "m4_vs_m3",
+        "paired_counts": {
+          "both": 0,
+          "neither": 0,
+          "only_a": 8,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 0.0
+      }
+    },
+    "overall": {
+      "m2_vs_m0": {
+        "ci_lower": 0.1667,
+        "ci_upper": 0.5,
+        "estimate": 0.3333,
+        "mcnemar_p": 0.001496,
+        "mcnemar_statistic": 10.083333,
+        "method_a": "M0",
+        "method_b": "M2",
+        "name": "m2_vs_m0",
+        "paired_counts": {
+          "both": 16,
+          "neither": 8,
+          "only_a": 0,
+          "only_b": 12
+        },
+        "solve_rate_a": 0.4444,
+        "solve_rate_b": 0.7778
+      },
+      "m2_vs_m1": {
+        "ci_lower": 0.1667,
+        "ci_upper": 0.5,
+        "estimate": 0.3333,
+        "mcnemar_p": 0.001496,
+        "mcnemar_statistic": 10.083333,
+        "method_a": "M1",
+        "method_b": "M2",
+        "name": "m2_vs_m1",
+        "paired_counts": {
+          "both": 16,
+          "neither": 8,
+          "only_a": 0,
+          "only_b": 12
+        },
+        "solve_rate_a": 0.4444,
+        "solve_rate_b": 0.7778
+      },
+      "m3_vs_m2": {
+        "ci_lower": -0.2778,
+        "ci_upper": 0.1944,
+        "estimate": -0.0556,
+        "mcnemar_p": 0.813664,
+        "mcnemar_statistic": 0.055556,
+        "method_a": "M2",
+        "method_b": "M3",
+        "name": "m3_vs_m2",
+        "paired_counts": {
+          "both": 18,
+          "neither": 0,
+          "only_a": 10,
+          "only_b": 8
+        },
+        "solve_rate_a": 0.7778,
+        "solve_rate_b": 0.7222
+      },
+      "m4_vs_anchor": {
+        "ci_lower": 0.0278,
+        "ci_upper": 0.4167,
+        "estimate": 0.2222,
+        "mcnemar_p": 0.061369,
+        "mcnemar_statistic": 3.5,
+        "method_a": "R_anchor",
+        "method_b": "M4",
+        "name": "m4_vs_anchor",
+        "paired_counts": {
+          "both": 13,
+          "neither": 9,
+          "only_a": 3,
+          "only_b": 11
+        },
+        "solve_rate_a": 0.4444,
+        "solve_rate_b": 0.6667
+      },
+      "m4_vs_m3": {
+        "ci_lower": -0.3056,
+        "ci_upper": 0.1944,
+        "estimate": -0.0556,
+        "mcnemar_p": 0.823063,
+        "mcnemar_statistic": 0.05,
+        "method_a": "M3",
+        "method_b": "M4",
+        "name": "m4_vs_m3",
+        "paired_counts": {
+          "both": 15,
+          "neither": 1,
+          "only_a": 11,
+          "only_b": 9
+        },
+        "solve_rate_a": 0.7222,
+        "solve_rate_b": 0.6667
+      }
+    },
+    "refinement_composition": {
+      "m2_vs_m0": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M0",
+        "method_b": "M2",
+        "name": "m2_vs_m0",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m2_vs_m1": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M1",
+        "method_b": "M2",
+        "name": "m2_vs_m1",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m3_vs_m2": {
+        "ci_lower": -1.0,
+        "ci_upper": -1.0,
+        "estimate": -1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "method_a": "M2",
+        "method_b": "M3",
+        "name": "m3_vs_m2",
+        "paired_counts": {
+          "both": 0,
+          "neither": 0,
+          "only_a": 8,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 0.0
+      },
+      "m4_vs_anchor": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "R_anchor",
+        "method_b": "M4",
+        "name": "m4_vs_anchor",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m4_vs_m3": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "method_a": "M3",
+        "method_b": "M4",
+        "name": "m4_vs_m3",
+        "paired_counts": {
+          "both": 0,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 8
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      }
+    },
+    "selector_divergence": {
+      "m2_vs_m0": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "estimate": 1.0,
+        "mcnemar_p": 0.001496,
+        "mcnemar_statistic": 10.083333,
+        "method_a": "M0",
+        "method_b": "M2",
+        "name": "m2_vs_m0",
+        "paired_counts": {
+          "both": 0,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 12
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "m2_vs_m1": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "estimate": 1.0,
+        "mcnemar_p": 0.001496,
+        "mcnemar_statistic": 10.083333,
+        "method_a": "M1",
+        "method_b": "M2",
+        "name": "m2_vs_m1",
+        "paired_counts": {
+          "both": 0,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 12
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "m3_vs_m2": {
+        "ci_lower": -0.4167,
+        "ci_upper": 0.0,
+        "estimate": -0.1667,
+        "mcnemar_p": 0.4795,
+        "mcnemar_statistic": 0.5,
+        "method_a": "M2",
+        "method_b": "M3",
+        "name": "m3_vs_m2",
+        "paired_counts": {
+          "both": 10,
+          "neither": 0,
+          "only_a": 2,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 0.8333
+      },
+      "m4_vs_anchor": {
+        "ci_lower": 0.75,
+        "ci_upper": 1.0,
+        "estimate": 0.9167,
+        "mcnemar_p": 0.002569,
+        "mcnemar_statistic": 9.090909,
+        "method_a": "R_anchor",
+        "method_b": "M4",
+        "name": "m4_vs_anchor",
+        "paired_counts": {
+          "both": 0,
+          "neither": 1,
+          "only_a": 0,
+          "only_b": 11
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.9167
+      },
+      "m4_vs_m3": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.25,
+        "estimate": 0.0833,
+        "mcnemar_p": 1.0,
+        "mcnemar_statistic": 0.0,
+        "method_a": "M3",
+        "method_b": "M4",
+        "name": "m4_vs_m3",
+        "paired_counts": {
+          "both": 10,
+          "neither": 1,
+          "only_a": 0,
+          "only_b": 1
+        },
+        "solve_rate_a": 0.8333,
+        "solve_rate_b": 0.9167
+      }
+    }
+  },
+  "generated_at_utc": "2026-03-19T05:45:12.569140+00:00",
+  "native": {
+    "control": {
+      "m2_vs_m0": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M0",
+        "method_b": "M2",
+        "name": "m2_vs_m0",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m2_vs_m1": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M1",
+        "method_b": "M2",
+        "name": "m2_vs_m1",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m3_vs_m2": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M2",
+        "method_b": "M3",
+        "name": "m3_vs_m2",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m4_vs_anchor": {
+        "ci_lower": -0.75,
+        "ci_upper": -0.125,
+        "estimate": -0.375,
+        "mcnemar_p": 0.248213,
+        "mcnemar_statistic": 1.333333,
+        "method_a": "R_anchor",
+        "method_b": "M4",
+        "name": "m4_vs_anchor",
+        "paired_counts": {
+          "both": 5,
+          "neither": 0,
+          "only_a": 3,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 0.625
+      },
+      "m4_vs_m3": {
+        "ci_lower": -0.75,
+        "ci_upper": -0.125,
+        "estimate": -0.375,
+        "mcnemar_p": 0.248213,
+        "mcnemar_statistic": 1.333333,
+        "method_a": "M3",
+        "method_b": "M4",
+        "name": "m4_vs_m3",
+        "paired_counts": {
+          "both": 5,
+          "neither": 0,
+          "only_a": 3,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 0.625
+      }
+    },
+    "diversity_sensitive": {
+      "m2_vs_m0": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M0",
+        "method_b": "M2",
+        "name": "m2_vs_m0",
+        "paired_counts": {
+          "both": 0,
+          "neither": 8,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "m2_vs_m1": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M1",
+        "method_b": "M2",
+        "name": "m2_vs_m1",
+        "paired_counts": {
+          "both": 0,
+          "neither": 8,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "m3_vs_m2": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "method_a": "M2",
+        "method_b": "M3",
+        "name": "m3_vs_m2",
+        "paired_counts": {
+          "both": 0,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 8
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "m4_vs_anchor": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "R_anchor",
+        "method_b": "M4",
+        "name": "m4_vs_anchor",
+        "paired_counts": {
+          "both": 0,
+          "neither": 8,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "m4_vs_m3": {
+        "ci_lower": -1.0,
+        "ci_upper": -1.0,
+        "estimate": -1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "method_a": "M3",
+        "method_b": "M4",
+        "name": "m4_vs_m3",
+        "paired_counts": {
+          "both": 0,
+          "neither": 0,
+          "only_a": 8,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 0.0
+      }
+    },
+    "overall": {
+      "m2_vs_m0": {
+        "ci_lower": 0.1667,
+        "ci_upper": 0.4722,
+        "estimate": 0.3056,
+        "mcnemar_p": 0.002569,
+        "mcnemar_statistic": 9.090909,
+        "method_a": "M0",
+        "method_b": "M2",
+        "name": "m2_vs_m0",
+        "paired_counts": {
+          "both": 16,
+          "neither": 9,
+          "only_a": 0,
+          "only_b": 11
+        },
+        "solve_rate_a": 0.4444,
+        "solve_rate_b": 0.75
+      },
+      "m2_vs_m1": {
+        "ci_lower": 0.1667,
+        "ci_upper": 0.4722,
+        "estimate": 0.3056,
+        "mcnemar_p": 0.002569,
+        "mcnemar_statistic": 9.090909,
+        "method_a": "M1",
+        "method_b": "M2",
+        "name": "m2_vs_m1",
+        "paired_counts": {
+          "both": 16,
+          "neither": 9,
+          "only_a": 0,
+          "only_b": 11
+        },
+        "solve_rate_a": 0.4444,
+        "solve_rate_b": 0.75
+      },
+      "m3_vs_m2": {
+        "ci_lower": -0.25,
+        "ci_upper": 0.1944,
+        "estimate": -0.0278,
+        "mcnemar_p": 1.0,
+        "mcnemar_statistic": 0.0,
+        "method_a": "M2",
+        "method_b": "M3",
+        "name": "m3_vs_m2",
+        "paired_counts": {
+          "both": 18,
+          "neither": 1,
+          "only_a": 9,
+          "only_b": 8
+        },
+        "solve_rate_a": 0.75,
+        "solve_rate_b": 0.7222
+      },
+      "m4_vs_anchor": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.3889,
+        "estimate": 0.1944,
+        "mcnemar_p": 0.096092,
+        "mcnemar_statistic": 2.769231,
+        "method_a": "R_anchor",
+        "method_b": "M4",
+        "name": "m4_vs_anchor",
+        "paired_counts": {
+          "both": 13,
+          "neither": 10,
+          "only_a": 3,
+          "only_b": 10
+        },
+        "solve_rate_a": 0.4444,
+        "solve_rate_b": 0.6389
+      },
+      "m4_vs_m3": {
+        "ci_lower": -0.3333,
+        "ci_upper": 0.1389,
+        "estimate": -0.0833,
+        "mcnemar_p": 0.646355,
+        "mcnemar_statistic": 0.210526,
+        "method_a": "M3",
+        "method_b": "M4",
+        "name": "m4_vs_m3",
+        "paired_counts": {
+          "both": 15,
+          "neither": 2,
+          "only_a": 11,
+          "only_b": 8
+        },
+        "solve_rate_a": 0.7222,
+        "solve_rate_b": 0.6389
+      }
+    },
+    "refinement_composition": {
+      "m2_vs_m0": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M0",
+        "method_b": "M2",
+        "name": "m2_vs_m0",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m2_vs_m1": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M1",
+        "method_b": "M2",
+        "name": "m2_vs_m1",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m3_vs_m2": {
+        "ci_lower": -1.0,
+        "ci_upper": -1.0,
+        "estimate": -1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "method_a": "M2",
+        "method_b": "M3",
+        "name": "m3_vs_m2",
+        "paired_counts": {
+          "both": 0,
+          "neither": 0,
+          "only_a": 8,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 0.0
+      },
+      "m4_vs_anchor": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "R_anchor",
+        "method_b": "M4",
+        "name": "m4_vs_anchor",
+        "paired_counts": {
+          "both": 8,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "m4_vs_m3": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "method_a": "M3",
+        "method_b": "M4",
+        "name": "m4_vs_m3",
+        "paired_counts": {
+          "both": 0,
+          "neither": 0,
+          "only_a": 0,
+          "only_b": 8
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      }
+    },
+    "selector_divergence": {
+      "m2_vs_m0": {
+        "ci_lower": 0.75,
+        "ci_upper": 1.0,
+        "estimate": 0.9167,
+        "mcnemar_p": 0.002569,
+        "mcnemar_statistic": 9.090909,
+        "method_a": "M0",
+        "method_b": "M2",
+        "name": "m2_vs_m0",
+        "paired_counts": {
+          "both": 0,
+          "neither": 1,
+          "only_a": 0,
+          "only_b": 11
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.9167
+      },
+      "m2_vs_m1": {
+        "ci_lower": 0.75,
+        "ci_upper": 1.0,
+        "estimate": 0.9167,
+        "mcnemar_p": 0.002569,
+        "mcnemar_statistic": 9.090909,
+        "method_a": "M1",
+        "method_b": "M2",
+        "name": "m2_vs_m1",
+        "paired_counts": {
+          "both": 0,
+          "neither": 1,
+          "only_a": 0,
+          "only_b": 11
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.9167
+      },
+      "m3_vs_m2": {
+        "ci_lower": -0.25,
+        "ci_upper": 0.0,
+        "estimate": -0.0833,
+        "mcnemar_p": 1.0,
+        "mcnemar_statistic": 0.0,
+        "method_a": "M2",
+        "method_b": "M3",
+        "name": "m3_vs_m2",
+        "paired_counts": {
+          "both": 10,
+          "neither": 1,
+          "only_a": 1,
+          "only_b": 0
+        },
+        "solve_rate_a": 0.9167,
+        "solve_rate_b": 0.8333
+      },
+      "m4_vs_anchor": {
+        "ci_lower": 0.5833,
+        "ci_upper": 1.0,
+        "estimate": 0.8333,
+        "mcnemar_p": 0.004427,
+        "mcnemar_statistic": 8.1,
+        "method_a": "R_anchor",
+        "method_b": "M4",
+        "name": "m4_vs_anchor",
+        "paired_counts": {
+          "both": 0,
+          "neither": 2,
+          "only_a": 0,
+          "only_b": 10
+        },
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.8333
+      },
+      "m4_vs_m3": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "method_a": "M3",
+        "method_b": "M4",
+        "name": "m4_vs_m3",
+        "paired_counts": {
+          "both": 10,
+          "neither": 2,
+          "only_a": 0,
+          "only_b": 0
+        },
+        "solve_rate_a": 0.8333,
+        "solve_rate_b": 0.8333
+      }
+    }
+  }
+}

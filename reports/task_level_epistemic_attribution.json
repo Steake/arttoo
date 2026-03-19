@@ -1,0 +1,902 @@
+[
+  {
+    "category": "all_agree_correct",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "control",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_control_01_task"
+  },
+  {
+    "category": "all_agree_correct",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "control",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_control_02_task"
+  },
+  {
+    "category": "all_agree_correct",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "control",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_control_03_task"
+  },
+  {
+    "category": "all_agree_correct",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "control",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_control_04_task"
+  },
+  {
+    "category": "all_agree_correct",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "control",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_control_05_task"
+  },
+  {
+    "category": "refinement_anchor_best",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": false,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "control",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": false,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_control_06_task"
+  },
+  {
+    "category": "refinement_anchor_best",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": false,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "control",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": false,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_control_07_task"
+  },
+  {
+    "category": "refinement_anchor_best",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": false,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "control",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": false,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_control_08_task"
+  },
+  {
+    "category": "diversity_aware_only_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "diversity_sensitive",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_diversity_sensitive_01_task"
+  },
+  {
+    "category": "diversity_aware_only_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "diversity_sensitive",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_diversity_sensitive_02_task"
+  },
+  {
+    "category": "diversity_aware_only_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "diversity_sensitive",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_diversity_sensitive_03_task"
+  },
+  {
+    "category": "diversity_aware_only_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "diversity_sensitive",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_diversity_sensitive_04_task"
+  },
+  {
+    "category": "diversity_aware_only_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "diversity_sensitive",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_diversity_sensitive_05_task"
+  },
+  {
+    "category": "diversity_aware_only_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "diversity_sensitive",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_diversity_sensitive_06_task"
+  },
+  {
+    "category": "diversity_aware_only_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "diversity_sensitive",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_diversity_sensitive_07_task"
+  },
+  {
+    "category": "diversity_aware_only_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "diversity_sensitive",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": true,
+      "M4": false,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_diversity_sensitive_08_task"
+  },
+  {
+    "category": "diversity_hurt",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "refinement_composition",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_refinement_composition_01_task"
+  },
+  {
+    "category": "diversity_hurt",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "refinement_composition",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_refinement_composition_02_task"
+  },
+  {
+    "category": "diversity_hurt",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "refinement_composition",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_refinement_composition_03_task"
+  },
+  {
+    "category": "diversity_hurt",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "refinement_composition",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_refinement_composition_04_task"
+  },
+  {
+    "category": "diversity_hurt",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "refinement_composition",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_refinement_composition_05_task"
+  },
+  {
+    "category": "diversity_hurt",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "refinement_composition",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_refinement_composition_06_task"
+  },
+  {
+    "category": "diversity_hurt",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "refinement_composition",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_refinement_composition_07_task"
+  },
+  {
+    "category": "diversity_hurt",
+    "frozen_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "frozen_selector_disagreement_m0_m2": false,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "refinement_composition",
+    "native_correctness": {
+      "M0": true,
+      "M1": true,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": true
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_refinement_composition_08_task"
+  },
+  {
+    "category": "epistemic_package_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_selector_divergence_01_task"
+  },
+  {
+    "category": "epistemic_package_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_selector_divergence_02_task"
+  },
+  {
+    "category": "epistemic_package_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_selector_divergence_03_task"
+  },
+  {
+    "category": "output_mass_only_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": false,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": false,
+      "M3": false,
+      "M4": false,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": false,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_selector_divergence_04_task"
+  },
+  {
+    "category": "output_mass_only_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": false,
+      "M4": false,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": true,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": false,
+      "M4": false,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": true,
+    "task_id": "holdout_v5_selector_divergence_05_task"
+  },
+  {
+    "category": "epistemic_package_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_selector_divergence_06_task"
+  },
+  {
+    "category": "epistemic_package_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_selector_divergence_07_task"
+  },
+  {
+    "category": "epistemic_package_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_selector_divergence_08_task"
+  },
+  {
+    "category": "epistemic_package_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_selector_divergence_09_task"
+  },
+  {
+    "category": "epistemic_package_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_selector_divergence_10_task"
+  },
+  {
+    "category": "epistemic_package_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_selector_divergence_11_task"
+  },
+  {
+    "category": "epistemic_package_gain",
+    "frozen_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "frozen_selector_disagreement_m0_m2": true,
+    "frozen_selector_disagreement_m2_m3": false,
+    "manifest_family": "selector_divergence",
+    "native_correctness": {
+      "M0": false,
+      "M1": false,
+      "M2": true,
+      "M3": true,
+      "M4": true,
+      "R_anchor": false
+    },
+    "native_selector_disagreement_m0_m2": true,
+    "native_selector_disagreement_m2_m3": false,
+    "task_id": "holdout_v5_selector_divergence_12_task"
+  }
+]
