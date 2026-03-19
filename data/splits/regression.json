@@ -1,0 +1,11 @@
+{
+  "task_ids": [
+    "ambiguous_competing_regression_task",
+    "crop_rotate_task",
+    "object_count_mismatch_regression_task",
+    "shape_mismatch_regression_task",
+    "unsupported_pattern_task",
+    "unsupported_pattern_three_objects_task",
+    "unsupported_pattern_four_objects_task"
+  ]
+}

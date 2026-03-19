@@ -1,0 +1,151 @@
+{
+  "task_id": "holdout_v3_refine_largest_rotate180_02_task",
+  "train": [
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "output": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          4,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "output": [
+        [
+          4,
+          4
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    }
+  ],
+  "test": [
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          6
+        ]
+      ]
+    ],
+    "ranking_prefix": [
+      "largest_object -> rotate180"
+    ],
+    "notes": "Requires extracting the largest connected object and then rotating it 180 degrees. The distractor pixel prevents crop_to_content from being correct.",
+    "expect_exact": true,
+    "failure_tags": [
+      "composition_failure"
+    ]
+  }
+}

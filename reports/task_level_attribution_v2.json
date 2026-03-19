@@ -1,0 +1,2450 @@
+[
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "crop_to_content -> flip_horizontal",
+      "crop_to_content -> rotate270",
+      "crop_to_content -> rotate90",
+      "crop_to_content",
+      "identity -> crop_to_content"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "refinement_composition",
+    "manifest_family": "refinement_composition",
+    "notes": "Requires crop_to_content composed with flip_horizontal. Pure crop and pure flip are both wrong on the padded inputs.",
+    "point_estimate_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 0.03,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.5134,
+      "C01": 1.5191,
+      "C10": 4.41,
+      "C11": 4.319
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_refine_crop_flip_h_01_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": -0.41000000000000003,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "crop_to_content -> flip_horizontal",
+      "crop_to_content -> rotate270",
+      "crop_to_content -> rotate90",
+      "crop_to_content",
+      "identity -> crop_to_content"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "refinement_composition",
+    "manifest_family": "refinement_composition",
+    "notes": "Requires crop_to_content composed with flip_horizontal. Pure crop and pure flip are both wrong on the padded inputs.",
+    "point_estimate_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 0.03,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.5272,
+      "C01": 1.5006,
+      "C10": 4.3583,
+      "C11": 4.2786
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_refine_crop_flip_h_02_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": -0.41000000000000003,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "crop_to_content -> flip_horizontal",
+      "crop_to_content -> rotate270",
+      "crop_to_content -> rotate90",
+      "crop_to_content",
+      "identity -> crop_to_content"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "refinement_composition",
+    "manifest_family": "refinement_composition",
+    "notes": "Requires crop_to_content composed with flip_horizontal. Pure crop and pure flip are both wrong on the padded inputs.",
+    "point_estimate_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 0.03,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.5624,
+      "C01": 1.5283,
+      "C10": 4.3457,
+      "C11": 4.2809
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_refine_crop_flip_h_03_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": -0.41000000000000003,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "crop_to_content -> rotate90",
+      "crop_to_content -> flip_horizontal",
+      "crop_to_content -> flip_vertical",
+      "crop_to_content",
+      "identity -> crop_to_content"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "refinement_composition",
+    "manifest_family": "refinement_composition",
+    "notes": "Requires crop_to_content composed with rotate90. Primitive baseline fails because crop alone preserves orientation and rotate90 alone preserves padding.",
+    "point_estimate_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 0.03,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.5755,
+      "C01": 1.5337,
+      "C10": 4.3583,
+      "C11": 4.3601
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_refine_crop_rotate90_01_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": -0.41000000000000003,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "crop_to_content -> rotate90",
+      "crop_to_content -> flip_horizontal",
+      "crop_to_content -> flip_vertical",
+      "crop_to_content",
+      "identity -> crop_to_content"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "refinement_composition",
+    "manifest_family": "refinement_composition",
+    "notes": "Requires crop_to_content composed with rotate90. Primitive baseline fails because crop alone preserves orientation and rotate90 alone preserves padding.",
+    "point_estimate_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 0.03,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.5451,
+      "C01": 1.5519,
+      "C10": 4.3563,
+      "C11": 4.2767
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_refine_crop_rotate90_02_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": -0.41000000000000003,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "crop_to_content -> rotate90",
+      "crop_to_content -> flip_horizontal",
+      "crop_to_content -> flip_vertical",
+      "crop_to_content",
+      "identity -> crop_to_content"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "refinement_composition",
+    "manifest_family": "refinement_composition",
+    "notes": "Requires crop_to_content composed with rotate90. Primitive baseline fails because crop alone preserves orientation and rotate90 alone preserves padding.",
+    "point_estimate_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 0.03,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.5357,
+      "C01": 1.5272,
+      "C10": 4.489,
+      "C11": 4.2363
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_refine_crop_rotate90_03_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "crop_to_content",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": -0.41000000000000003,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "largest_object -> rotate180",
+      "largest_object",
+      "largest_object -> crop_to_content",
+      "largest_object -> flip_horizontal",
+      "largest_object -> flip_vertical"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "refinement_composition",
+    "manifest_family": "refinement_composition",
+    "notes": "Requires extracting the largest connected object and then rotating it 180 degrees. The distractor pixel prevents crop_to_content from being correct.",
+    "point_estimate_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": 0.04000000000000001,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.296,
+      "C01": 1.2935,
+      "C10": 4.0215,
+      "C11": 3.8973
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_refine_largest_rotate180_01_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": -0.38,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "largest_object -> rotate180",
+      "largest_object",
+      "largest_object -> crop_to_content",
+      "largest_object -> flip_horizontal",
+      "largest_object -> flip_vertical"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "refinement_composition",
+    "manifest_family": "refinement_composition",
+    "notes": "Requires extracting the largest connected object and then rotating it 180 degrees. The distractor pixel prevents crop_to_content from being correct.",
+    "point_estimate_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": 0.04000000000000001,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.2689,
+      "C01": 1.2668,
+      "C10": 3.9701,
+      "C11": 3.949
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_refine_largest_rotate180_02_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": -0.38,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "control_all_agree",
+    "candidate_identities_or_families": [
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "rotate180",
+        "family": "symmetry"
+      },
+      {
+        "description": "rotate270",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": true,
+      "C01": true,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": null,
+      "C01": null,
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "flip_horizontal",
+      "identity -> flip_horizontal",
+      "crop_to_content -> flip_horizontal",
+      "flip_horizontal -> crop_to_content",
+      "rotate180 -> flip_vertical"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 45
+    },
+    "intended_primary_mechanism": "control",
+    "manifest_family": "control",
+    "notes": "Pure flip_horizontal control task. No refinement or uncertainty effect is intended.",
+    "point_estimate_first_pass_ordering": [
+      "flip_horizontal",
+      "identity",
+      "crop_to_content",
+      "rotate180",
+      "rotate270"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "flip_horizontal",
+      "disbelief": 0.0,
+      "family": "symmetry",
+      "score": 1.05,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": false,
+    "runtime_ms_by_condition": {
+      "C00": 9.5597,
+      "C01": 1.7291,
+      "C10": 4.9661,
+      "C11": 4.998
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_control_flip_horizontal_01_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "flip_horizontal",
+      "identity",
+      "crop_to_content",
+      "rotate180",
+      "rotate270"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "flip_horizontal",
+      "disbelief": 0.0,
+      "family": "symmetry",
+      "score": 1.15,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 9
+  },
+  {
+    "attribution_category_v2": "control_all_agree",
+    "candidate_identities_or_families": [
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "rotate180",
+        "family": "symmetry"
+      },
+      {
+        "description": "rotate270",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": true,
+      "C01": true,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": null,
+      "C01": null,
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "flip_horizontal",
+      "identity -> flip_horizontal",
+      "crop_to_content -> flip_horizontal",
+      "flip_horizontal -> crop_to_content",
+      "rotate180 -> flip_vertical"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 45
+    },
+    "intended_primary_mechanism": "control",
+    "manifest_family": "control",
+    "notes": "Pure flip_horizontal control task. No refinement or uncertainty effect is intended.",
+    "point_estimate_first_pass_ordering": [
+      "flip_horizontal",
+      "identity",
+      "crop_to_content",
+      "rotate180",
+      "rotate270"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "flip_horizontal",
+      "disbelief": 0.0,
+      "family": "symmetry",
+      "score": 1.05,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": false,
+    "runtime_ms_by_condition": {
+      "C00": 1.8489,
+      "C01": 1.7074,
+      "C10": 4.9051,
+      "C11": 4.8683
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_control_flip_horizontal_02_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "flip_horizontal",
+      "identity",
+      "crop_to_content",
+      "rotate180",
+      "rotate270"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "flip_horizontal",
+      "disbelief": 0.0,
+      "family": "symmetry",
+      "score": 1.15,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 9
+  },
+  {
+    "attribution_category_v2": "control_all_agree",
+    "candidate_identities_or_families": [
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "rotate180",
+        "family": "symmetry"
+      },
+      {
+        "description": "rotate270",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": true,
+      "C01": true,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": null,
+      "C01": null,
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "flip_horizontal",
+      "identity -> flip_horizontal",
+      "crop_to_content -> flip_horizontal",
+      "flip_horizontal -> crop_to_content",
+      "rotate180 -> flip_vertical"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 45
+    },
+    "intended_primary_mechanism": "control",
+    "manifest_family": "control",
+    "notes": "Pure flip_horizontal control task. No refinement or uncertainty effect is intended.",
+    "point_estimate_first_pass_ordering": [
+      "flip_horizontal",
+      "identity",
+      "crop_to_content",
+      "rotate180",
+      "rotate270"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "flip_horizontal",
+      "disbelief": 0.0,
+      "family": "symmetry",
+      "score": 1.05,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": false,
+    "runtime_ms_by_condition": {
+      "C00": 1.8025,
+      "C01": 1.672,
+      "C10": 5.0614,
+      "C11": 4.83
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_control_flip_horizontal_03_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "flip_horizontal",
+      "identity",
+      "crop_to_content",
+      "rotate180",
+      "rotate270"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "flip_horizontal",
+      "disbelief": 0.0,
+      "family": "symmetry",
+      "score": 1.15,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 9
+  },
+  {
+    "attribution_category_v2": "control_all_agree",
+    "candidate_identities_or_families": [
+      {
+        "description": "translate_to_origin",
+        "family": "geometry"
+      },
+      {
+        "description": "rotate180",
+        "family": "symmetry"
+      },
+      {
+        "description": "rotate270",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": true,
+      "C01": true,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": null,
+      "C01": null,
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "translate_to_origin",
+      "flip_horizontal -> rotate270",
+      "flip_vertical -> rotate90",
+      "rotate270 -> flip_vertical",
+      "rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 45
+    },
+    "intended_primary_mechanism": "control",
+    "manifest_family": "control",
+    "notes": "Pure translate_to_origin control task. No first-pass disagreement is intended.",
+    "point_estimate_first_pass_ordering": [
+      "translate_to_origin",
+      "rotate180",
+      "rotate270",
+      "flip_vertical",
+      "identity"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "translate_to_origin",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 1.05,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": false,
+    "runtime_ms_by_condition": {
+      "C00": 1.3612,
+      "C01": 1.3544,
+      "C10": 4.5392,
+      "C11": 4.3948
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_control_translate_to_origin_01_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "translate_to_origin",
+      "rotate180",
+      "rotate270",
+      "flip_vertical",
+      "identity"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "translate_to_origin",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 1.15,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 9
+  },
+  {
+    "attribution_category_v2": "control_all_agree",
+    "candidate_identities_or_families": [
+      {
+        "description": "translate_to_origin",
+        "family": "geometry"
+      },
+      {
+        "description": "rotate180",
+        "family": "symmetry"
+      },
+      {
+        "description": "rotate270",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": true,
+      "C01": true,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": null,
+      "C01": null,
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "translate_to_origin",
+      "flip_horizontal -> rotate270",
+      "flip_vertical -> rotate90",
+      "rotate270 -> flip_vertical",
+      "rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 45
+    },
+    "intended_primary_mechanism": "control",
+    "manifest_family": "control",
+    "notes": "Pure translate_to_origin control task. No first-pass disagreement is intended.",
+    "point_estimate_first_pass_ordering": [
+      "translate_to_origin",
+      "rotate180",
+      "rotate270",
+      "flip_vertical",
+      "identity"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "translate_to_origin",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 1.05,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": false,
+    "runtime_ms_by_condition": {
+      "C00": 1.3373,
+      "C01": 1.3481,
+      "C10": 4.2998,
+      "C11": 4.3277
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_control_translate_to_origin_02_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "translate_to_origin",
+      "rotate180",
+      "rotate270",
+      "flip_vertical",
+      "identity"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "translate_to_origin",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 1.15,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 9
+  },
+  {
+    "attribution_category_v2": "control_all_agree",
+    "candidate_identities_or_families": [
+      {
+        "description": "translate_to_origin",
+        "family": "geometry"
+      },
+      {
+        "description": "rotate180",
+        "family": "symmetry"
+      },
+      {
+        "description": "rotate270",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": true,
+      "C01": true,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": null,
+      "C01": null,
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "translate_to_origin",
+      "flip_horizontal -> rotate270",
+      "flip_vertical -> rotate90",
+      "rotate270 -> flip_vertical",
+      "rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 45
+    },
+    "intended_primary_mechanism": "control",
+    "manifest_family": "control",
+    "notes": "Pure translate_to_origin control task. No first-pass disagreement is intended.",
+    "point_estimate_first_pass_ordering": [
+      "translate_to_origin",
+      "rotate180",
+      "rotate270",
+      "flip_vertical",
+      "identity"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "translate_to_origin",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 1.05,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": false,
+    "runtime_ms_by_condition": {
+      "C00": 1.3461,
+      "C01": 1.3152,
+      "C10": 4.4629,
+      "C11": 4.2711
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_control_translate_to_origin_03_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "translate_to_origin",
+      "rotate180",
+      "rotate270",
+      "flip_vertical",
+      "identity"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "translate_to_origin",
+      "disbelief": 0.0,
+      "family": "geometry",
+      "score": 1.15,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 9
+  },
+  {
+    "attribution_category_v2": "control_all_agree",
+    "candidate_identities_or_families": [
+      {
+        "description": "tile_1x2",
+        "family": "patterns"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": true,
+      "C01": true,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": null,
+      "C01": null,
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "tile_1x2",
+      "tile_1x2 -> crop_to_content",
+      "tile_1x2 -> flip_vertical",
+      "tile_1x2 -> flip_horizontal",
+      "tile_1x2 -> rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 10,
+      "with_refinement_pool": 28
+    },
+    "intended_primary_mechanism": "control",
+    "manifest_family": "control",
+    "notes": "Pure tiling control task with repeat factor 1x2.",
+    "point_estimate_first_pass_ordering": [
+      "tile_1x2",
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "tile_1x2",
+      "disbelief": 0.0,
+      "family": "patterns",
+      "score": 1.05,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": false,
+    "runtime_ms_by_condition": {
+      "C00": 1.2387,
+      "C01": 1.1885,
+      "C10": 3.7838,
+      "C11": 4.1489
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_control_tile_1x2_01_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "tile_1x2",
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "tile_1x2",
+      "disbelief": 0.0,
+      "family": "patterns",
+      "score": 1.15,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 3
+  },
+  {
+    "attribution_category_v2": "control_all_agree",
+    "candidate_identities_or_families": [
+      {
+        "description": "tile_1x2",
+        "family": "patterns"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": true,
+      "C01": true,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": null,
+      "C01": null,
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "tile_1x2",
+      "tile_1x2 -> crop_to_content",
+      "tile_1x2 -> flip_vertical",
+      "tile_1x2 -> flip_horizontal",
+      "tile_1x2 -> rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 10,
+      "with_refinement_pool": 28
+    },
+    "intended_primary_mechanism": "control",
+    "manifest_family": "control",
+    "notes": "Pure tiling control task with repeat factor 1x2.",
+    "point_estimate_first_pass_ordering": [
+      "tile_1x2",
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "tile_1x2",
+      "disbelief": 0.0,
+      "family": "patterns",
+      "score": 1.05,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": false,
+    "runtime_ms_by_condition": {
+      "C00": 1.1949,
+      "C01": 1.1484,
+      "C10": 3.8094,
+      "C11": 3.8539
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_control_tile_1x2_02_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "tile_1x2",
+      "crop_to_content",
+      "largest_object",
+      "identity",
+      "flip_horizontal"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 1.0,
+      "contradiction_count": 0,
+      "description": "tile_1x2",
+      "disbelief": 0.0,
+      "family": "patterns",
+      "score": 1.15,
+      "support_count": 2,
+      "uncertainty": 0.0,
+      "unresolved_count": 0
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 3
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "largest_object -> flip_horizontal",
+      "largest_object -> rotate270",
+      "largest_object",
+      "largest_object -> crop_to_content",
+      "largest_object -> rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "ranking_conflict",
+    "manifest_family": "ranking_conflict",
+    "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal.",
+    "point_estimate_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": 0.04111111111111111,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.4325,
+      "C01": 1.3422,
+      "C10": 4.1659,
+      "C11": 4.1248
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_ranking_conflict_01_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": -0.3766666666666667,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "largest_object -> flip_horizontal",
+      "largest_object -> rotate270",
+      "largest_object",
+      "largest_object -> crop_to_content",
+      "largest_object -> rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "ranking_conflict",
+    "manifest_family": "ranking_conflict",
+    "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal.",
+    "point_estimate_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": 0.04111111111111111,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.3319,
+      "C01": 1.3314,
+      "C10": 4.48,
+      "C11": 4.0861
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_ranking_conflict_02_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": -0.3766666666666667,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "largest_object -> flip_horizontal",
+      "largest_object -> rotate270",
+      "largest_object",
+      "largest_object -> crop_to_content",
+      "largest_object -> rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "ranking_conflict",
+    "manifest_family": "ranking_conflict",
+    "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal.",
+    "point_estimate_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": 0.04111111111111111,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.3201,
+      "C01": 1.2903,
+      "C10": 4.1423,
+      "C11": 4.1011
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_ranking_conflict_03_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": -0.3766666666666667,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "largest_object -> flip_horizontal",
+      "largest_object -> rotate270",
+      "largest_object",
+      "largest_object -> crop_to_content",
+      "largest_object -> rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "ranking_conflict",
+    "manifest_family": "ranking_conflict",
+    "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal.",
+    "point_estimate_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": 0.04111111111111111,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.3773,
+      "C01": 1.2881,
+      "C10": 4.1114,
+      "C11": 4.0911
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_ranking_conflict_04_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": -0.3766666666666667,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "largest_object -> flip_horizontal",
+      "largest_object -> rotate270",
+      "largest_object",
+      "largest_object -> crop_to_content",
+      "largest_object -> rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "ranking_conflict",
+    "manifest_family": "ranking_conflict",
+    "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal.",
+    "point_estimate_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": 0.04111111111111111,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.3101,
+      "C01": 1.3017,
+      "C10": 4.1287,
+      "C11": 4.1353
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_ranking_conflict_05_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": -0.3766666666666667,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "largest_object -> flip_horizontal",
+      "largest_object -> rotate270",
+      "largest_object",
+      "largest_object -> crop_to_content",
+      "largest_object -> rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "ranking_conflict",
+    "manifest_family": "ranking_conflict",
+    "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal.",
+    "point_estimate_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": 0.04111111111111111,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.3193,
+      "C01": 1.3063,
+      "C10": 4.122,
+      "C11": 4.1017
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_ranking_conflict_06_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": -0.3766666666666667,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "largest_object -> flip_horizontal",
+      "largest_object -> rotate270",
+      "largest_object",
+      "largest_object -> crop_to_content",
+      "largest_object -> rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "ranking_conflict",
+    "manifest_family": "ranking_conflict",
+    "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal.",
+    "point_estimate_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": 0.04111111111111111,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.3039,
+      "C01": 1.2899,
+      "C10": 4.1883,
+      "C11": 4.1113
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_ranking_conflict_07_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": -0.3766666666666667,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  },
+  {
+    "attribution_category_v2": "refinement_only_gain",
+    "candidate_identities_or_families": [
+      {
+        "description": "largest_object",
+        "family": "objects"
+      },
+      {
+        "description": "crop_to_content",
+        "family": "geometry"
+      },
+      {
+        "description": "identity",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_horizontal",
+        "family": "symmetry"
+      },
+      {
+        "description": "flip_vertical",
+        "family": "symmetry"
+      }
+    ],
+    "condition_correctness": {
+      "C00": false,
+      "C01": false,
+      "C10": true,
+      "C11": true
+    },
+    "failure_class_by_condition": {
+      "C00": "no_candidate_solution",
+      "C01": "no_candidate_solution",
+      "C10": null,
+      "C11": null
+    },
+    "final_ordering_after_refinement": [
+      "largest_object -> flip_horizontal",
+      "largest_object -> rotate270",
+      "largest_object",
+      "largest_object -> crop_to_content",
+      "largest_object -> rotate180"
+    ],
+    "frozen_candidate_pool_size": {
+      "primitive_pool": 9,
+      "with_refinement_pool": 27
+    },
+    "intended_primary_mechanism": "ranking_conflict",
+    "manifest_family": "ranking_conflict",
+    "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal.",
+    "point_estimate_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "point_estimate_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": 0.04111111111111111,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "ranking_conflict_occurred": false,
+    "refinement_changed_winner": true,
+    "runtime_ms_by_condition": {
+      "C00": 1.3356,
+      "C01": 1.3296,
+      "C10": 4.1826,
+      "C11": 4.0867
+    },
+    "synergy_gain": false,
+    "task_id": "holdout_v3_ranking_conflict_08_task",
+    "uncertainty_aware_first_pass_ordering": [
+      "largest_object",
+      "crop_to_content",
+      "identity",
+      "flip_horizontal",
+      "flip_vertical"
+    ],
+    "uncertainty_aware_top_candidate": {
+      "belief": 0.0,
+      "contradiction_count": 0,
+      "description": "largest_object",
+      "disbelief": 0.0,
+      "family": "objects",
+      "score": -0.3766666666666667,
+      "support_count": 0,
+      "uncertainty": 1.0,
+      "unresolved_count": 2
+    },
+    "uncertainty_changed_winner": false,
+    "uncertainty_hurt_correctness": false,
+    "uncertainty_improved_correctness": false,
+    "uncertainty_only_gain": false,
+    "viable_competing_candidates_after_first_pass": 2
+  }
+]

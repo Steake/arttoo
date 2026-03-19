@@ -1,0 +1,26 @@
+{
+  "task_id": "holdout_composition_largest_rotate_task",
+  "train": [
+    {
+      "input": [[0, 0, 0, 0, 0], [0, 1, 1, 0, 0], [0, 1, 0, 0, 0], [0, 2, 0, 0, 0], [0, 0, 0, 0, 0]],
+      "output": [[1, 0], [1, 1]]
+    },
+    {
+      "input": [[0, 0, 0, 0, 0], [0, 3, 3, 0, 0], [0, 3, 0, 0, 0], [0, 2, 0, 0, 0], [0, 0, 0, 0, 0]],
+      "output": [[3, 0], [3, 3]]
+    }
+  ],
+  "test": [
+    {
+      "input": [[0, 0, 0, 0, 0], [0, 5, 5, 0, 0], [0, 5, 0, 0, 0], [0, 2, 0, 0, 0], [0, 0, 0, 0, 0]]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [[5, 0], [5, 5]]
+    ],
+    "ranking_prefix": ["largest_object -> rotate90"],
+    "notes": "Extract the largest connected object (L-shape, ignoring the distractor pixel of color 2), then rotate 90 degrees counter-clockwise. The distractor object prevents naive single-transform solvers. Primitive baseline fails; full epistemic refinement recovers the correct composition.",
+    "expect_exact": true
+  }
+}

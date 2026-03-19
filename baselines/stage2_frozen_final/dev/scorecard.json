@@ -1,0 +1,12 @@
+{
+  "average_runtime_ms": 7.262739875045554,
+  "determinism_pass": true,
+  "evaluated_tasks": 8,
+  "exact_solve_rate": 1.0,
+  "failure_counts_by_class": {},
+  "lift": 0.125,
+  "primitive_baseline_solve_rate": 0.875,
+  "task_split": "dev",
+  "timestamp_utc": "2026-03-18T23:44:58.070689+00:00",
+  "worst_case_runtime_ms": 35.8876360000977
+}

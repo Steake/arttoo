@@ -1,0 +1,44 @@
+{
+  "candidate_transform_failure_count": 0,
+  "failure_classes": {
+    "unsupported_pattern": {
+      "count": 3,
+      "failure_tags": {
+        "known_regression_fixture": 3,
+        "object_count_mismatch": 3,
+        "unsupported_pattern": 3
+      },
+      "representatives": [
+        "unsupported_pattern_four_objects_task",
+        "unsupported_pattern_task",
+        "unsupported_pattern_three_objects_task"
+      ],
+      "split": "all",
+      "suspected_root_cause": "fixture encodes a pattern family not currently covered by available primitives",
+      "task_ids": [
+        "unsupported_pattern_four_objects_task",
+        "unsupported_pattern_task",
+        "unsupported_pattern_three_objects_task"
+      ]
+    }
+  },
+  "final_task_failure_count": 3,
+  "final_task_failure_ids": [
+    "unsupported_pattern_four_objects_task",
+    "unsupported_pattern_task",
+    "unsupported_pattern_three_objects_task"
+  ],
+  "global_tag_counts": {
+    "known_regression_fixture": 3,
+    "object_count_mismatch": 3,
+    "unsupported_pattern": 3
+  },
+  "shape_mismatch_rejection_count": 316,
+  "split": "all",
+  "unsupported_pattern_exit_count": 3,
+  "unsupported_pattern_exit_ids": [
+    "unsupported_pattern_four_objects_task",
+    "unsupported_pattern_task",
+    "unsupported_pattern_three_objects_task"
+  ]
+}

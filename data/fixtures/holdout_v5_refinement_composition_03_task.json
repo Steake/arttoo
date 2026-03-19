@@ -1,0 +1,133 @@
+{
+  "task_id": "holdout_v5_refinement_composition_03_task",
+  "train": [
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "output": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          5,
+          0
+        ],
+        [
+          0,
+          8,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "output": [
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ]
+    }
+  ],
+  "test": [
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          3
+        ]
+      ]
+    ],
+    "ranking_prefix": [
+      "crop_to_content -> flip_horizontal"
+    ],
+    "notes": "Refinement-composition positive control carried into blind_holdout_v5 to keep the benchmark honest about refinement-sensitive gains.",
+    "expect_exact": true,
+    "failure_tags": [
+      "refinement_composition"
+    ]
+  }
+}

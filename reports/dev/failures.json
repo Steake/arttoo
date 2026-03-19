@@ -1,0 +1,11 @@
+{
+  "candidate_transform_failure_count": 0,
+  "failure_classes": {},
+  "final_task_failure_count": 0,
+  "final_task_failure_ids": [],
+  "global_tag_counts": {},
+  "shape_mismatch_rejection_count": 90,
+  "split": "dev",
+  "unsupported_pattern_exit_count": 0,
+  "unsupported_pattern_exit_ids": []
+}

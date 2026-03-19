@@ -1,0 +1,530 @@
+{
+  "category_counts": {
+    "control_all_agree": 8,
+    "refinement_only_gain": 16
+  },
+  "freeze_manifest": {
+    "family_counts": {
+      "control": 8,
+      "ranking_conflict": 8,
+      "refinement_composition": 8
+    },
+    "generated_at_utc": "2026-03-19T04:23:51.250544+00:00",
+    "manifest_hash_sha256": "db98c4fbcd2d27fafda7de11c43734965eb703d24ce9a1a184a46658bd8237fd",
+    "source_paths": {
+      "manifest": "data/splits/blind_holdout_v3_manifest.json",
+      "split": "data/splits/blind_holdout_v3.json"
+    },
+    "split": "blind_holdout_v3",
+    "split_hash_sha256": "62acb1893546787827428a150ee7bbc4cbe541f1221b97b07f8751a100878741",
+    "task_count": 24,
+    "task_ids": [
+      "holdout_v3_refine_crop_flip_h_01_task",
+      "holdout_v3_refine_crop_flip_h_02_task",
+      "holdout_v3_refine_crop_flip_h_03_task",
+      "holdout_v3_refine_crop_rotate90_01_task",
+      "holdout_v3_refine_crop_rotate90_02_task",
+      "holdout_v3_refine_crop_rotate90_03_task",
+      "holdout_v3_refine_largest_rotate180_01_task",
+      "holdout_v3_refine_largest_rotate180_02_task",
+      "holdout_v3_control_flip_horizontal_01_task",
+      "holdout_v3_control_flip_horizontal_02_task",
+      "holdout_v3_control_flip_horizontal_03_task",
+      "holdout_v3_control_translate_to_origin_01_task",
+      "holdout_v3_control_translate_to_origin_02_task",
+      "holdout_v3_control_translate_to_origin_03_task",
+      "holdout_v3_control_tile_1x2_01_task",
+      "holdout_v3_control_tile_1x2_02_task",
+      "holdout_v3_ranking_conflict_01_task",
+      "holdout_v3_ranking_conflict_02_task",
+      "holdout_v3_ranking_conflict_03_task",
+      "holdout_v3_ranking_conflict_04_task",
+      "holdout_v3_ranking_conflict_05_task",
+      "holdout_v3_ranking_conflict_06_task",
+      "holdout_v3_ranking_conflict_07_task",
+      "holdout_v3_ranking_conflict_08_task"
+    ]
+  },
+  "split": "blind_holdout_v3",
+  "summary": {
+    "c00": 0.3333,
+    "c01": 0.3333,
+    "c10": 1.0,
+    "c11": 1.0,
+    "refinement_status": "proven",
+    "uncertainty_status": "still_inconclusive",
+    "uncertainty_winner_changes": 0
+  },
+  "uncertainty_analysis": {
+    "exact_paired_counts": {
+      "native_c01_vs_c00": {
+        "n_ab": 0,
+        "n_ba": 0
+      },
+      "native_c11_vs_c10": {
+        "n_ab": 0,
+        "n_ba": 0
+      }
+    },
+    "factor_evidence": {
+      "conditioned_frozen_contrast": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C10",
+        "condition_b": "C11",
+        "description": "Uncertainty-aware ranking given refinement (C11 \u2212 C10)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c11_vs_c10",
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "conditioned_native_contrast": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C10",
+        "condition_b": "C11",
+        "description": "Uncertainty-aware ranking given refinement (C11 \u2212 C10)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c11_vs_c10",
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "conviction": "low",
+      "directional_consistency_frozen_native": true,
+      "evidence_rule_satisfied": false,
+      "factor": "uncertainty",
+      "gain_category_present": false,
+      "nonzero_successful_reorderings": 0,
+      "one_sided_evidence": {
+        "available": false,
+        "ci_excludes_zero": false,
+        "exact_one_sided": false
+      },
+      "positive_effect": false,
+      "primary_frozen_contrast": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C00",
+        "condition_b": "C01",
+        "description": "Uncertainty-aware ranking without refinement (C01 \u2212 C00)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c01_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "primary_native_contrast": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C00",
+        "condition_b": "C01",
+        "description": "Uncertainty-aware ranking without refinement (C01 \u2212 C00)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c01_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "status": "still_inconclusive",
+      "subset": "ranking_conflict"
+    },
+    "frozen_contrasts": {
+      "c01_vs_c00": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C00",
+        "condition_b": "C01",
+        "description": "Uncertainty-aware ranking without refinement (C01 \u2212 C00)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c01_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "c10_vs_c00": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "condition_a": "C00",
+        "condition_b": "C10",
+        "description": "Refinement without uncertainty-aware ranking (C10 \u2212 C00)",
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "n_ab": 0,
+        "n_ba": 8,
+        "n_concordant": 0,
+        "name": "c10_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "c11_vs_c00": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "condition_a": "C00",
+        "condition_b": "C11",
+        "description": "Full solver versus primitive baseline (C11 \u2212 C00)",
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "n_ab": 0,
+        "n_ba": 8,
+        "n_concordant": 0,
+        "name": "c11_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "c11_vs_c01": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "condition_a": "C01",
+        "condition_b": "C11",
+        "description": "Refinement given uncertainty-aware ranking (C11 \u2212 C01)",
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "n_ab": 0,
+        "n_ba": 8,
+        "n_concordant": 0,
+        "name": "c11_vs_c01",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "c11_vs_c10": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C10",
+        "condition_b": "C11",
+        "description": "Uncertainty-aware ranking given refinement (C11 \u2212 C10)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c11_vs_c10",
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      }
+    },
+    "hurt_count": 0,
+    "improved_correctness_count": 0,
+    "native_contrasts": {
+      "c01_vs_c00": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C00",
+        "condition_b": "C01",
+        "description": "Uncertainty-aware ranking without refinement (C01 \u2212 C00)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c01_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "c10_vs_c00": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "condition_a": "C00",
+        "condition_b": "C10",
+        "description": "Refinement without uncertainty-aware ranking (C10 \u2212 C00)",
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "n_ab": 0,
+        "n_ba": 8,
+        "n_concordant": 0,
+        "name": "c10_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "c11_vs_c00": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "condition_a": "C00",
+        "condition_b": "C11",
+        "description": "Full solver versus primitive baseline (C11 \u2212 C00)",
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "n_ab": 0,
+        "n_ba": 8,
+        "n_concordant": 0,
+        "name": "c11_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "c11_vs_c01": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "condition_a": "C01",
+        "condition_b": "C11",
+        "description": "Refinement given uncertainty-aware ranking (C11 \u2212 C01)",
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "n_ab": 0,
+        "n_ba": 8,
+        "n_concordant": 0,
+        "name": "c11_vs_c01",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "c11_vs_c10": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C10",
+        "condition_b": "C11",
+        "description": "Uncertainty-aware ranking given refinement (C11 \u2212 C10)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c11_vs_c10",
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      }
+    },
+    "point_estimate_vs_uncertainty_first_pass_disagreement_count": 0,
+    "solved_tasks_with_nonzero_winning_uncertainty": 8,
+    "subset": "ranking_conflict",
+    "task_count": 8,
+    "winner_changed_count": 0,
+    "wins_produced_by_uncertainty_that_refinement_alone_did_not": 0
+  },
+  "verdict": {
+    "overall_condition_rates_native": {
+      "C00": {
+        "config_name": "primitive_baseline_only",
+        "solve_count": 8,
+        "solve_rate": 0.3333,
+        "task_count": 24
+      },
+      "C01": {
+        "config_name": "epistemic_no_refinement",
+        "solve_count": 8,
+        "solve_rate": 0.3333,
+        "task_count": 24
+      },
+      "C10": {
+        "config_name": "primitive_plus_bounded_compositions",
+        "solve_count": 24,
+        "solve_rate": 1.0,
+        "task_count": 24
+      },
+      "C11": {
+        "config_name": "full_epistemic_coagency",
+        "solve_count": 24,
+        "solve_rate": 1.0,
+        "task_count": 24
+      }
+    },
+    "overall_conviction": "moderate",
+    "overall_exact_paired_counts": {
+      "c01_vs_c00": {
+        "n_ab": 0,
+        "n_ba": 0
+      },
+      "c10_vs_c00": {
+        "n_ab": 0,
+        "n_ba": 16
+      },
+      "c11_vs_c01": {
+        "n_ab": 0,
+        "n_ba": 16
+      },
+      "c11_vs_c10": {
+        "n_ab": 0,
+        "n_ba": 0
+      }
+    },
+    "overall_status": "supported_but_not_isolated",
+    "refinement": {
+      "conditioned_frozen_contrast": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "condition_a": "C01",
+        "condition_b": "C11",
+        "description": "Refinement given uncertainty-aware ranking (C11 \u2212 C01)",
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "n_ab": 0,
+        "n_ba": 8,
+        "n_concordant": 0,
+        "name": "c11_vs_c01",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "conditioned_native_contrast": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "condition_a": "C01",
+        "condition_b": "C11",
+        "description": "Refinement given uncertainty-aware ranking (C11 \u2212 C01)",
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "n_ab": 0,
+        "n_ba": 8,
+        "n_concordant": 0,
+        "name": "c11_vs_c01",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "conviction": "high",
+      "directional_consistency_frozen_native": true,
+      "evidence_rule_satisfied": true,
+      "factor": "refinement",
+      "gain_category_present": true,
+      "nonzero_successful_reorderings": 8,
+      "one_sided_evidence": {
+        "available": true,
+        "ci_excludes_zero": true,
+        "exact_one_sided": true
+      },
+      "positive_effect": true,
+      "primary_frozen_contrast": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "condition_a": "C00",
+        "condition_b": "C10",
+        "description": "Refinement without uncertainty-aware ranking (C10 \u2212 C00)",
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "n_ab": 0,
+        "n_ba": 8,
+        "n_concordant": 0,
+        "name": "c10_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "primary_native_contrast": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "condition_a": "C00",
+        "condition_b": "C10",
+        "description": "Refinement without uncertainty-aware ranking (C10 \u2212 C00)",
+        "estimate": 1.0,
+        "mcnemar_p": 0.013328,
+        "mcnemar_statistic": 6.125,
+        "n_ab": 0,
+        "n_ba": 8,
+        "n_concordant": 0,
+        "name": "c10_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 1.0
+      },
+      "status": "proven",
+      "subset": "refinement_composition"
+    },
+    "uncertainty": {
+      "conditioned_frozen_contrast": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C10",
+        "condition_b": "C11",
+        "description": "Uncertainty-aware ranking given refinement (C11 \u2212 C10)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c11_vs_c10",
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "conditioned_native_contrast": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C10",
+        "condition_b": "C11",
+        "description": "Uncertainty-aware ranking given refinement (C11 \u2212 C10)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c11_vs_c10",
+        "solve_rate_a": 1.0,
+        "solve_rate_b": 1.0
+      },
+      "conviction": "low",
+      "directional_consistency_frozen_native": true,
+      "evidence_rule_satisfied": false,
+      "factor": "uncertainty",
+      "gain_category_present": false,
+      "nonzero_successful_reorderings": 0,
+      "one_sided_evidence": {
+        "available": false,
+        "ci_excludes_zero": false,
+        "exact_one_sided": false
+      },
+      "positive_effect": false,
+      "primary_frozen_contrast": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C00",
+        "condition_b": "C01",
+        "description": "Uncertainty-aware ranking without refinement (C01 \u2212 C00)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c01_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "primary_native_contrast": {
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "condition_a": "C00",
+        "condition_b": "C01",
+        "description": "Uncertainty-aware ranking without refinement (C01 \u2212 C00)",
+        "estimate": 0.0,
+        "mcnemar_p": null,
+        "mcnemar_statistic": null,
+        "n_ab": 0,
+        "n_ba": 0,
+        "n_concordant": 8,
+        "name": "c01_vs_c00",
+        "solve_rate_a": 0.0,
+        "solve_rate_b": 0.0
+      },
+      "status": "still_inconclusive",
+      "subset": "ranking_conflict"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "task_ids": [
+    "holdout_flip_vertical_task",
+    "holdout_rotate180_task",
+    "holdout_translate_task",
+    "holdout_composition_crop_flip_task",
+    "holdout_composition_largest_rotate_task"
+  ]
+}

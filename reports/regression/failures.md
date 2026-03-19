@@ -1,0 +1,22 @@
+# Failure Summary: regression
+
+| Primary Class | Count | Representatives | Tags | Suspected Root Cause |
+| --- | --- | --- | --- | --- |
+| unsupported_pattern | 3 | unsupported_pattern_four_objects_task, unsupported_pattern_task, unsupported_pattern_three_objects_task | known_regression_fixture:3, object_count_mismatch:3, unsupported_pattern:3 | fixture encodes a pattern family not currently covered by available primitives |
+
+## Failure Category Breakdown
+
+| Category | Count |
+| --- | --- |
+| Final task failures | 3 |
+| Candidate transform failures | 0 |
+| Shape mismatch rejections (search) | 176 |
+| Unsupported pattern exits | 3 |
+
+## Global Tags
+
+| Tag | Count |
+| --- | --- |
+| known_regression_fixture | 3 |
+| object_count_mismatch | 3 |
+| unsupported_pattern | 3 |
