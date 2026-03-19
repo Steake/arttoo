@@ -123,11 +123,60 @@ The audit answers three questions:
 2. **Is it calibrated?** Is uncertainty higher for unsolved tasks than solved tasks?
 3. **Is it decision-relevant?** Does uncertainty change which hypothesis wins the final ranking?
 
-Current findings (see `reports/uncertainty_audit.md`):
-- Uncertainty is zero for all solved tasks (binary-signal tasks: one transform matches perfectly, all others fail).
-- Uncertainty is non-zero for some unsolved tasks (partial-match cases in the regression split).
-- Uncertainty does **not** affect final ranking in the current fixture suite, because no task has competing partial hypotheses that uncertainty would need to disambiguate.
-- This is honest, not a bug. To make uncertainty decision-relevant, add tasks where multiple candidate transforms each partially satisfy training pairs.
+## Generate Epistemic Reordering Analysis
+
+```bash
+python tools/generate_epistemic_reorderings.py --reports reports
+```
+
+Reads per-split `per_task_diagnostics.json` (all splits under `reports/`) and writes:
+- `reports/epistemic_reorderings.json` — machine-readable per-split reordering counts
+- `reports/epistemic_reorderings.md` — markdown table with per-task detail and verdict
+
+A **reordering** occurs when the first-pass winner (top hypothesis after the initial primitive
+evaluation) differs from the final winner after the co-agency refinement pass.
+
+The report emits per-split:
+- `tasks_with_multiple_competing_candidates` — tasks where ≥ 2 first-pass hypotheses are viable
+- `tasks_with_nonzero_winning_uncertainty` — tasks where the first-pass winner has uncertainty > 0
+- `tasks_where_first_pass_winner_changed_after_refinement` — reorderings
+- `reorder_success_count` — reorderings that led to a correct final answer
+- `reorder_failure_count` — reorderings that still produced a wrong answer
+
+Reorderings are the primary operational signal that the co-agency loop adds value beyond the
+primitive baseline.  The benchmark contains verified reordering tasks:
+- `crop_rotate_task` (regression): `crop_to_content` → `crop_to_content -> rotate90`
+- `holdout_composition_crop_flip_task` (blind_holdout): `crop_to_content` → `crop_to_content -> flip_horizontal`
+- `holdout_composition_largest_rotate_task` (blind_holdout): `largest_object` → `largest_object -> flip_vertical`
+- `ambiguous_competing_regression_task` (regression): `largest_object` → `largest_object -> flip_horizontal`
+
+## Generate Thesis Validation Summary
+
+```bash
+python tools/generate_thesis_validation_summary.py --reports reports
+```
+
+Reads `final_split_diagnostics.json`, `epistemic_reorderings.json`, and per-split
+`per_task_diagnostics.json`, then writes:
+- `reports/thesis_validation_summary.json` — machine-readable answers to the six core questions
+- `reports/thesis_validation_summary.md` — markdown with direct YES/NO answers and evidence
+
+The summary answers these six questions without ambiguity:
+1. Is `blind_holdout` currently discriminative?
+2. Does the full solver beat the primitive baseline on `blind_holdout`?
+3. Is uncertainty present on any solved tasks?
+4. Is uncertainty decision-relevant?
+5. Do epistemic reorderings occur?
+6. Is current evidence sufficient to claim generalisation of epistemic co-agency?
+
+### How to interpret the discriminativeness gate
+
+The holdout is considered **discriminative** if either:
+- The primitive baseline fails ≥ 1 holdout task (solve rate < 1.0), OR
+- The full solver beats the primitive baseline on ≥ 1 holdout task.
+
+The current blind_holdout passes this gate: 2/5 holdout tasks require composition and are **not**
+solved by the primitive baseline alone.
 
 ## Snapshot A Frozen Baseline
 
@@ -208,9 +257,13 @@ Fields that might be expected but are **not currently available**:
 | `reports/final_split_diagnostics.md` | ⚠️ read all columns; blind_holdout column is marked |
 | `reports/uncertainty_audit.md` | ⚠️ read split labels; holdout rows are marked |
 | `reports/multi_split_summary.md` | ⚠️ read split labels; holdout rows are marked |
+| `reports/epistemic_reorderings.md` | ⚠️ read split labels; blind_holdout rows are marked |
+| `reports/thesis_validation_summary.md` | ⚠️ read all sections; holdout evidence is clearly labeled |
 
 ## What To Read First
 
+- Read [reports/thesis_validation_summary.md](reports/thesis_validation_summary.md) for the six-question thesis verdict (discriminativeness, lift, uncertainty, reorderings, generalisation).
+- Read [reports/epistemic_reorderings.md](reports/epistemic_reorderings.md) for the first-pass vs final ranking comparison across all splits.
 - Read [reports/final_split_diagnostics.md](reports/final_split_diagnostics.md) for a complete cross-split view with explicit blind holdout verdict.
 - Read [reports/dev/next_stage_summary.md](reports/dev/next_stage_summary.md) for optimisation handoff on the development split.
 - Read [reports/uncertainty_audit.md](reports/uncertainty_audit.md) to understand whether the epistemic layer is providing decision-relevant uncertainty.

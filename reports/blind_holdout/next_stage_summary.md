@@ -6,17 +6,17 @@
 - Split evaluated: blind_holdout.
 - Determinism status: outputs=True, rankings=True, metrics=True.
 - Current exact solve rate with full solver: 1.000.
-- Most frequent winning families: symmetry (2), geometry (1).
+- Most frequent winning families: geometry (2), symmetry (2), objects (1).
 
 ## Current Weaknesses
 - Dominant failure classes: none.
 - Average uncertainty of winning hypotheses: 0.000.
-- Guardrail-sensitive search load: generated=9.33, refined=36.00.
+- Guardrail-sensitive search load: generated=9.20, refined=28.80.
 
 ## Bottlenecks And Dead Weight
 - Final task failures: 0.
 - Candidate transform crashes: 0.
-- Shape mismatch rejections (search phase): 24.
+- Shape mismatch rejections (search phase): 76.
 - Unsupported pattern exits: 0.
 - Failure tags seen: none.
 
@@ -26,5 +26,5 @@
 3. Use blind holdout scorecards to judge whether fixes generalise beyond dev/regression.
 
 ## Thesis Assessment
-- Measured solve-rate lift of full epistemic co-agency over primitive baseline: +0.000.
+- Measured solve-rate lift of full epistemic co-agency over primitive baseline: +0.400.
 - Interpret lift jointly with split-specific scorecards and richer failure telemetry before expanding the approach further.

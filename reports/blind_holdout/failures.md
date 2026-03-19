@@ -10,7 +10,7 @@
 | --- | --- |
 | Final task failures | 0 |
 | Candidate transform failures | 0 |
-| Shape mismatch rejections (search) | 24 |
+| Shape mismatch rejections (search) | 76 |
 | Unsupported pattern exits | 0 |
 
 ## Global Tags

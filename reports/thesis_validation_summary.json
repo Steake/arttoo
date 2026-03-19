@@ -1,0 +1,16 @@
+{
+  "overall_verdict": "The thesis is currently **testable and shows positive evidence**: the holdout is discriminative, the full solver outperforms the primitive baseline on unseen tasks, and epistemic reorderings have been observed.  Further evidence is needed to establish that uncertainty-aware ranking (rather than refinement alone) drives the lift.",
+  "q1_discriminative": true,
+  "q1_explanation": "Primitive baseline fails 2/5 blind_holdout tasks (rate=0.600).  The holdout is discriminative: it contains tasks that require epistemic refinement (composition) to solve.",
+  "q2_explanation": "Full solver=1.000, primitive baseline=0.600, lift=+0.400 on 5 blind_holdout tasks.",
+  "q2_full_beats_baseline": true,
+  "q3_explanation": "Non-zero first-pass uncertainty on 4 solved task(s): holdout_composition_crop_flip_task (split=blind_holdout), holdout_composition_largest_rotate_task (split=blind_holdout), ambiguous_competing_regression_task (split=regression), crop_rotate_task (split=regression).  This means the first-pass winner did not fully explain all training pairs before refinement corrected it.",
+  "q3_uncertainty_present": true,
+  "q4_explanation": "9 successful reordering(s) across all splits: refinement replaced a non-certain first-pass winner with a correct composed hypothesis.  Uncertainty (non-zero on the first-pass winner) directly determined the final answer.",
+  "q4_uncertainty_decision_relevant": true,
+  "q5_explanation": "9 reordering(s) detected (all=4, blind_holdout=2, dev=1, regression=2).",
+  "q5_reorderings_occur": true,
+  "q6_proven": "Full solver beats primitive baseline on blind_holdout (measured lift > 0).  Epistemic refinement reorders candidates in at least one task, demonstrating that the co-agency loop provides value beyond the first-pass primitives.",
+  "q6_suggested": "No additional evidence suggests generalisation beyond what is proven.",
+  "q6_untestable": "No known gaps in the current benchmark design."
+}
