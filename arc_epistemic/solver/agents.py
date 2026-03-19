@@ -318,21 +318,33 @@ def refine_hypotheses(task: Task, survivors: list[Hypothesis], config: SolverCon
 
 
 def run_coagency_loop(task: Task, config: SolverConfig = FULL_COAGENCY_CONFIG) -> LoopResult:
-    generated = generate_hypotheses(task, config=config)
     guardrail_messages: list[str] = []
+    train_count = len(task.train)
+
+    generated = generate_hypotheses(task, config=config)
     if len(generated) > config.max_generated_hypotheses:
-        guardrail_messages.append("generated hypothesis cap exceeded")
+        generated = generated[: config.max_generated_hypotheses]
+        guardrail_messages.append("generated hypothesis cap enforced")
+
     first_pass, first_crashes, first_shape_mismatches = score_hypotheses(task, generated, config=config)
     survivors, first_pruned = critic_prune(first_pass, keep=config.first_pass_keep, config=config)
+
     refined: list[Hypothesis] = []
     if config.use_refinement:
+        # Enforce evaluation budget before expanding refined candidates.
+        first_pass_evals = len(generated) * train_count
+        remaining_budget = config.max_total_evaluations - first_pass_evals
+        max_refined_by_budget = max(0, remaining_budget // max(train_count, 1)) - len(survivors)
+        budget_cap = min(config.max_refined_hypotheses, max(0, max_refined_by_budget))
         refined = refine_hypotheses(task, survivors, config=config)
-    if len(refined) > config.max_refined_hypotheses:
-        guardrail_messages.append("refined hypothesis cap exceeded")
+        if len(refined) > budget_cap:
+            refined = refined[:budget_cap]
+            guardrail_messages.append("refined hypothesis cap enforced")
+
     second_input = survivors + refined if config.use_refinement else survivors
     second_pass, second_crashes, second_shape_mismatches = score_hypotheses(task, second_input, config=config)
     final_survivors, final_pruned = critic_prune(second_pass, keep=config.first_pass_keep, config=config)
-    evaluation_count = (len(generated) + len(second_input)) * len(task.train)
+    evaluation_count = (len(generated) + len(second_input)) * train_count
     if evaluation_count > config.max_total_evaluations:
         guardrail_messages.append("evaluation count cap exceeded")
     diagnostics = LoopDiagnostics(

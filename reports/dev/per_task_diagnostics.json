@@ -20,7 +20,7 @@
         1
       ]
     ],
-    "evaluation_count": 110,
+    "evaluation_count": 112,
     "expected_output": [
       [
         3,
@@ -33,12 +33,12 @@
     ],
     "failure_primary_class": null,
     "failure_tags": [],
-    "first_pass_survivor_count": 9,
+    "first_pass_survivor_count": 10,
     "generated_count": 10,
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 35.8876360000977,
+    "runtime_ms": 15.625609999972312,
     "second_hypothesis": "color_map_[(0, 0), (1, 3), (2, 4)] -> crop_to_content",
     "shape_mismatch_count": 0,
     "split": "dev",
@@ -68,16 +68,7 @@
         "uncertainty": 0.0
       },
       "deterministic_fingerprint": "c785f8a18ec5cf119c7d7e08c3683e6e31c6ccc69c076e8cc93ed6cb05999cb8",
-      "expected_fingerprint": [
-        [
-          3,
-          4
-        ],
-        [
-          0,
-          3
-        ]
-      ],
+      "expected_fingerprint": "5894ac4ea150ee00",
       "final_pruned": [
         {
           "description": "flip_horizontal -> rotate270",
@@ -209,6 +200,10 @@
         },
         {
           "description": "color_map_[(0, 0), (1, 3), (2, 4)] -> flip_vertical",
+          "reason": "keep_cap_reached"
+        },
+        {
+          "description": "largest_object",
           "reason": "keep_cap_reached"
         }
       ],
@@ -752,14 +747,21 @@
           "support_count": 0,
           "uncertainty": 1.0,
           "unresolved_count": 2
-        }
-      ],
-      "first_pass_pruned": [
+        },
         {
+          "belief": 0.0,
+          "complexity": 1,
+          "contradiction_count": 1,
           "description": "largest_object",
-          "reason": "contradiction_dominated"
+          "disbelief": 0.5,
+          "family": "objects",
+          "score": -0.7125,
+          "support_count": 0,
+          "uncertainty": 0.5,
+          "unresolved_count": 1
         }
       ],
+      "first_pass_pruned": [],
       "first_pass_ranking": [
         {
           "belief": 1.0,
@@ -872,14 +874,14 @@
         {
           "belief": 0.0,
           "complexity": 1,
-          "contradiction_count": 2,
+          "contradiction_count": 1,
           "description": "largest_object",
-          "disbelief": 1.0,
+          "disbelief": 0.5,
           "family": "objects",
-          "score": -0.9625,
+          "score": -0.7125,
           "support_count": 0,
-          "uncertainty": 0.0,
-          "unresolved_count": 0
+          "uncertainty": 0.5,
+          "unresolved_count": 1
         }
       ],
       "generated_candidates": [
@@ -941,13 +943,13 @@
         ]
       },
       "step_counts": {
-        "evaluation_count": 110,
+        "evaluation_count": 112,
         "final_survivor_count": 12,
         "first_pass_scored_count": 10,
-        "first_pass_survivor_count": 9,
+        "first_pass_survivor_count": 10,
         "generated_count": 10,
         "refined_count": 36,
-        "second_pass_scored_count": 45
+        "second_pass_scored_count": 46
       }
     },
     "transform_crash_count": 0,
@@ -998,7 +1000,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 2.891761999762821,
+    "runtime_ms": 4.6296069999698375,
     "second_hypothesis": "largest_object",
     "shape_mismatch_count": 26,
     "split": "dev",
@@ -1028,16 +1030,7 @@
         "uncertainty": 0.0
       },
       "deterministic_fingerprint": "ad5c12aee7f8f00b1fd85d1eff9b37e78668eb7459c20a7a69c793d3c42c4aec",
-      "expected_fingerprint": [
-        [
-          4,
-          4
-        ],
-        [
-          4,
-          0
-        ]
-      ],
+      "expected_fingerprint": "82da18e459ee5891",
       "final_pruned": [
         {
           "description": "largest_object -> rotate180",
@@ -1563,7 +1556,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 3.0427070000769163,
+    "runtime_ms": 5.164261000004444,
     "second_hypothesis": "crop_to_content -> flip_horizontal",
     "shape_mismatch_count": 26,
     "split": "dev",
@@ -1593,16 +1586,7 @@
         "uncertainty": 0.0
       },
       "deterministic_fingerprint": "9c9521196e65cb7481b9d3fcf14b8bfdca30ff15e5d3ece232ff347288d27a52",
-      "expected_fingerprint": [
-        [
-          8,
-          9
-        ],
-        [
-          7,
-          0
-        ]
-      ],
+      "expected_fingerprint": "8c7ab496ee507e29",
       "final_pruned": [
         {
           "description": "largest_object",
@@ -2126,7 +2110,7 @@
         4
       ]
     ],
-    "evaluation_count": 114,
+    "evaluation_count": 116,
     "expected_output": [
       [
         4,
@@ -2139,12 +2123,12 @@
     ],
     "failure_primary_class": null,
     "failure_tags": [],
-    "first_pass_survivor_count": 10,
+    "first_pass_survivor_count": 11,
     "generated_count": 11,
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 3.6936620003871212,
+    "runtime_ms": 5.4791960000102335,
     "second_hypothesis": "crop_to_content",
     "shape_mismatch_count": 0,
     "split": "dev",
@@ -2175,16 +2159,7 @@
         "uncertainty": 0.0
       },
       "deterministic_fingerprint": "0c6f08cb73d1f228de92a85f52ed7bb247f3ba98d4a5dd46c40f3f8a3d56a634",
-      "expected_fingerprint": [
-        [
-          4,
-          0
-        ],
-        [
-          0,
-          4
-        ]
-      ],
+      "expected_fingerprint": "0515109eafba0741",
       "final_pruned": [
         {
           "description": "identity -> rotate180",
@@ -2320,6 +2295,10 @@
         },
         {
           "description": "color_map_[(0, 0), (1, 1), (2, 2), (3, 3)] -> flip_vertical",
+          "reason": "keep_cap_reached"
+        },
+        {
+          "description": "largest_object",
           "reason": "keep_cap_reached"
         }
       ],
@@ -2875,14 +2854,21 @@
           "support_count": 0,
           "uncertainty": 1.0,
           "unresolved_count": 2
-        }
-      ],
-      "first_pass_pruned": [
+        },
         {
+          "belief": 0.0,
+          "complexity": 1,
+          "contradiction_count": 1,
           "description": "largest_object",
-          "reason": "contradiction_dominated"
+          "disbelief": 0.5,
+          "family": "objects",
+          "score": -0.7125,
+          "support_count": 0,
+          "uncertainty": 0.5,
+          "unresolved_count": 1
         }
       ],
+      "first_pass_pruned": [],
       "first_pass_ranking": [
         {
           "belief": 1.0,
@@ -3007,14 +2993,14 @@
         {
           "belief": 0.0,
           "complexity": 1,
-          "contradiction_count": 2,
+          "contradiction_count": 1,
           "description": "largest_object",
-          "disbelief": 1.0,
+          "disbelief": 0.5,
           "family": "objects",
-          "score": -0.9625,
+          "score": -0.7125,
           "support_count": 0,
-          "uncertainty": 0.0,
-          "unresolved_count": 0
+          "uncertainty": 0.5,
+          "unresolved_count": 1
         }
       ],
       "generated_candidates": [
@@ -3077,13 +3063,13 @@
         ]
       },
       "step_counts": {
-        "evaluation_count": 114,
+        "evaluation_count": 116,
         "final_survivor_count": 12,
         "first_pass_scored_count": 11,
-        "first_pass_survivor_count": 10,
+        "first_pass_survivor_count": 11,
         "generated_count": 11,
         "refined_count": 36,
-        "second_pass_scored_count": 46
+        "second_pass_scored_count": 47
       }
     },
     "transform_crash_count": 0,
@@ -3140,7 +3126,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 3.0272010003500327,
+    "runtime_ms": 3.9674459999901046,
     "second_hypothesis": "identity -> flip_horizontal",
     "shape_mismatch_count": 24,
     "split": "dev",
@@ -3169,18 +3155,7 @@
         "uncertainty": 0.0
       },
       "deterministic_fingerprint": "f05ca5060a0287fc0e3d79a8ebc31fa19f88e8e15070f9901b748562e75a41a4",
-      "expected_fingerprint": [
-        [
-          2,
-          1,
-          9
-        ],
-        [
-          4,
-          3,
-          0
-        ]
-      ],
+      "expected_fingerprint": "fbfd0c9e1caba2d8",
       "final_pruned": [
         {
           "description": "rotate180",
@@ -3367,26 +3342,26 @@
         {
           "belief": 0.5,
           "complexity": 3,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "crop_to_content -> flip_horizontal",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "geometry",
-          "score": 0.09750000000000003,
+          "score": 0.34750000000000003,
           "support_count": 1,
-          "uncertainty": 0.0,
-          "unresolved_count": 0
+          "uncertainty": 0.5,
+          "unresolved_count": 1
         },
         {
           "belief": 0.5,
           "complexity": 3,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "flip_horizontal -> crop_to_content",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "symmetry",
-          "score": 0.09750000000000003,
+          "score": 0.34750000000000003,
           "support_count": 1,
-          "uncertainty": 0.0,
-          "unresolved_count": 0
+          "uncertainty": 0.5,
+          "unresolved_count": 1
         },
         {
           "belief": 0.0,
@@ -3571,83 +3546,107 @@
         {
           "belief": 0.0,
           "complexity": 1,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "crop_to_content",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "geometry",
-          "score": -0.6725,
+          "score": -0.4225,
           "support_count": 0,
-          "uncertainty": 0.5,
-          "unresolved_count": 1
+          "uncertainty": 1.0,
+          "unresolved_count": 2
         },
         {
           "belief": 0.0,
           "complexity": 2,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "identity -> crop_to_content",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "symmetry",
-          "score": -0.6725,
+          "score": -0.4225,
           "support_count": 0,
-          "uncertainty": 0.5,
-          "unresolved_count": 1
+          "uncertainty": 1.0,
+          "unresolved_count": 2
         },
         {
           "belief": 0.0,
           "complexity": 3,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "crop_to_content -> crop_to_content",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "geometry",
-          "score": -0.6725,
+          "score": -0.4225,
           "support_count": 0,
-          "uncertainty": 0.5,
-          "unresolved_count": 1
+          "uncertainty": 1.0,
+          "unresolved_count": 2
         },
         {
           "belief": 0.0,
           "complexity": 3,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "translate_to_origin -> crop_to_content",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "geometry",
-          "score": -0.6725,
+          "score": -0.4225,
           "support_count": 0,
-          "uncertainty": 0.5,
-          "unresolved_count": 1
+          "uncertainty": 1.0,
+          "unresolved_count": 2
         },
         {
           "belief": 0.0,
           "complexity": 3,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "crop_to_content -> flip_vertical",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "geometry",
-          "score": -0.6825,
+          "score": -0.4325,
           "support_count": 0,
-          "uncertainty": 0.5,
-          "unresolved_count": 1
+          "uncertainty": 1.0,
+          "unresolved_count": 2
         },
         {
           "belief": 0.0,
           "complexity": 3,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "crop_to_content -> rotate180",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "geometry",
-          "score": -0.6825,
+          "score": -0.4325,
           "support_count": 0,
-          "uncertainty": 0.5,
-          "unresolved_count": 1
+          "uncertainty": 1.0,
+          "unresolved_count": 2
         },
         {
           "belief": 0.0,
           "complexity": 3,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "flip_vertical -> crop_to_content",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "symmetry",
-          "score": -0.6825,
+          "score": -0.4325,
+          "support_count": 0,
+          "uncertainty": 1.0,
+          "unresolved_count": 2
+        },
+        {
+          "belief": 0.0,
+          "complexity": 3,
+          "contradiction_count": 0,
+          "description": "rotate180 -> crop_to_content",
+          "disbelief": 0.0,
+          "family": "symmetry",
+          "score": -0.4325,
+          "support_count": 0,
+          "uncertainty": 1.0,
+          "unresolved_count": 2
+        },
+        {
+          "belief": 0.0,
+          "complexity": 3,
+          "contradiction_count": 1,
+          "description": "crop_to_content -> rotate270",
+          "disbelief": 0.5,
+          "family": "geometry",
+          "score": -0.7125,
           "support_count": 0,
           "uncertainty": 0.5,
           "unresolved_count": 1
@@ -3656,37 +3655,13 @@
           "belief": 0.0,
           "complexity": 3,
           "contradiction_count": 1,
-          "description": "rotate180 -> crop_to_content",
+          "description": "crop_to_content -> rotate90",
           "disbelief": 0.5,
-          "family": "symmetry",
-          "score": -0.6825,
+          "family": "geometry",
+          "score": -0.7125,
           "support_count": 0,
           "uncertainty": 0.5,
           "unresolved_count": 1
-        },
-        {
-          "belief": 0.0,
-          "complexity": 3,
-          "contradiction_count": 2,
-          "description": "crop_to_content -> rotate270",
-          "disbelief": 1.0,
-          "family": "geometry",
-          "score": -0.9625,
-          "support_count": 0,
-          "uncertainty": 0.0,
-          "unresolved_count": 0
-        },
-        {
-          "belief": 0.0,
-          "complexity": 3,
-          "contradiction_count": 2,
-          "description": "crop_to_content -> rotate90",
-          "disbelief": 1.0,
-          "family": "geometry",
-          "score": -0.9625,
-          "support_count": 0,
-          "uncertainty": 0.0,
-          "unresolved_count": 0
         },
         {
           "belief": 0.0,
@@ -3887,14 +3862,14 @@
         {
           "belief": 0.0,
           "complexity": 1,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "crop_to_content",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "geometry",
-          "score": -0.6725,
+          "score": -0.4225,
           "support_count": 0,
-          "uncertainty": 0.5,
-          "unresolved_count": 1
+          "uncertainty": 1.0,
+          "unresolved_count": 2
         },
         {
           "belief": 0.0,
@@ -4048,7 +4023,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 3.6571299997376627,
+    "runtime_ms": 4.846579999991718,
     "second_hypothesis": "identity -> rotate90",
     "shape_mismatch_count": 0,
     "split": "dev",
@@ -4077,16 +4052,7 @@
         "uncertainty": 0.0
       },
       "deterministic_fingerprint": "98f6f7edf66f23e3d3f7e8f5d9d3e7b3d451ec1f74bfe757804e4870bdbebd39",
-      "expected_fingerprint": [
-        [
-          1,
-          3
-        ],
-        [
-          9,
-          2
-        ]
-      ],
+      "expected_fingerprint": "fb856030f843c3ca",
       "final_pruned": [
         {
           "description": "flip_horizontal -> crop_to_content",
@@ -5019,7 +4985,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 18,
-    "runtime_ms": 2.4260270001832396,
+    "runtime_ms": 3.191162999996777,
     "second_hypothesis": "tile_2x2 -> flip_horizontal",
     "shape_mismatch_count": 14,
     "split": "dev",
@@ -5050,20 +5016,7 @@
         "uncertainty": 0.0
       },
       "deterministic_fingerprint": "74a33906028b093e32fe2d3498c5e734a8ba53bdfbe52110d7d3834aa5dd9038",
-      "expected_fingerprint": [
-        [
-          5,
-          6,
-          5,
-          6
-        ],
-        [
-          5,
-          6,
-          5,
-          6
-        ]
-      ],
+      "expected_fingerprint": "2ea9e258055e1628",
       "final_pruned": [
         {
           "description": "crop_to_content",
@@ -5170,14 +5123,14 @@
         {
           "belief": 0.5,
           "complexity": 3,
-          "contradiction_count": 1,
+          "contradiction_count": 0,
           "description": "tile_2x2 -> crop_to_content",
-          "disbelief": 0.5,
+          "disbelief": 0.0,
           "family": "patterns",
-          "score": 0.09750000000000003,
+          "score": 0.34750000000000003,
           "support_count": 1,
-          "uncertainty": 0.0,
-          "unresolved_count": 0
+          "uncertainty": 0.5,
+          "unresolved_count": 1
         },
         {
           "belief": 0.0,
@@ -5655,7 +5608,7 @@
     "guardrail_messages": [],
     "guardrail_ok": true,
     "refined_count": 36,
-    "runtime_ms": 3.475793999768939,
+    "runtime_ms": 4.385823999996319,
     "second_hypothesis": "flip_horizontal -> rotate270",
     "shape_mismatch_count": 0,
     "split": "dev",
@@ -5684,23 +5637,7 @@
         "uncertainty": 0.0
       },
       "deterministic_fingerprint": "48b3b336ba31eaf5a53e680972422cd0e3ee39523459ecf7effcdab3b615aed5",
-      "expected_fingerprint": [
-        [
-          7,
-          0,
-          0
-        ],
-        [
-          7,
-          7,
-          0
-        ],
-        [
-          0,
-          0,
-          0
-        ]
-      ],
+      "expected_fingerprint": "625553acfcd52402",
       "final_pruned": [
         {
           "description": "flip_vertical",

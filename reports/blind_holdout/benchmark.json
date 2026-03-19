@@ -8,7 +8,7 @@
     "average_first_pass_survivor_count": 7.333333333333333,
     "average_generated_count": 9.333333333333334,
     "average_refined_count": 36.0,
-    "average_runtime_ms": 13.971607333284433,
+    "average_runtime_ms": 8.885054333328904,
     "average_uncertainty": 0.0,
     "average_winning_score": 1.15,
     "contradiction_dominated_failure_count": 0,
@@ -18,8 +18,8 @@
       "geometry": 1,
       "symmetry": 2
     },
-    "generated_at_utc": "2026-03-18T23:45:00.547188+00:00",
-    "max_runtime_ms": 29.375257000083366,
+    "generated_at_utc": "2026-03-19T00:04:18.211510+00:00",
+    "max_runtime_ms": 14.188457000045673,
     "no_viable_hypothesis_count": 0,
     "shape_mismatch_failure_count": 24,
     "split": "blind_holdout",
@@ -81,7 +81,7 @@
       "guardrail_messages": [],
       "guardrail_ok": true,
       "refined_count": 36,
-      "runtime_ms": 8.744228999603365,
+      "runtime_ms": 14.188457000045673,
       "second_hypothesis": "identity -> flip_vertical",
       "shape_mismatch_count": 24,
       "split": "blind_holdout",
@@ -110,20 +110,7 @@
           "uncertainty": 0.0
         },
         "deterministic_fingerprint": "b7d29acc9c8933f276161d6c6952b2ca279662a74882110eea494f12f45199ae",
-        "expected_fingerprint": [
-          [
-            0,
-            9
-          ],
-          [
-            8,
-            9
-          ],
-          [
-            7,
-            0
-          ]
-        ],
+        "expected_fingerprint": "f71f95cce54bcf01",
         "final_pruned": [
           {
             "description": "flip_horizontal -> flip_horizontal",
@@ -991,7 +978,7 @@
       "guardrail_messages": [],
       "guardrail_ok": true,
       "refined_count": 36,
-      "runtime_ms": 3.7953360001665715,
+      "runtime_ms": 6.552190999968843,
       "second_hypothesis": "identity -> rotate180",
       "shape_mismatch_count": 0,
       "split": "blind_holdout",
@@ -1021,16 +1008,7 @@
           "uncertainty": 0.0
         },
         "deterministic_fingerprint": "17532ef4124f24d834b84a80b13787b964a6804b81c1d1a690950469e561f352",
-        "expected_fingerprint": [
-          [
-            1,
-            0
-          ],
-          [
-            9,
-            8
-          ]
-        ],
+        "expected_fingerprint": "a0c967ac602ce05e",
         "final_pruned": [
           {
             "description": "identity",
@@ -1972,7 +1950,7 @@
       "guardrail_messages": [],
       "guardrail_ok": true,
       "refined_count": 36,
-      "runtime_ms": 29.375257000083366,
+      "runtime_ms": 5.914514999972198,
       "second_hypothesis": "flip_horizontal -> rotate270",
       "shape_mismatch_count": 0,
       "split": "blind_holdout",
@@ -2001,23 +1979,7 @@
           "uncertainty": 0.0
         },
         "deterministic_fingerprint": "7bf681c3a07db6803d78f591a72fcd2efaeb9aab727eee8217f6976588e55e7c",
-        "expected_fingerprint": [
-          [
-            7,
-            7,
-            0
-          ],
-          [
-            0,
-            7,
-            0
-          ],
-          [
-            0,
-            0,
-            0
-          ]
-        ],
+        "expected_fingerprint": "89f751c849a20e36",
         "final_pruned": [
           {
             "description": "translate_to_origin -> flip_vertical",

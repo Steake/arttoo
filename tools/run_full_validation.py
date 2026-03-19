@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from arc_epistemic.eval.fixtures import discover_splits
-from arc_epistemic.eval.reporting import next_stage_summary_markdown, write_json
+from arc_epistemic.eval.reporting import multi_split_summary_markdown, next_stage_summary_markdown, write_json
 
 
 def _run(command: list[str], cwd: Path) -> dict[str, object]:
@@ -119,6 +119,7 @@ def main(argv: list[str] | None = None) -> int:
         lines.append("")
     write_json(reports_dir / "test_results.txt", "\n".join(lines))
 
+    split_scorecards: dict[str, dict[str, object]] = {}
     for split in requested_splits:
         summary_dir = _split_output_dir(reports_dir, split)
         benchmark = json.loads((summary_dir / "benchmark.json").read_text(encoding="utf-8"))
@@ -129,6 +130,17 @@ def main(argv: list[str] | None = None) -> int:
         write_json(
             summary_dir / "next_stage_summary.md",
             next_stage_summary_markdown(benchmark, ablation, failures, determinism),
+        )
+        # Collect scorecard for multi-split summary (A: split-specific reporting)
+        scorecard_path = summary_dir / "scorecard.json"
+        if scorecard_path.exists():
+            split_scorecards[split] = json.loads(scorecard_path.read_text(encoding="utf-8"))
+
+    # Generate the aggregate multi-split summary (A: no more collapsing to "all")
+    if len(split_scorecards) > 1:
+        write_json(
+            reports_dir / "multi_split_summary.md",
+            multi_split_summary_markdown(split_scorecards),
         )
 
     failed = any(results[name]["returncode"] != 0 for name in ("unit_and_integration", "regressions"))

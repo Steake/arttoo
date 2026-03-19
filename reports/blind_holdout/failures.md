@@ -4,6 +4,15 @@
 | --- | --- | --- | --- | --- |
 | none | 0 |  |  |  |
 
+## Failure Category Breakdown
+
+| Category | Count |
+| --- | --- |
+| Final task failures | 0 |
+| Candidate transform failures | 0 |
+| Shape mismatch rejections (search) | 24 |
+| Unsupported pattern exits | 0 |
+
 ## Global Tags
 
 | Tag | Count |

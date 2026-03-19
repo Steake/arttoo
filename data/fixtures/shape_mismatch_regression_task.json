@@ -1,0 +1,27 @@
+{
+  "task_id": "shape_mismatch_regression_task",
+  "train": [
+    {
+      "input": [[0, 1, 1, 0], [0, 0, 0, 0]],
+      "output": [[1, 1]]
+    },
+    {
+      "input": [[0, 0, 2, 2], [0, 0, 0, 0]],
+      "output": [[2, 2]]
+    }
+  ],
+  "test": [
+    {
+      "input": [[3, 3, 0, 0], [0, 0, 0, 0]]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [[3, 3]]
+    ],
+    "ranking_prefix": ["crop_to_content"],
+    "notes": "Cropping to content bbox changes the output shape. Tests that shape-mismatch rejections are counted separately from final task failures.",
+    "expect_exact": true,
+    "failure_tags": []
+  }
+}

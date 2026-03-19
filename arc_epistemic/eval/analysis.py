@@ -200,7 +200,7 @@ def _telemetry(result: SolveResult, expected: Grid) -> dict[str, Any]:
             "final_survivor_count": result.loop_diagnostics.final_survivor_count,
             "evaluation_count": result.loop_diagnostics.evaluation_count,
         },
-        "expected_fingerprint": expected.cache_key(),
+        "expected_fingerprint": expected.fingerprint(),
     }
 
 
@@ -326,12 +326,22 @@ def compare_variants(fixtures: list[FixtureTask], split: str = "all") -> dict[st
 def group_failures(per_task: list[dict[str, object]], split: str = "all") -> dict[str, object]:
     grouped: dict[str, list[dict[str, object]]] = defaultdict(list)
     tag_counts: Counter[str] = Counter()
+    # Separate counters for distinct failure categories (C: failure metric hygiene)
+    final_task_failures: list[str] = []
+    candidate_transform_failures_total = 0
+    shape_mismatch_rejections_total = 0
+    unsupported_pattern_exits: list[str] = []
     for item in per_task:
         primary = item.get("failure_primary_class")
         if primary:
             grouped[str(primary)].append(item)
+            final_task_failures.append(str(item["task_id"]))
+        if str(primary) == "unsupported_pattern":
+            unsupported_pattern_exits.append(str(item["task_id"]))
         for tag in item.get("failure_tags", []):
             tag_counts[str(tag)] += 1
+        candidate_transform_failures_total += int(item.get("transform_crash_count", 0))
+        shape_mismatch_rejections_total += int(item.get("shape_mismatch_count", 0))
     summary = {
         category: {
             "split": split,
@@ -343,7 +353,18 @@ def group_failures(per_task: list[dict[str, object]], split: str = "all") -> dic
         }
         for category, items in sorted(grouped.items())
     }
-    return {"split": split, "failure_classes": summary, "global_tag_counts": dict(sorted(tag_counts.items()))}
+    return {
+        "split": split,
+        "failure_classes": summary,
+        "global_tag_counts": dict(sorted(tag_counts.items())),
+        # Separate hygiene counters (not collapsed into one ambiguous failure_count)
+        "final_task_failure_count": len(final_task_failures),
+        "final_task_failure_ids": sorted(final_task_failures),
+        "candidate_transform_failure_count": candidate_transform_failures_total,
+        "shape_mismatch_rejection_count": shape_mismatch_rejections_total,
+        "unsupported_pattern_exit_count": len(unsupported_pattern_exits),
+        "unsupported_pattern_exit_ids": sorted(unsupported_pattern_exits),
+    }
 
 
 def build_scorecard(
@@ -364,7 +385,15 @@ def build_scorecard(
         "determinism_pass": bool(
             determinism["stable_outputs"] and determinism["stable_rankings"] and determinism["stable_metrics"]
         ),
+        # Separated failure categories (C: failure metric hygiene)
         "failure_counts_by_class": aggregate["failure_primary_class_counts"],
+        "final_task_failure_count": failures.get("final_task_failure_count", 0),
+        "candidate_transform_failure_count": failures.get("candidate_transform_failure_count", 0),
+        "shape_mismatch_rejection_count": failures.get("shape_mismatch_rejection_count", 0),
+        "unsupported_pattern_exit_count": failures.get("unsupported_pattern_exit_count", 0),
+        # Epistemic calibration summary (B: uncertainty audit)
+        "average_winning_uncertainty": aggregate["average_uncertainty"],
+        "average_winning_belief": aggregate["average_belief"],
         "average_runtime_ms": aggregate["average_runtime_ms"],
         "worst_case_runtime_ms": aggregate["max_runtime_ms"],
         "evaluated_tasks": aggregate["task_count"],

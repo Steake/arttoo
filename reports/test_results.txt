@@ -1,23 +1,16 @@
 [unit_and_integration] returncode=0
-............................
+.................................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.113s
+Ran 33 tests in 0.135s
 
 OK
 
 [regressions] returncode=0
 .
 ----------------------------------------------------------------------
-Ran 1 test in 0.020s
+Ran 1 test in 0.036s
 
 OK
-
-[split=all]
-  benchmark: returncode=0
-  ablation: returncode=0
-  determinism: returncode=0
-  failures: returncode=0
-  scorecard: returncode=0
 
 [split=dev]
   benchmark: returncode=0
@@ -34,6 +27,13 @@ OK
   scorecard: returncode=0
 
 [split=blind_holdout]
+  benchmark: returncode=0
+  ablation: returncode=0
+  determinism: returncode=0
+  failures: returncode=0
+  scorecard: returncode=0
+
+[split=all]
   benchmark: returncode=0
   ablation: returncode=0
   determinism: returncode=0

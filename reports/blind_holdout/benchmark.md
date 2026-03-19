@@ -8,8 +8,8 @@
 | Attempt 1 exact rate | 1.000 |
 | Attempt 1 or 2 exact rate | 1.000 |
 | Attempt 2 rescues | 0 |
-| Average runtime ms | 13.972 |
-| Max runtime ms | 29.375 |
+| Average runtime ms | 8.885 |
+| Max runtime ms | 14.188 |
 | Average generated hypotheses | 9.33 |
 | Average first-pass survivors | 7.33 |
 | Average refined hypotheses | 36.00 |
@@ -28,6 +28,6 @@
 
 | Task | Split | Attempt 1 | Solved by Attempt 2 | Runtime ms | Winner | Failure |
 | --- | --- | --- | --- | --- | --- | --- |
-| holdout_flip_vertical_task | blind_holdout | yes | yes | 8.744 | flip_vertical |  |
-| holdout_rotate180_task | blind_holdout | yes | yes | 3.795 | rotate180 |  |
-| holdout_translate_task | blind_holdout | yes | yes | 29.375 | translate_to_origin |  |
+| holdout_flip_vertical_task | blind_holdout | yes | yes | 14.188 | flip_vertical |  |
+| holdout_rotate180_task | blind_holdout | yes | yes | 6.552 | rotate180 |  |
+| holdout_translate_task | blind_holdout | yes | yes | 5.915 | translate_to_origin |  |

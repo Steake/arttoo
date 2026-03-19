@@ -1,5 +1,7 @@
 # Next Stage Summary
 
+> ⚠️  This summary includes blind_holdout data. Do not use these numbers to guide tuning decisions.
+
 ## Current Strengths
 - Split evaluated: blind_holdout.
 - Determinism status: outputs=True, rankings=True, metrics=True.
@@ -12,8 +14,10 @@
 - Guardrail-sensitive search load: generated=9.33, refined=36.00.
 
 ## Bottlenecks And Dead Weight
-- Transform crashes observed: 0.
-- Shape mismatch failures observed: 24.
+- Final task failures: 0.
+- Candidate transform crashes: 0.
+- Shape mismatch rejections (search phase): 24.
+- Unsupported pattern exits: 0.
 - Failure tags seen: none.
 
 ## Recommended Priorities

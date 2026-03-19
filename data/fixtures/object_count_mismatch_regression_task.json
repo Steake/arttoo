@@ -1,0 +1,27 @@
+{
+  "task_id": "object_count_mismatch_regression_task",
+  "train": [
+    {
+      "input": [[0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 2, 0]],
+      "output": [[0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 2, 0]]
+    },
+    {
+      "input": [[3, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 4]],
+      "output": [[3, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 4]]
+    }
+  ],
+  "test": [
+    {
+      "input": [[0, 0, 5, 0, 0, 0], [0, 0, 0, 0, 0, 0], [6, 0, 0, 0, 0, 0]]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [[0, 0, 5, 0, 0, 0], [0, 0, 0, 0, 0, 0], [6, 0, 0, 0, 0, 0]]
+    ],
+    "ranking_prefix": ["identity"],
+    "notes": "Identity task with two separate objects. Tests that multi-object layouts are handled without miscount.",
+    "expect_exact": true,
+    "failure_tags": []
+  }
+}
