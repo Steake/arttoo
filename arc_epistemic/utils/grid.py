@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 from dataclasses import dataclass
 from typing import Iterable
 
@@ -55,7 +56,6 @@ class Grid:
         return (self.array.shape, self.array.tobytes())
 
     def fingerprint(self) -> str:
-        import hashlib
         payload = str(self.array.shape).encode() + self.array.tobytes()
         return hashlib.sha256(payload).hexdigest()[:16]
 
