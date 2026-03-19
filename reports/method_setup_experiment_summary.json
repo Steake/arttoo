@@ -1,5 +1,69 @@
 {
   "diversity_quality_valid": true,
+  "efficiency_frozen": {
+    "refined_hypotheses": {
+      "ci_lower": -15.6667,
+      "ci_upper": -11.3333,
+      "estimate": -13.5,
+      "field": "refined_hypotheses",
+      "mean_a": 30.0,
+      "mean_b": 16.5,
+      "method_a": "R_anchor",
+      "method_b": "M4",
+      "name": "m4_vs_anchor_refined_hypotheses"
+    },
+    "refined_output_classes": {
+      "ci_lower": -6.8889,
+      "ci_upper": -6.3333,
+      "estimate": -6.6111,
+      "field": "refined_output_classes",
+      "mean_a": 8.3889,
+      "mean_b": 1.7778,
+      "method_a": "R_anchor",
+      "method_b": "M4",
+      "name": "m4_vs_anchor_refined_output_classes"
+    },
+    "runtime_ms": {
+      "ci_lower": -1.4831,
+      "ci_upper": -0.9975,
+      "estimate": -1.2441,
+      "field": "runtime_ms",
+      "mean_a": 3.2023,
+      "mean_b": 1.9582,
+      "method_a": "R_anchor",
+      "method_b": "M4",
+      "name": "m4_vs_anchor_runtime_ms"
+    },
+    "scored_hypotheses": {
+      "ci_lower": -15.6667,
+      "ci_upper": -11.3333,
+      "estimate": -13.5,
+      "field": "scored_hypotheses",
+      "mean_a": 36.8056,
+      "mean_b": 23.3056,
+      "method_a": "R_anchor",
+      "method_b": "M4",
+      "name": "m4_vs_anchor_scored_hypotheses"
+    },
+    "solve_rate": {
+      "ci_lower": 0.0278,
+      "ci_upper": 0.4167,
+      "estimate": 0.2222,
+      "mcnemar_p": 0.061369,
+      "mcnemar_statistic": 3.5,
+      "method_a": "R_anchor",
+      "method_b": "M4",
+      "name": "m4_vs_anchor_solve_rate",
+      "paired_counts": {
+        "both": 13,
+        "neither": 9,
+        "only_a": 3,
+        "only_b": 11
+      },
+      "solve_rate_a": 0.4444,
+      "solve_rate_b": 0.6667
+    }
+  },
   "frozen_overall_solve_rates": {
     "M0": 0.4444,
     "M1": 0.4444,
@@ -8,7 +72,43 @@
     "M4": 0.6667,
     "R_anchor": 0.4444
   },
-  "generated_at_utc": "2026-03-19T05:45:12.790717+00:00",
+  "generated_at_utc": "2026-03-19T05:59:56.014752+00:00",
+  "m2_vs_m0_overall_frozen": {
+    "ci_lower": 0.1667,
+    "ci_upper": 0.5,
+    "estimate": 0.3333,
+    "mcnemar_p": 0.001496,
+    "mcnemar_statistic": 10.083333,
+    "method_a": "M0",
+    "method_b": "M2",
+    "name": "m2_vs_m0",
+    "paired_counts": {
+      "both": 16,
+      "neither": 8,
+      "only_a": 0,
+      "only_b": 12
+    },
+    "solve_rate_a": 0.4444,
+    "solve_rate_b": 0.7778
+  },
+  "m2_vs_m0_overall_native": {
+    "ci_lower": 0.1667,
+    "ci_upper": 0.4722,
+    "estimate": 0.3056,
+    "mcnemar_p": 0.002569,
+    "mcnemar_statistic": 9.090909,
+    "method_a": "M0",
+    "method_b": "M2",
+    "name": "m2_vs_m0",
+    "paired_counts": {
+      "both": 16,
+      "neither": 9,
+      "only_a": 0,
+      "only_b": 11
+    },
+    "solve_rate_a": 0.4444,
+    "solve_rate_b": 0.75
+  },
   "m2_vs_m0_selector_divergence_frozen": {
     "ci_lower": 1.0,
     "ci_upper": 1.0,
@@ -27,7 +127,43 @@
     "solve_rate_a": 0.0,
     "solve_rate_b": 1.0
   },
+  "m2_vs_m0_selector_divergence_native": {
+    "ci_lower": 0.75,
+    "ci_upper": 1.0,
+    "estimate": 0.9167,
+    "mcnemar_p": 0.002569,
+    "mcnemar_statistic": 9.090909,
+    "method_a": "M0",
+    "method_b": "M2",
+    "name": "m2_vs_m0",
+    "paired_counts": {
+      "both": 0,
+      "neither": 1,
+      "only_a": 0,
+      "only_b": 11
+    },
+    "solve_rate_a": 0.0,
+    "solve_rate_b": 0.9167
+  },
   "m3_vs_m2_diversity_frozen": {
+    "ci_lower": 1.0,
+    "ci_upper": 1.0,
+    "estimate": 1.0,
+    "mcnemar_p": 0.013328,
+    "mcnemar_statistic": 6.125,
+    "method_a": "M2",
+    "method_b": "M3",
+    "name": "m3_vs_m2",
+    "paired_counts": {
+      "both": 0,
+      "neither": 0,
+      "only_a": 0,
+      "only_b": 8
+    },
+    "solve_rate_a": 0.0,
+    "solve_rate_b": 1.0
+  },
+  "m3_vs_m2_diversity_native": {
     "ci_lower": 1.0,
     "ci_upper": 1.0,
     "estimate": 1.0,
@@ -69,12 +205,12 @@
       "name": "m4_vs_anchor_refined_output_classes"
     },
     "runtime_ms": {
-      "ci_lower": -1.1261,
-      "ci_upper": -0.477,
-      "estimate": -0.8,
+      "ci_lower": -1.1183,
+      "ci_upper": -0.4933,
+      "estimate": -0.8101,
       "field": "runtime_ms",
-      "mean_a": 4.8635,
-      "mean_b": 4.0635,
+      "mean_a": 4.9923,
+      "mean_b": 4.1822,
       "method_a": "R_anchor",
       "method_b": "M4",
       "name": "m4_vs_anchor_runtime_ms"
@@ -109,6 +245,42 @@
       "solve_rate_b": 0.6389
     }
   },
+  "m4_vs_anchor_overall_frozen": {
+    "ci_lower": 0.0278,
+    "ci_upper": 0.4167,
+    "estimate": 0.2222,
+    "mcnemar_p": 0.061369,
+    "mcnemar_statistic": 3.5,
+    "method_a": "R_anchor",
+    "method_b": "M4",
+    "name": "m4_vs_anchor",
+    "paired_counts": {
+      "both": 13,
+      "neither": 9,
+      "only_a": 3,
+      "only_b": 11
+    },
+    "solve_rate_a": 0.4444,
+    "solve_rate_b": 0.6667
+  },
+  "m4_vs_anchor_overall_native": {
+    "ci_lower": 0.0,
+    "ci_upper": 0.3889,
+    "estimate": 0.1944,
+    "mcnemar_p": 0.096092,
+    "mcnemar_statistic": 2.769231,
+    "method_a": "R_anchor",
+    "method_b": "M4",
+    "name": "m4_vs_anchor",
+    "paired_counts": {
+      "both": 13,
+      "neither": 10,
+      "only_a": 3,
+      "only_b": 10
+    },
+    "solve_rate_a": 0.4444,
+    "solve_rate_b": 0.6389
+  },
   "methods": {
     "M0": "single_best_point_estimate",
     "M1": "local_epistemic_single_best",
@@ -135,7 +307,7 @@
     "falsified": [
       "diversity-aware selection is not a generally safe replacement for refinement-composition tasks on this benchmark"
     ],
-    "generated_at_utc": "2026-03-19T05:45:12.790698+00:00",
+    "generated_at_utc": "2026-03-19T05:59:56.014734+00:00",
     "output_selection_changed_answer": 12,
     "proven_strongly": [
       "output-level selection has an independent causal effect on selector_divergence tasks",

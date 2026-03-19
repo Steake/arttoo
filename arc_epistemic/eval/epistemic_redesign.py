@@ -158,6 +158,27 @@ def _table(headers: list[str], rows: list[list[str]]) -> str:
     return "\n".join(parts)
 
 
+def _format_ci(contrast: dict[str, Any]) -> str:
+    return f"[{contrast['ci_lower']:+.3f}, {contrast['ci_upper']:+.3f}]"
+
+
+def _format_p_value(value: float | None) -> str:
+    return "—" if value is None else f"{value:.6f}"
+
+
+def _paired_count_row(contrast: dict[str, Any]) -> list[str]:
+    counts = contrast["paired_counts"]
+    return [
+        f"{contrast['estimate']:+.3f}",
+        _format_ci(contrast),
+        str(counts["only_a"]),
+        str(counts["only_b"]),
+        str(counts["both"]),
+        str(counts["neither"]),
+        _format_p_value(contrast.get("mcnemar_p")),
+    ]
+
+
 def load_manifest(path: str | Path) -> list[ManifestEntry]:
     payload = json.loads(Path(path).read_text(encoding="utf-8"))
     return [ManifestEntry(**entry) for entry in payload.get("entries", [])]
@@ -890,7 +911,14 @@ def method_setup_experiment_summary(
         "selector_divergence_quality_valid": quality_gates["frozen"]["selector_divergence"]["valid"] and quality_gates["native"]["selector_divergence"]["valid"],
         "diversity_quality_valid": quality_gates["frozen"]["diversity_sensitive"]["valid"] and quality_gates["native"]["diversity_sensitive"]["valid"],
         "m2_vs_m0_selector_divergence_frozen": causal_analysis["frozen"]["selector_divergence"]["m2_vs_m0"],
+        "m2_vs_m0_selector_divergence_native": causal_analysis["native"]["selector_divergence"]["m2_vs_m0"],
         "m3_vs_m2_diversity_frozen": causal_analysis["frozen"]["diversity_sensitive"]["m3_vs_m2"],
+        "m3_vs_m2_diversity_native": causal_analysis["native"]["diversity_sensitive"]["m3_vs_m2"],
+        "m2_vs_m0_overall_frozen": causal_analysis["frozen"]["overall"]["m2_vs_m0"],
+        "m2_vs_m0_overall_native": causal_analysis["native"]["overall"]["m2_vs_m0"],
+        "m4_vs_anchor_overall_frozen": causal_analysis["frozen"]["overall"]["m4_vs_anchor"],
+        "m4_vs_anchor_overall_native": causal_analysis["native"]["overall"]["m4_vs_anchor"],
+        "efficiency_frozen": efficiency_analysis["frozen"],
         "m4_vs_anchor_efficiency_native": efficiency_analysis["native"],
         "verdict": verdict,
     }
@@ -935,42 +963,92 @@ def quality_gates_markdown(payload: dict[str, Any]) -> str:
 
 
 def output_selection_causal_markdown(payload: dict[str, Any]) -> str:
-    rows = []
+    summary_rows = []
+    for label, family, contrast_name in (
+        ("frozen", "overall", "m2_vs_m0"),
+        ("native", "overall", "m2_vs_m0"),
+        ("frozen", "selector_divergence", "m2_vs_m0"),
+        ("native", "selector_divergence", "m2_vs_m0"),
+        ("frozen", "diversity_sensitive", "m3_vs_m2"),
+        ("native", "diversity_sensitive", "m3_vs_m2"),
+        ("frozen", "overall", "m4_vs_anchor"),
+        ("native", "overall", "m4_vs_anchor"),
+    ):
+        contrast = payload[label][family][contrast_name]
+        summary_rows.append(
+            [label, family, contrast_name, *_paired_count_row(contrast)]
+        )
+
+    detailed_rows = []
     for label in ("frozen", "native"):
         for family, contrasts in payload[label].items():
             for name, contrast in contrasts.items():
-                rows.append([
+                detailed_rows.append([
                     label,
                     family,
                     name,
-                    f"{contrast['estimate']:+.3f}",
-                    f"[{contrast['ci_lower']:+.3f}, {contrast['ci_upper']:+.3f}]",
-                    str(contrast["paired_counts"]),
+                    *_paired_count_row(contrast),
                 ])
     return "\n".join(
         [
             "# Output Selection Causal Analysis",
             "",
-            _table(["Experiment", "Family", "Contrast", "Estimate", "95% CI", "Paired counts"], rows),
+            "## Hostile Audit Quick View",
+            "",
+            _table(
+                ["Experiment", "Family", "Contrast", "Estimate", "95% CI", "Only A", "Only B", "Both", "Neither", "McNemar p"],
+                summary_rows,
+            ),
+            "",
+            "## Full Pairwise Contrast Table",
+            "",
+            _table(
+                ["Experiment", "Family", "Contrast", "Estimate", "95% CI", "Only A", "Only B", "Both", "Neither", "McNemar p"],
+                detailed_rows,
+            ),
         ]
     )
 
 
 def efficiency_gating_markdown(payload: dict[str, Any]) -> str:
-    rows = []
+    compute_rows = []
+    solve_rows = []
     for label in ("frozen", "native"):
         for name, contrast in payload[label].items():
-            rows.append([
-                label,
-                name,
-                f"{contrast['estimate']:+.3f}",
-                f"[{contrast['ci_lower']:+.3f}, {contrast['ci_upper']:+.3f}]",
-            ])
+            if name == "solve_rate":
+                counts = contrast["paired_counts"]
+                solve_rows.append([
+                    label,
+                    f"{contrast['mean_a']:.3f}" if "mean_a" in contrast else f"{contrast['solve_rate_a']:.3f}",
+                    f"{contrast['mean_b']:.3f}" if "mean_b" in contrast else f"{contrast['solve_rate_b']:.3f}",
+                    f"{contrast['estimate']:+.3f}",
+                    _format_ci(contrast),
+                    str(counts["only_a"]),
+                    str(counts["only_b"]),
+                    str(counts["both"]),
+                    str(counts["neither"]),
+                    _format_p_value(contrast.get("mcnemar_p")),
+                ])
+            else:
+                compute_rows.append([
+                    label,
+                    name,
+                    f"{contrast['mean_a']:.3f}",
+                    f"{contrast['mean_b']:.3f}",
+                    f"{contrast['estimate']:+.3f}",
+                    _format_ci(contrast),
+                ])
     return "\n".join(
         [
             "# Efficiency Gating Analysis",
             "",
-            _table(["Experiment", "Metric", "Estimate", "95% CI"], rows),
+            "## Compute Deltas",
+            "",
+            _table(["Experiment", "Metric", "Mean A", "Mean B", "Estimate", "95% CI"], compute_rows),
+            "",
+            "## Solve-Rate Paired Audit",
+            "",
+            _table(["Experiment", "Rate A", "Rate B", "Estimate", "95% CI", "Only A", "Only B", "Both", "Neither", "McNemar p"], solve_rows),
         ]
     )
 
@@ -1030,6 +1108,37 @@ def verdict_markdown(payload: dict[str, Any]) -> str:
 
 def method_setup_summary_markdown(payload: dict[str, Any]) -> str:
     rows = [[method, str(payload["frozen_overall_solve_rates"][method]), str(payload["native_overall_solve_rates"][method])] for method in METHOD_ORDER]
+    audit_rows = [
+        ["frozen", "overall M2-M0", *_paired_count_row(payload["m2_vs_m0_overall_frozen"])],
+        ["native", "overall M2-M0", *_paired_count_row(payload["m2_vs_m0_overall_native"])],
+        ["frozen", "selector_divergence M2-M0", *_paired_count_row(payload["m2_vs_m0_selector_divergence_frozen"])],
+        ["native", "selector_divergence M2-M0", *_paired_count_row(payload["m2_vs_m0_selector_divergence_native"])],
+        ["frozen", "diversity_sensitive M3-M2", *_paired_count_row(payload["m3_vs_m2_diversity_frozen"])],
+        ["native", "diversity_sensitive M3-M2", *_paired_count_row(payload["m3_vs_m2_diversity_native"])],
+        ["frozen", "overall M4-R_anchor", *_paired_count_row(payload["m4_vs_anchor_overall_frozen"])],
+        ["native", "overall M4-R_anchor", *_paired_count_row(payload["m4_vs_anchor_overall_native"])],
+    ]
+    efficiency_rows = [
+        [
+            "frozen",
+            metric,
+            f"{payload['efficiency_frozen'][metric]['mean_a']:.3f}",
+            f"{payload['efficiency_frozen'][metric]['mean_b']:.3f}",
+            f"{payload['efficiency_frozen'][metric]['estimate']:+.3f}",
+            _format_ci(payload["efficiency_frozen"][metric]),
+        ]
+        for metric in ("scored_hypotheses", "refined_hypotheses", "runtime_ms")
+    ] + [
+        [
+            "native",
+            metric,
+            f"{payload['m4_vs_anchor_efficiency_native'][metric]['mean_a']:.3f}",
+            f"{payload['m4_vs_anchor_efficiency_native'][metric]['mean_b']:.3f}",
+            f"{payload['m4_vs_anchor_efficiency_native'][metric]['estimate']:+.3f}",
+            _format_ci(payload["m4_vs_anchor_efficiency_native"][metric]),
+        ]
+        for metric in ("scored_hypotheses", "refined_hypotheses", "runtime_ms")
+    ]
     return "\n".join(
         [
             "# Method Setup Experiment Summary",
@@ -1040,5 +1149,13 @@ def method_setup_summary_markdown(payload: dict[str, Any]) -> str:
             f"- Verdict: `{payload['verdict']['status']}` ({payload['verdict']['conviction_level']})",
             "",
             _table(["Method", "Frozen solve rate", "Native solve rate"], rows),
+            "",
+            "## Hostile Audit Quick View",
+            "",
+            _table(["Experiment", "Contrast", "Estimate", "95% CI", "Only A", "Only B", "Both", "Neither", "McNemar p"], audit_rows),
+            "",
+            "## Key Efficiency Deltas (M4 vs R_anchor)",
+            "",
+            _table(["Experiment", "Metric", "Mean A", "Mean B", "Estimate", "95% CI"], efficiency_rows),
         ]
     )

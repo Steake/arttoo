@@ -5,7 +5,7 @@
   "falsified": [
     "diversity-aware selection is not a generally safe replacement for refinement-composition tasks on this benchmark"
   ],
-  "generated_at_utc": "2026-03-19T05:45:12.790698+00:00",
+  "generated_at_utc": "2026-03-19T05:59:56.014734+00:00",
   "output_selection_changed_answer": 12,
   "proven_strongly": [
     "output-level selection has an independent causal effect on selector_divergence tasks",

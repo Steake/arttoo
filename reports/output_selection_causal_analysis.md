@@ -1,54 +1,69 @@
 # Output Selection Causal Analysis
 
-| Experiment | Family | Contrast | Estimate | 95% CI | Paired counts |
-| --- | --- | --- | --- | --- | --- |
-| frozen | overall | m2_vs_m0 | +0.333 | [+0.167, +0.500] | {'only_a': 0, 'only_b': 12, 'both': 16, 'neither': 8} |
-| frozen | overall | m2_vs_m1 | +0.333 | [+0.167, +0.500] | {'only_a': 0, 'only_b': 12, 'both': 16, 'neither': 8} |
-| frozen | overall | m3_vs_m2 | -0.056 | [-0.278, +0.194] | {'only_a': 10, 'only_b': 8, 'both': 18, 'neither': 0} |
-| frozen | overall | m4_vs_m3 | -0.056 | [-0.306, +0.194] | {'only_a': 11, 'only_b': 9, 'both': 15, 'neither': 1} |
-| frozen | overall | m4_vs_anchor | +0.222 | [+0.028, +0.417] | {'only_a': 3, 'only_b': 11, 'both': 13, 'neither': 9} |
-| frozen | selector_divergence | m2_vs_m0 | +1.000 | [+1.000, +1.000] | {'only_a': 0, 'only_b': 12, 'both': 0, 'neither': 0} |
-| frozen | selector_divergence | m2_vs_m1 | +1.000 | [+1.000, +1.000] | {'only_a': 0, 'only_b': 12, 'both': 0, 'neither': 0} |
-| frozen | selector_divergence | m3_vs_m2 | -0.167 | [-0.417, +0.000] | {'only_a': 2, 'only_b': 0, 'both': 10, 'neither': 0} |
-| frozen | selector_divergence | m4_vs_m3 | +0.083 | [+0.000, +0.250] | {'only_a': 0, 'only_b': 1, 'both': 10, 'neither': 1} |
-| frozen | selector_divergence | m4_vs_anchor | +0.917 | [+0.750, +1.000] | {'only_a': 0, 'only_b': 11, 'both': 0, 'neither': 1} |
-| frozen | diversity_sensitive | m2_vs_m0 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 0, 'neither': 8} |
-| frozen | diversity_sensitive | m2_vs_m1 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 0, 'neither': 8} |
-| frozen | diversity_sensitive | m3_vs_m2 | +1.000 | [+1.000, +1.000] | {'only_a': 0, 'only_b': 8, 'both': 0, 'neither': 0} |
-| frozen | diversity_sensitive | m4_vs_m3 | -1.000 | [-1.000, -1.000] | {'only_a': 8, 'only_b': 0, 'both': 0, 'neither': 0} |
-| frozen | diversity_sensitive | m4_vs_anchor | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 0, 'neither': 8} |
-| frozen | refinement_composition | m2_vs_m0 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| frozen | refinement_composition | m2_vs_m1 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| frozen | refinement_composition | m3_vs_m2 | -1.000 | [-1.000, -1.000] | {'only_a': 8, 'only_b': 0, 'both': 0, 'neither': 0} |
-| frozen | refinement_composition | m4_vs_m3 | +1.000 | [+1.000, +1.000] | {'only_a': 0, 'only_b': 8, 'both': 0, 'neither': 0} |
-| frozen | refinement_composition | m4_vs_anchor | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| frozen | control | m2_vs_m0 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| frozen | control | m2_vs_m1 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| frozen | control | m3_vs_m2 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| frozen | control | m4_vs_m3 | -0.375 | [-0.750, -0.125] | {'only_a': 3, 'only_b': 0, 'both': 5, 'neither': 0} |
-| frozen | control | m4_vs_anchor | -0.375 | [-0.750, -0.125] | {'only_a': 3, 'only_b': 0, 'both': 5, 'neither': 0} |
-| native | overall | m2_vs_m0 | +0.306 | [+0.167, +0.472] | {'only_a': 0, 'only_b': 11, 'both': 16, 'neither': 9} |
-| native | overall | m2_vs_m1 | +0.306 | [+0.167, +0.472] | {'only_a': 0, 'only_b': 11, 'both': 16, 'neither': 9} |
-| native | overall | m3_vs_m2 | -0.028 | [-0.250, +0.194] | {'only_a': 9, 'only_b': 8, 'both': 18, 'neither': 1} |
-| native | overall | m4_vs_m3 | -0.083 | [-0.333, +0.139] | {'only_a': 11, 'only_b': 8, 'both': 15, 'neither': 2} |
-| native | overall | m4_vs_anchor | +0.194 | [+0.000, +0.389] | {'only_a': 3, 'only_b': 10, 'both': 13, 'neither': 10} |
-| native | selector_divergence | m2_vs_m0 | +0.917 | [+0.750, +1.000] | {'only_a': 0, 'only_b': 11, 'both': 0, 'neither': 1} |
-| native | selector_divergence | m2_vs_m1 | +0.917 | [+0.750, +1.000] | {'only_a': 0, 'only_b': 11, 'both': 0, 'neither': 1} |
-| native | selector_divergence | m3_vs_m2 | -0.083 | [-0.250, +0.000] | {'only_a': 1, 'only_b': 0, 'both': 10, 'neither': 1} |
-| native | selector_divergence | m4_vs_m3 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 10, 'neither': 2} |
-| native | selector_divergence | m4_vs_anchor | +0.833 | [+0.583, +1.000] | {'only_a': 0, 'only_b': 10, 'both': 0, 'neither': 2} |
-| native | diversity_sensitive | m2_vs_m0 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 0, 'neither': 8} |
-| native | diversity_sensitive | m2_vs_m1 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 0, 'neither': 8} |
-| native | diversity_sensitive | m3_vs_m2 | +1.000 | [+1.000, +1.000] | {'only_a': 0, 'only_b': 8, 'both': 0, 'neither': 0} |
-| native | diversity_sensitive | m4_vs_m3 | -1.000 | [-1.000, -1.000] | {'only_a': 8, 'only_b': 0, 'both': 0, 'neither': 0} |
-| native | diversity_sensitive | m4_vs_anchor | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 0, 'neither': 8} |
-| native | refinement_composition | m2_vs_m0 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| native | refinement_composition | m2_vs_m1 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| native | refinement_composition | m3_vs_m2 | -1.000 | [-1.000, -1.000] | {'only_a': 8, 'only_b': 0, 'both': 0, 'neither': 0} |
-| native | refinement_composition | m4_vs_m3 | +1.000 | [+1.000, +1.000] | {'only_a': 0, 'only_b': 8, 'both': 0, 'neither': 0} |
-| native | refinement_composition | m4_vs_anchor | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| native | control | m2_vs_m0 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| native | control | m2_vs_m1 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| native | control | m3_vs_m2 | +0.000 | [+0.000, +0.000] | {'only_a': 0, 'only_b': 0, 'both': 8, 'neither': 0} |
-| native | control | m4_vs_m3 | -0.375 | [-0.750, -0.125] | {'only_a': 3, 'only_b': 0, 'both': 5, 'neither': 0} |
-| native | control | m4_vs_anchor | -0.375 | [-0.750, -0.125] | {'only_a': 3, 'only_b': 0, 'both': 5, 'neither': 0} |
+## Hostile Audit Quick View
+
+| Experiment | Family | Contrast | Estimate | 95% CI | Only A | Only B | Both | Neither | McNemar p |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| frozen | overall | m2_vs_m0 | +0.333 | [+0.167, +0.500] | 0 | 12 | 16 | 8 | 0.001496 |
+| native | overall | m2_vs_m0 | +0.306 | [+0.167, +0.472] | 0 | 11 | 16 | 9 | 0.002569 |
+| frozen | selector_divergence | m2_vs_m0 | +1.000 | [+1.000, +1.000] | 0 | 12 | 0 | 0 | 0.001496 |
+| native | selector_divergence | m2_vs_m0 | +0.917 | [+0.750, +1.000] | 0 | 11 | 0 | 1 | 0.002569 |
+| frozen | diversity_sensitive | m3_vs_m2 | +1.000 | [+1.000, +1.000] | 0 | 8 | 0 | 0 | 0.013328 |
+| native | diversity_sensitive | m3_vs_m2 | +1.000 | [+1.000, +1.000] | 0 | 8 | 0 | 0 | 0.013328 |
+| frozen | overall | m4_vs_anchor | +0.222 | [+0.028, +0.417] | 3 | 11 | 13 | 9 | 0.061369 |
+| native | overall | m4_vs_anchor | +0.194 | [+0.000, +0.389] | 3 | 10 | 13 | 10 | 0.096092 |
+
+## Full Pairwise Contrast Table
+
+| Experiment | Family | Contrast | Estimate | 95% CI | Only A | Only B | Both | Neither | McNemar p |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| frozen | overall | m2_vs_m0 | +0.333 | [+0.167, +0.500] | 0 | 12 | 16 | 8 | 0.001496 |
+| frozen | overall | m2_vs_m1 | +0.333 | [+0.167, +0.500] | 0 | 12 | 16 | 8 | 0.001496 |
+| frozen | overall | m3_vs_m2 | -0.056 | [-0.278, +0.194] | 10 | 8 | 18 | 0 | 0.813664 |
+| frozen | overall | m4_vs_m3 | -0.056 | [-0.306, +0.194] | 11 | 9 | 15 | 1 | 0.823063 |
+| frozen | overall | m4_vs_anchor | +0.222 | [+0.028, +0.417] | 3 | 11 | 13 | 9 | 0.061369 |
+| frozen | selector_divergence | m2_vs_m0 | +1.000 | [+1.000, +1.000] | 0 | 12 | 0 | 0 | 0.001496 |
+| frozen | selector_divergence | m2_vs_m1 | +1.000 | [+1.000, +1.000] | 0 | 12 | 0 | 0 | 0.001496 |
+| frozen | selector_divergence | m3_vs_m2 | -0.167 | [-0.417, +0.000] | 2 | 0 | 10 | 0 | 0.479500 |
+| frozen | selector_divergence | m4_vs_m3 | +0.083 | [+0.000, +0.250] | 0 | 1 | 10 | 1 | 1.000000 |
+| frozen | selector_divergence | m4_vs_anchor | +0.917 | [+0.750, +1.000] | 0 | 11 | 0 | 1 | 0.002569 |
+| frozen | diversity_sensitive | m2_vs_m0 | +0.000 | [+0.000, +0.000] | 0 | 0 | 0 | 8 | — |
+| frozen | diversity_sensitive | m2_vs_m1 | +0.000 | [+0.000, +0.000] | 0 | 0 | 0 | 8 | — |
+| frozen | diversity_sensitive | m3_vs_m2 | +1.000 | [+1.000, +1.000] | 0 | 8 | 0 | 0 | 0.013328 |
+| frozen | diversity_sensitive | m4_vs_m3 | -1.000 | [-1.000, -1.000] | 8 | 0 | 0 | 0 | 0.013328 |
+| frozen | diversity_sensitive | m4_vs_anchor | +0.000 | [+0.000, +0.000] | 0 | 0 | 0 | 8 | — |
+| frozen | refinement_composition | m2_vs_m0 | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| frozen | refinement_composition | m2_vs_m1 | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| frozen | refinement_composition | m3_vs_m2 | -1.000 | [-1.000, -1.000] | 8 | 0 | 0 | 0 | 0.013328 |
+| frozen | refinement_composition | m4_vs_m3 | +1.000 | [+1.000, +1.000] | 0 | 8 | 0 | 0 | 0.013328 |
+| frozen | refinement_composition | m4_vs_anchor | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| frozen | control | m2_vs_m0 | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| frozen | control | m2_vs_m1 | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| frozen | control | m3_vs_m2 | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| frozen | control | m4_vs_m3 | -0.375 | [-0.750, -0.125] | 3 | 0 | 5 | 0 | 0.248213 |
+| frozen | control | m4_vs_anchor | -0.375 | [-0.750, -0.125] | 3 | 0 | 5 | 0 | 0.248213 |
+| native | overall | m2_vs_m0 | +0.306 | [+0.167, +0.472] | 0 | 11 | 16 | 9 | 0.002569 |
+| native | overall | m2_vs_m1 | +0.306 | [+0.167, +0.472] | 0 | 11 | 16 | 9 | 0.002569 |
+| native | overall | m3_vs_m2 | -0.028 | [-0.250, +0.194] | 9 | 8 | 18 | 1 | 1.000000 |
+| native | overall | m4_vs_m3 | -0.083 | [-0.333, +0.139] | 11 | 8 | 15 | 2 | 0.646355 |
+| native | overall | m4_vs_anchor | +0.194 | [+0.000, +0.389] | 3 | 10 | 13 | 10 | 0.096092 |
+| native | selector_divergence | m2_vs_m0 | +0.917 | [+0.750, +1.000] | 0 | 11 | 0 | 1 | 0.002569 |
+| native | selector_divergence | m2_vs_m1 | +0.917 | [+0.750, +1.000] | 0 | 11 | 0 | 1 | 0.002569 |
+| native | selector_divergence | m3_vs_m2 | -0.083 | [-0.250, +0.000] | 1 | 0 | 10 | 1 | 1.000000 |
+| native | selector_divergence | m4_vs_m3 | +0.000 | [+0.000, +0.000] | 0 | 0 | 10 | 2 | — |
+| native | selector_divergence | m4_vs_anchor | +0.833 | [+0.583, +1.000] | 0 | 10 | 0 | 2 | 0.004427 |
+| native | diversity_sensitive | m2_vs_m0 | +0.000 | [+0.000, +0.000] | 0 | 0 | 0 | 8 | — |
+| native | diversity_sensitive | m2_vs_m1 | +0.000 | [+0.000, +0.000] | 0 | 0 | 0 | 8 | — |
+| native | diversity_sensitive | m3_vs_m2 | +1.000 | [+1.000, +1.000] | 0 | 8 | 0 | 0 | 0.013328 |
+| native | diversity_sensitive | m4_vs_m3 | -1.000 | [-1.000, -1.000] | 8 | 0 | 0 | 0 | 0.013328 |
+| native | diversity_sensitive | m4_vs_anchor | +0.000 | [+0.000, +0.000] | 0 | 0 | 0 | 8 | — |
+| native | refinement_composition | m2_vs_m0 | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| native | refinement_composition | m2_vs_m1 | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| native | refinement_composition | m3_vs_m2 | -1.000 | [-1.000, -1.000] | 8 | 0 | 0 | 0 | 0.013328 |
+| native | refinement_composition | m4_vs_m3 | +1.000 | [+1.000, +1.000] | 0 | 8 | 0 | 0 | 0.013328 |
+| native | refinement_composition | m4_vs_anchor | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| native | control | m2_vs_m0 | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| native | control | m2_vs_m1 | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| native | control | m3_vs_m2 | +0.000 | [+0.000, +0.000] | 0 | 0 | 8 | 0 | — |
+| native | control | m4_vs_m3 | -0.375 | [-0.750, -0.125] | 3 | 0 | 5 | 0 | 0.248213 |
+| native | control | m4_vs_anchor | -0.375 | [-0.750, -0.125] | 3 | 0 | 5 | 0 | 0.248213 |

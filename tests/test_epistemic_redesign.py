@@ -16,8 +16,12 @@ from arc_epistemic.eval.epistemic_redesign import (
     build_freeze_manifest,
     build_output_selection_causal_analysis,
     build_task_level_epistemic_attribution,
+    efficiency_gating_markdown,
     freeze_manifest_markdown,
     load_manifest,
+    method_setup_experiment_summary,
+    method_setup_summary_markdown,
+    output_selection_causal_markdown,
     run_frozen_experiment,
     run_native_experiment,
     summarize_experiment,
@@ -114,6 +118,24 @@ class EpistemicRedesignExperimentTests(unittest.TestCase):
     def test_native_selector_gain_is_positive(self) -> None:
         contrast = self.causal["native"]["selector_divergence"]["m2_vs_m0"]
         self.assertGreater(contrast["estimate"], 0.0)
+
+    def test_markdown_reports_expose_audit_columns(self) -> None:
+        output_md = output_selection_causal_markdown(self.causal)
+        efficiency_md = efficiency_gating_markdown(self.efficiency)
+        summary_payload = method_setup_experiment_summary(
+            self.frozen,
+            self.native,
+            self.quality,
+            self.causal,
+            self.efficiency,
+            self.verdict,
+        )
+        summary_md = method_setup_summary_markdown(summary_payload)
+        self.assertIn("Only A", output_md)
+        self.assertIn("Only B", output_md)
+        self.assertIn("McNemar p", output_md)
+        self.assertIn("Solve-Rate Paired Audit", efficiency_md)
+        self.assertIn("Hostile Audit Quick View", summary_md)
 
 
 class ToolSmokeTests(unittest.TestCase):

@@ -23,12 +23,12 @@
       "name": "m4_vs_anchor_refined_output_classes"
     },
     "runtime_ms": {
-      "ci_lower": -1.4446,
-      "ci_upper": -0.982,
-      "estimate": -1.2048,
+      "ci_lower": -1.4831,
+      "ci_upper": -0.9975,
+      "estimate": -1.2441,
       "field": "runtime_ms",
-      "mean_a": 3.0975,
-      "mean_b": 1.8927,
+      "mean_a": 3.2023,
+      "mean_b": 1.9582,
       "method_a": "R_anchor",
       "method_b": "M4",
       "name": "m4_vs_anchor_runtime_ms"
@@ -63,7 +63,7 @@
       "solve_rate_b": 0.6667
     }
   },
-  "generated_at_utc": "2026-03-19T05:45:12.569168+00:00",
+  "generated_at_utc": "2026-03-19T05:59:55.785236+00:00",
   "native": {
     "refined_hypotheses": {
       "ci_lower": -15.6667,
@@ -88,12 +88,12 @@
       "name": "m4_vs_anchor_refined_output_classes"
     },
     "runtime_ms": {
-      "ci_lower": -1.1261,
-      "ci_upper": -0.477,
-      "estimate": -0.8,
+      "ci_lower": -1.1183,
+      "ci_upper": -0.4933,
+      "estimate": -0.8101,
       "field": "runtime_ms",
-      "mean_a": 4.8635,
-      "mean_b": 4.0635,
+      "mean_a": 4.9923,
+      "mean_b": 4.1822,
       "method_a": "R_anchor",
       "method_b": "M4",
       "name": "m4_vs_anchor_runtime_ms"
