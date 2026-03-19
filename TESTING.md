@@ -9,6 +9,7 @@ Task membership is defined in [data/splits](data/splits):
 - `dev`: supported development fixtures — **safe for tuning**.
 - `regression`: regression-focused fixtures, including retained failure-family coverage — **safe for tuning**.
 - `blind_holdout`: isolated holdout fixtures for less gameable evaluation — **not tuning-safe**.
+- `blind_holdout_v2`: second holdout cohort of 5 discriminative tasks used in the 2×2 factorial causal attribution experiment — **not tuning-safe**.
 - `all`: every fixture under [data/fixtures](data/fixtures) — **not tuning-safe**.
 
 ## Run Tests
@@ -178,6 +179,73 @@ The holdout is considered **discriminative** if either:
 The current blind_holdout passes this gate: 2/5 holdout tasks require composition and are **not**
 solved by the primitive baseline alone.
 
+## Run The 2×2 Factorial Causal Attribution Experiment
+
+```bash
+python tools/run_causal_factorial.py --tasks data/fixtures --split blind_holdout_v2 --report reports/blind_holdout_v2/causal_factorial.md --json reports/blind_holdout_v2/causal_factorial.json
+```
+
+Runs all four factorial conditions (C00, C10, C01, C11) on every task in the specified split and writes:
+- `causal_factorial.json` — machine-readable contrasts, attribution table, and verdict
+- `causal_factorial.md` — markdown report with solve-rate table, five contrasts + interaction, task attribution, and causal verdict
+
+### 2×2 Factorial Design
+
+| Condition | use_refinement | use_epistemic_scoring | Config |
+| --- | --- | --- | --- |
+| C00 | False | False | `primitive_baseline_only` |
+| C10 | True  | False | `primitive_plus_bounded_compositions` |
+| C01 | False | True  | `epistemic_no_refinement` |
+| C11 | True  | True  | `full_epistemic_coagency` |
+
+**Naming convention**: C{refinement_bit}{epistemic_bit}.
+
+### Five pairwise contrasts + interaction
+
+| Contrast | Question answered |
+| --- | --- |
+| `c10_vs_c00` | Does refinement alone help? (simple effect of R at E=0) |
+| `c01_vs_c00` | Does epistemic scoring alone help? (simple effect of E at R=0) |
+| `c11_vs_c10` | Does epistemic scoring help given refinement? (simple effect of E at R=1) |
+| `c11_vs_c01` | Does refinement help given epistemic scoring? (simple effect of R at E=1) |
+| `c11_vs_c00` | Full co-agency vs primitive baseline (overall lift) |
+| `interaction_RxE` | R×E synergy: (C11 − C01) − (C10 − C00) |
+
+Each contrast reports:
+- Solve rate in each condition
+- Estimate (difference in solve rates)
+- Paired bootstrap 95% CI (2000 resamples, default seed 42)
+- McNemar chi-squared statistic and p-value (continuity-corrected)
+
+### Task Attribution Categories
+
+Each task is assigned one of these causal categories based on its 4-bit solve pattern (C00, C10, C01, C11):
+
+| Category | Pattern | Interpretation |
+| --- | --- | --- |
+| `all_solve` | (T,T,T,T) | Task is trivially easy — all configs solve it |
+| `none_solve` | (F,F,F,F) | Task is beyond current capability |
+| `trivially_solved` | C00=T | Primitive baseline already solves it |
+| `baseline_only` | (T,F,F,F) | Baseline solves; other configs regress |
+| `refinement_resolves` | (F,T,F,T) | Refinement (R) is the sole causal factor |
+| `epistemic_resolves` | (F,F,T,T) | Epistemic scoring (E) is the sole causal factor |
+| `synergy_required` | (F,F,F,T) | Both factors together are required (pure interaction) |
+| `either_factor_sufficient` | (F,T,T,T) | Either R or E alone suffices |
+
+### blind_holdout_v2 Cohort
+
+The five new discriminative tasks in `blind_holdout_v2`:
+
+| Task | Pattern | Category | Notes |
+| --- | --- | --- | --- |
+| `holdout_v2_crop_flip_v_task` | (F,T,F,T) | `refinement_resolves` | `crop_to_content -> flip_vertical` |
+| `holdout_v2_crop_rotate90_task` | (F,T,F,T) | `refinement_resolves` | `crop_to_content -> rotate90` |
+| `holdout_v2_flip_h_task` | (T,T,T,T) | `all_solve` | `flip_horizontal` primitive |
+| `holdout_v2_largest_rotate180_task` | (F,T,F,T) | `refinement_resolves` | `largest_object -> rotate180` |
+| `holdout_v2_rotate270_task` | (T,T,T,T) | `all_solve` | `rotate270` primitive |
+
+The dominant causal factor on `blind_holdout_v2` is **Refinement**: ME_R ≈ +0.60, ME_E ≈ 0.00, interaction ≈ 0.00.
+
 ## Snapshot A Frozen Baseline
 
 ```bash
@@ -253,6 +321,7 @@ Fields that might be expected but are **not currently available**:
 | `reports/dev/scorecard.json` | ✅ yes |
 | `reports/regression/scorecard.json` | ✅ yes |
 | `reports/blind_holdout/scorecard.json` | ❌ no — holdout numbers |
+| `reports/blind_holdout_v2/causal_factorial.json` | ❌ no — holdout numbers |
 | `reports/scorecard.json` (all) | ❌ no — includes holdout |
 | `reports/final_split_diagnostics.md` | ⚠️ read all columns; blind_holdout column is marked |
 | `reports/uncertainty_audit.md` | ⚠️ read split labels; holdout rows are marked |

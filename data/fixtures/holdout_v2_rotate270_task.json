@@ -1,0 +1,23 @@
+{
+  "task_id": "holdout_v2_rotate270_task",
+  "train": [
+    {
+      "input": [[1,2],[3,4]],
+      "output": [[3,1],[4,2]]
+    },
+    {
+      "input": [[5,6],[7,8]],
+      "output": [[7,5],[8,6]]
+    }
+  ],
+  "test": [
+    {"input": [[1,3],[2,4]]}
+  ],
+  "golden": {
+    "expected_test_outputs": [[[2,1],[4,3]]],
+    "ranking_prefix": ["rotate270"],
+    "notes": "Pure rotate270 (270 degrees counter-clockwise). No padding or composition needed. Primitive baseline should solve this directly via the rotate270 named transform.",
+    "expect_exact": true,
+    "failure_tags": []
+  }
+}
