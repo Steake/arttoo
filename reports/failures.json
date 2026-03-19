@@ -33,7 +33,7 @@
     "object_count_mismatch": 3,
     "unsupported_pattern": 3
   },
-  "shape_mismatch_rejection_count": 238,
+  "shape_mismatch_rejection_count": 316,
   "split": "all",
   "unsupported_pattern_exit_count": 3,
   "unsupported_pattern_exit_ids": [

@@ -159,6 +159,22 @@ def main(argv: list[str] | None = None) -> int:
     if uncertainty_audit["returncode"] != 0:
         print(f"[WARN] generate_uncertainty_audit failed: {uncertainty_audit['stderr']}")
 
+    # Generate epistemic reordering analysis (C: first-pass vs final ranking comparison)
+    epistemic_reorderings = _run(
+        ["python", "tools/generate_epistemic_reorderings.py", "--reports", str(reports_dir)],
+        repo_root,
+    )
+    if epistemic_reorderings["returncode"] != 0:
+        print(f"[WARN] generate_epistemic_reorderings failed: {epistemic_reorderings['stderr']}")
+
+    # Generate thesis validation summary (F: answer the six core thesis questions)
+    thesis_validation = _run(
+        ["python", "tools/generate_thesis_validation_summary.py", "--reports", str(reports_dir)],
+        repo_root,
+    )
+    if thesis_validation["returncode"] != 0:
+        print(f"[WARN] generate_thesis_validation_summary failed: {thesis_validation['stderr']}")
+
     failed = any(results[name]["returncode"] != 0 for name in ("unit_and_integration", "regressions"))
     for suite in results["split_runs"].values():
         failed = failed or any(payload["returncode"] != 0 for payload in suite.values())

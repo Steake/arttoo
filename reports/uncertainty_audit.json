@@ -2,11 +2,18 @@
   "holdout_warn": "\u26a0\ufe0f  blind_holdout and all-split data appear in this audit for transparency. Do not use these rows to tune the solver.",
   "splits": {
     "all": {
-      "avg_uncertainty_all": 0.125,
+      "avg_uncertainty_all": 0.10526315789473684,
       "avg_uncertainty_solved": 0.0,
       "avg_uncertainty_unsolved": 0.6666666666666666,
       "epistemic_reordering_task_ids": [],
       "per_task_uncertainty": [
+        {
+          "solved": true,
+          "task_id": "ambiguous_competing_regression_task",
+          "uncertainty_spread_top5": 1.0,
+          "winning_score": 1.15,
+          "winning_uncertainty": 0.0
+        },
         {
           "solved": true,
           "task_id": "color_map_task",
@@ -24,6 +31,20 @@
         {
           "solved": true,
           "task_id": "crop_rotate_task",
+          "uncertainty_spread_top5": 1.0,
+          "winning_score": 1.15,
+          "winning_uncertainty": 0.0
+        },
+        {
+          "solved": true,
+          "task_id": "holdout_composition_crop_flip_task",
+          "uncertainty_spread_top5": 1.0,
+          "winning_score": 1.15,
+          "winning_uncertainty": 0.0
+        },
+        {
+          "solved": true,
+          "task_id": "holdout_composition_largest_rotate_task",
           "uncertainty_spread_top5": 1.0,
           "winning_score": 1.15,
           "winning_uncertainty": 0.0
@@ -120,14 +141,14 @@
           "winning_uncertainty": 1.0
         }
       ],
-      "solved_count": 13,
+      "solved_count": 16,
       "split": "all",
-      "task_count": 16,
+      "task_count": 19,
       "tasks_where_epistemic_reordering_occurred": 0,
       "tasks_with_nonzero_uncertainty": 2,
       "tasks_with_nonzero_uncertainty_solved": 0,
       "tasks_with_nonzero_uncertainty_unsolved": 2,
-      "tasks_with_ranking_uncertainty_spread": 6,
+      "tasks_with_ranking_uncertainty_spread": 9,
       "tuning_safe": false,
       "unsolved_count": 3
     },
@@ -137,6 +158,20 @@
       "avg_uncertainty_unsolved": null,
       "epistemic_reordering_task_ids": [],
       "per_task_uncertainty": [
+        {
+          "solved": true,
+          "task_id": "holdout_composition_crop_flip_task",
+          "uncertainty_spread_top5": 1.0,
+          "winning_score": 1.15,
+          "winning_uncertainty": 0.0
+        },
+        {
+          "solved": true,
+          "task_id": "holdout_composition_largest_rotate_task",
+          "uncertainty_spread_top5": 1.0,
+          "winning_score": 1.15,
+          "winning_uncertainty": 0.0
+        },
         {
           "solved": true,
           "task_id": "holdout_flip_vertical_task",
@@ -159,14 +194,14 @@
           "winning_uncertainty": 0.0
         }
       ],
-      "solved_count": 3,
+      "solved_count": 5,
       "split": "blind_holdout",
-      "task_count": 3,
+      "task_count": 5,
       "tasks_where_epistemic_reordering_occurred": 0,
       "tasks_with_nonzero_uncertainty": 0,
       "tasks_with_nonzero_uncertainty_solved": 0,
       "tasks_with_nonzero_uncertainty_unsolved": 0,
-      "tasks_with_ranking_uncertainty_spread": 1,
+      "tasks_with_ranking_uncertainty_spread": 3,
       "tuning_safe": false,
       "unsolved_count": 0
     },
@@ -245,11 +280,18 @@
       "unsolved_count": 0
     },
     "regression": {
-      "avg_uncertainty_all": 0.3333333333333333,
+      "avg_uncertainty_all": 0.2857142857142857,
       "avg_uncertainty_solved": 0.0,
       "avg_uncertainty_unsolved": 0.6666666666666666,
       "epistemic_reordering_task_ids": [],
       "per_task_uncertainty": [
+        {
+          "solved": true,
+          "task_id": "ambiguous_competing_regression_task",
+          "uncertainty_spread_top5": 1.0,
+          "winning_score": 1.15,
+          "winning_uncertainty": 0.0
+        },
         {
           "solved": true,
           "task_id": "crop_rotate_task",
@@ -293,14 +335,14 @@
           "winning_uncertainty": 1.0
         }
       ],
-      "solved_count": 3,
+      "solved_count": 4,
       "split": "regression",
-      "task_count": 6,
+      "task_count": 7,
       "tasks_where_epistemic_reordering_occurred": 0,
       "tasks_with_nonzero_uncertainty": 2,
       "tasks_with_nonzero_uncertainty_solved": 0,
       "tasks_with_nonzero_uncertainty_unsolved": 2,
-      "tasks_with_ranking_uncertainty_spread": 2,
+      "tasks_with_ranking_uncertainty_spread": 3,
       "tuning_safe": true,
       "unsolved_count": 3
     }

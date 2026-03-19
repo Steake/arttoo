@@ -1,0 +1,46 @@
+{
+  "all": {
+    "reorder_failure_count": 0,
+    "reorder_success_count": 4,
+    "split": "all",
+    "task_count": 19,
+    "tasks_where_first_pass_winner_changed_after_refinement": 4,
+    "tasks_with_multiple_competing_candidates": 19,
+    "tasks_with_nonzero_winning_uncertainty": 6,
+    "unchanged_correct_count": 12,
+    "unchanged_incorrect_count": 3
+  },
+  "blind_holdout": {
+    "reorder_failure_count": 0,
+    "reorder_success_count": 2,
+    "split": "blind_holdout",
+    "task_count": 5,
+    "tasks_where_first_pass_winner_changed_after_refinement": 2,
+    "tasks_with_multiple_competing_candidates": 5,
+    "tasks_with_nonzero_winning_uncertainty": 2,
+    "unchanged_correct_count": 3,
+    "unchanged_incorrect_count": 0
+  },
+  "dev": {
+    "reorder_failure_count": 0,
+    "reorder_success_count": 1,
+    "split": "dev",
+    "task_count": 8,
+    "tasks_where_first_pass_winner_changed_after_refinement": 1,
+    "tasks_with_multiple_competing_candidates": 8,
+    "tasks_with_nonzero_winning_uncertainty": 1,
+    "unchanged_correct_count": 7,
+    "unchanged_incorrect_count": 0
+  },
+  "regression": {
+    "reorder_failure_count": 0,
+    "reorder_success_count": 2,
+    "split": "regression",
+    "task_count": 7,
+    "tasks_where_first_pass_winner_changed_after_refinement": 2,
+    "tasks_with_multiple_competing_candidates": 7,
+    "tasks_with_nonzero_winning_uncertainty": 4,
+    "unchanged_correct_count": 2,
+    "unchanged_incorrect_count": 3
+  }
+}
