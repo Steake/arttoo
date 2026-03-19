@@ -1,0 +1,366 @@
+{
+  "split": "blind_holdout_v5",
+  "task_count": 36,
+  "entries": [
+    {
+      "task_id": "holdout_v5_selector_divergence_01_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `identity` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `crop_to_content`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_02_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `identity` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `crop_to_content`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_03_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `identity` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `crop_to_content`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_04_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `crop_to_content -> rotate270` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `largest_object -> rotate270`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_05_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `crop_to_content -> flip_vertical` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `largest_object -> flip_vertical`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_06_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `identity` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `crop_to_content`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_07_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `identity` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `crop_to_content`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_08_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `identity` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `crop_to_content`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_09_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `identity` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `crop_to_content`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_10_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `identity` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `crop_to_content`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_11_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `identity` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `crop_to_content`."
+    },
+    {
+      "task_id": "holdout_v5_selector_divergence_12_task",
+      "family": "selector_divergence",
+      "intended_primary_mechanism": "selector_divergence",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Selector-divergence task authored after method redesign. M0/M1 select `identity` while coalition evidence under output-mass selection recovers the expected output. True transform family seed: `crop_to_content`."
+    },
+    {
+      "task_id": "holdout_v5_diversity_sensitive_01_task",
+      "family": "diversity_sensitive",
+      "intended_primary_mechanism": "diversity_sensitive",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Diversity-sensitive task authored after method redesign. Raw output mass backs `rotate270` but diversity-aware coalition support can favor the expected output seeded by `crop_to_content -> rotate270`."
+    },
+    {
+      "task_id": "holdout_v5_diversity_sensitive_02_task",
+      "family": "diversity_sensitive",
+      "intended_primary_mechanism": "diversity_sensitive",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Diversity-sensitive task authored after method redesign. Raw output mass backs `rotate90` but diversity-aware coalition support can favor the expected output seeded by `crop_to_content -> rotate90`."
+    },
+    {
+      "task_id": "holdout_v5_diversity_sensitive_03_task",
+      "family": "diversity_sensitive",
+      "intended_primary_mechanism": "diversity_sensitive",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Diversity-sensitive task authored after method redesign. Raw output mass backs `flip_horizontal` but diversity-aware coalition support can favor the expected output seeded by `crop_to_content -> flip_horizontal`."
+    },
+    {
+      "task_id": "holdout_v5_diversity_sensitive_04_task",
+      "family": "diversity_sensitive",
+      "intended_primary_mechanism": "diversity_sensitive",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Diversity-sensitive task authored after method redesign. Raw output mass backs `rotate270` but diversity-aware coalition support can favor the expected output seeded by `crop_to_content -> rotate270`."
+    },
+    {
+      "task_id": "holdout_v5_diversity_sensitive_05_task",
+      "family": "diversity_sensitive",
+      "intended_primary_mechanism": "diversity_sensitive",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Diversity-sensitive task authored after method redesign. Raw output mass backs `flip_horizontal` but diversity-aware coalition support can favor the expected output seeded by `crop_to_content -> flip_horizontal`."
+    },
+    {
+      "task_id": "holdout_v5_diversity_sensitive_06_task",
+      "family": "diversity_sensitive",
+      "intended_primary_mechanism": "diversity_sensitive",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Diversity-sensitive task authored after method redesign. Raw output mass backs `rotate270` but diversity-aware coalition support can favor the expected output seeded by `crop_to_content -> rotate270`."
+    },
+    {
+      "task_id": "holdout_v5_diversity_sensitive_07_task",
+      "family": "diversity_sensitive",
+      "intended_primary_mechanism": "diversity_sensitive",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Diversity-sensitive task authored after method redesign. Raw output mass backs `rotate90` but diversity-aware coalition support can favor the expected output seeded by `crop_to_content -> rotate90`."
+    },
+    {
+      "task_id": "holdout_v5_diversity_sensitive_08_task",
+      "family": "diversity_sensitive",
+      "intended_primary_mechanism": "diversity_sensitive",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "yes",
+      "intended_small_margin_expected": "yes",
+      "notes": "Diversity-sensitive task authored after method redesign. Raw output mass backs `rotate180` but diversity-aware coalition support can favor the expected output seeded by `crop_to_content -> rotate180`."
+    },
+    {
+      "task_id": "holdout_v5_refinement_composition_01_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Refinement-composition positive control carried into blind_holdout_v5 to keep the benchmark honest about refinement-sensitive gains."
+    },
+    {
+      "task_id": "holdout_v5_refinement_composition_02_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Refinement-composition positive control carried into blind_holdout_v5 to keep the benchmark honest about refinement-sensitive gains."
+    },
+    {
+      "task_id": "holdout_v5_refinement_composition_03_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Refinement-composition positive control carried into blind_holdout_v5 to keep the benchmark honest about refinement-sensitive gains."
+    },
+    {
+      "task_id": "holdout_v5_refinement_composition_04_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Refinement-composition positive control carried into blind_holdout_v5 to keep the benchmark honest about refinement-sensitive gains."
+    },
+    {
+      "task_id": "holdout_v5_refinement_composition_05_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Refinement-composition positive control carried into blind_holdout_v5 to keep the benchmark honest about refinement-sensitive gains."
+    },
+    {
+      "task_id": "holdout_v5_refinement_composition_06_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Refinement-composition positive control carried into blind_holdout_v5 to keep the benchmark honest about refinement-sensitive gains."
+    },
+    {
+      "task_id": "holdout_v5_refinement_composition_07_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Refinement-composition positive control carried into blind_holdout_v5 to keep the benchmark honest about refinement-sensitive gains."
+    },
+    {
+      "task_id": "holdout_v5_refinement_composition_08_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_multiple_hypotheses_expected": "yes",
+      "intended_multiple_output_classes_expected": "yes",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Refinement-composition positive control carried into blind_holdout_v5 to keep the benchmark honest about refinement-sensitive gains."
+    },
+    {
+      "task_id": "holdout_v5_control_01_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_multiple_hypotheses_expected": "no",
+      "intended_multiple_output_classes_expected": "no",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Control task for blind_holdout_v5: sensible selectors should agree and solve this cleanly."
+    },
+    {
+      "task_id": "holdout_v5_control_02_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_multiple_hypotheses_expected": "no",
+      "intended_multiple_output_classes_expected": "no",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Control task for blind_holdout_v5: sensible selectors should agree and solve this cleanly."
+    },
+    {
+      "task_id": "holdout_v5_control_03_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_multiple_hypotheses_expected": "no",
+      "intended_multiple_output_classes_expected": "no",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Control task for blind_holdout_v5: sensible selectors should agree and solve this cleanly."
+    },
+    {
+      "task_id": "holdout_v5_control_04_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_multiple_hypotheses_expected": "no",
+      "intended_multiple_output_classes_expected": "no",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Control task for blind_holdout_v5: sensible selectors should agree and solve this cleanly."
+    },
+    {
+      "task_id": "holdout_v5_control_05_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_multiple_hypotheses_expected": "no",
+      "intended_multiple_output_classes_expected": "no",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Control task for blind_holdout_v5: sensible selectors should agree and solve this cleanly."
+    },
+    {
+      "task_id": "holdout_v5_control_06_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_multiple_hypotheses_expected": "no",
+      "intended_multiple_output_classes_expected": "no",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Control task for blind_holdout_v5: sensible selectors should agree and solve this cleanly."
+    },
+    {
+      "task_id": "holdout_v5_control_07_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_multiple_hypotheses_expected": "no",
+      "intended_multiple_output_classes_expected": "no",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Control task for blind_holdout_v5: sensible selectors should agree and solve this cleanly."
+    },
+    {
+      "task_id": "holdout_v5_control_08_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_multiple_hypotheses_expected": "no",
+      "intended_multiple_output_classes_expected": "no",
+      "intended_selector_disagreement_expected": "no",
+      "intended_small_margin_expected": "no",
+      "notes": "Control task for blind_holdout_v5: sensible selectors should agree and solve this cleanly."
+    }
+  ]
+}

@@ -11,6 +11,7 @@ Task membership is defined in [data/splits](data/splits):
 - `blind_holdout`: isolated holdout fixtures for less gameable evaluation — **not tuning-safe**.
 - `blind_holdout_v2`: second holdout cohort of 5 discriminative tasks used in the 2×2 factorial causal attribution experiment — **not tuning-safe**.
 - `blind_holdout_v3`: 24-task frozen attribution-v2 holdout (8 ranking_conflict, 8 refinement_composition, 8 control) and the **primary inferential target** for current causal claims — **not tuning-safe**.
+- `blind_holdout_v5`: 36-task frozen epistemic-process holdout (12 selector_divergence, 8 diversity_sensitive, 8 refinement_composition, 8 control) and the **primary inferential target** for the revised output-level uncertainty claim — **not tuning-safe**.
 - `all`: every fixture under [data/fixtures](data/fixtures) — **not tuning-safe**.
 
 ## Run Tests
@@ -39,6 +40,7 @@ It also generates:
 - `reports/uncertainty_causal_analysis.json` / `.md` — uncertainty-specific causal analysis on the frozen benchmark
 - `reports/causal_verdict_v2.json` / `.md` — explicit factor verdicts (`proven` / `supported but not isolated` / `still inconclusive`)
 - `reports/thesis_final_attribution_summary.json` / `.md` — final blind_holdout_v3 thesis summary
+- `reports/output_competition_benchmark.json` / `.md` — output-level evidential aggregation vs single-best selection on ranking-conflict tasks, plus contested-refinement efficiency
 
 Per-split outputs go to `reports/dev/`, `reports/regression/`, `reports/blind_holdout/`. Aggregate outputs go to `reports/`.
 
@@ -218,6 +220,88 @@ Runs all four factorial conditions (C00, C10, C01, C11) on every task in the spe
 | `c11_vs_c01` | Does refinement help given epistemic scoring? (simple effect of R at E=1) |
 | `c11_vs_c00` | Full co-agency vs primitive baseline (overall lift) |
 | `interaction_RxE` | R×E synergy: (C11 − C01) − (C10 − C00) |
+
+## Run The Output Competition Benchmark
+
+```bash
+python tools/run_output_competition_benchmark.py --tasks data/fixtures --split blind_holdout_v3 --reports-dir reports
+```
+
+This benchmark keeps the current attribution infrastructure intact while adding the next hypothesis test:
+
+- **Frozen candidate pool**: compare single-best-hypothesis selection against output-level evidential aggregation on the sealed `ranking_conflict` subset.
+- **Native pipeline**: compare the current broad refinement loop against output aggregation with and without contested-output gating, and report compute savings.
+
+## Revised Epistemic Process Hypothesis
+
+ARC is scored on the **final predicted output grid**, not on recovering a unique latent rule.  
+The revised benchmark therefore treats the **output class** as the decision object:
+
+- **M0**: single-best point-estimate hypothesis
+- **M1**: local per-hypothesis epistemic ranking
+- **M2**: output-mass selection (aggregate evidence by distinct predicted output)
+- **M3**: output-mass + diversity-aware selection (penalize single-family coalitions)
+- **M4**: output-mass/diversity-aware selection + margin-gated refinement
+- **R_anchor**: previous broad-refinement operational baseline
+
+Selector-divergence tasks are necessary because uncertainty cannot be causal if all selectors always choose the same output.  
+The benchmark therefore requires real disagreement opportunities, multiple surviving outputs, and small output margins before it will make a thesis-facing claim.
+
+## Run The blind_holdout_v5 Epistemic Redesign Experiment
+
+```bash
+python tools/run_epistemic_method_redesign_experiment.py \
+  --tasks data/fixtures \
+  --split blind_holdout_v5 \
+  --split-path data/splits/blind_holdout_v5.json \
+  --manifest data/splits/blind_holdout_v5_manifest.json \
+  --reports-dir reports
+```
+
+This emits:
+
+- `reports/blind_holdout_v5_freeze_manifest.json` / `.md`
+- `reports/epistemic_method_redesign_frozen.json` / `.md`
+- `reports/epistemic_method_redesign_native.json` / `.md`
+- `reports/benchmark_quality_gates.json` / `.md`
+- `reports/output_selection_causal_analysis.json` / `.md`
+- `reports/efficiency_gating_analysis.json` / `.md`
+- `reports/task_level_epistemic_attribution.json` / `.md`
+- `reports/epistemic_process_verdict.json` / `.md`
+- `reports/method_setup_experiment_summary.json` / `.md`
+
+### How to interpret benchmark quality gates
+
+The gates validate the setup itself before any thesis claim:
+
+- Did tasks actually preserve multiple hypotheses?
+- Did multiple output classes survive?
+- Did selector disagreement actually occur where the manifest said it should?
+- Did output-level or diversity-aware selection ever improve correctness?
+
+If these gates do not pass, the final verdict must be treated as **methodologically inconclusive**.
+
+### How to interpret output-level uncertainty and diversity support
+
+- **Output uncertainty**: top-vs-runner-up coalition tension, reported from output masses.
+- **Output entropy**: dispersion across surviving output classes.
+- **Diversity-aware support**: coalition mass adjusted by distinct root transform families and penalized by coalition concentration.
+
+Use M2 to test whether coalition evidence beats a single best hypothesis.  
+Use M3 to test whether multi-family support beats a flashy but brittle coalition.  
+Use M4 to test whether refinement can be focused on contested outputs without losing accuracy.
+
+### How to read the final verdict
+
+`epistemic_process_verdict.md` reports whether uncertainty is:
+
+- `proven_strongly`
+- `supported_but_not_isolated`
+- `inconclusive`
+- `falsified_on_this_benchmark`
+- `methodologically_inconclusive`
+
+It also states whether efficiency gains were achieved and what limitations remain after the experiment.
 
 Each contrast reports:
 - Solve rate in each condition

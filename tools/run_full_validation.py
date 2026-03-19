@@ -81,7 +81,7 @@ def main(argv: list[str] | None = None) -> int:
         "--splits",
         nargs="*",
         default=["all"],
-        help="Splits to evaluate. Use all, dev, regression, blind_holdout, blind_holdout_v2, blind_holdout_v3, or omit for all.",
+        help="Splits to evaluate. Use all, dev, regression, blind_holdout, blind_holdout_v2, blind_holdout_v3, blind_holdout_v5, or omit for all.",
     )
     args = parser.parse_args(argv)
 
@@ -176,7 +176,14 @@ def main(argv: list[str] | None = None) -> int:
         print(f"[WARN] generate_thesis_validation_summary failed: {thesis_validation['stderr']}")
 
     freeze_manifest = _run(
-        ["python", "tools/generate_freeze_manifest.py"],
+        [
+            "python",
+            "tools/generate_freeze_manifest.py",
+            "--json",
+            str(reports_dir / "blind_holdout_v3_freeze_manifest.json"),
+            "--markdown",
+            str(reports_dir / "blind_holdout_v3_freeze_manifest.md"),
+        ],
         repo_root,
     )
     if freeze_manifest["returncode"] != 0:
@@ -202,6 +209,20 @@ def main(argv: list[str] | None = None) -> int:
     )
     if thesis_final["returncode"] != 0:
         print(f"[WARN] generate_thesis_final_attribution_summary failed: {thesis_final['stderr']}")
+
+    epistemic_redesign = _run(
+        [
+            "python",
+            "tools/run_epistemic_method_redesign_experiment.py",
+            "--tasks",
+            args.tasks,
+            "--reports-dir",
+            str(reports_dir),
+        ],
+        repo_root,
+    )
+    if epistemic_redesign["returncode"] != 0:
+        print(f"[WARN] run_epistemic_method_redesign_experiment failed: {epistemic_redesign['stderr']}")
 
     failed = any(results[name]["returncode"] != 0 for name in ("unit_and_integration", "regressions"))
     for suite in results["split_runs"].values():

@@ -9,6 +9,14 @@ from pathlib import Path
 from arc_epistemic.solver.agents import FULL_COAGENCY_CONFIG, LoopDiagnostics, SolverConfig, run_coagency_loop
 from arc_epistemic.solver.executor import apply_hypothesis
 from arc_epistemic.solver.hypotheses import Hypothesis
+from arc_epistemic.solver.output_competition import (
+    output_entropy,
+    output_margin,
+    output_uncertainty,
+    select_top_two_diversity_aware_output_classes,
+    select_top_two_output_classes,
+    serialize_output_supports,
+)
 from arc_epistemic.solver.parser import Task, load_tasks
 from arc_epistemic.solver.selection import select_top_two
 from arc_epistemic.solver.submission import write_submission
@@ -20,6 +28,7 @@ class SolveResult:
     ranked_hypotheses: list[Hypothesis]
     loop_diagnostics: LoopDiagnostics
     selected_hypotheses: tuple[str, ...]
+    selection_telemetry: dict[str, object]
     run_fingerprint: str
 
 
@@ -40,8 +49,34 @@ def solve_task_with_diagnostics(task: Task, config: SolverConfig = FULL_COAGENCY
     ranked = loop_result.ranked_hypotheses
     predictions = []
     selected_hypotheses: list[str] = []
+    selection_telemetry: dict[str, object] = {"mode": "single_best_hypothesis"}
     for test_case in task.test:
-        first_hypothesis, second_hypothesis = select_top_two(ranked, test_case.input)
+        if config.use_output_aggregation and config.use_diversity_aware_output_selection:
+            first_hypothesis, second_hypothesis, supports = select_top_two_diversity_aware_output_classes(ranked, test_case.input)
+            selection_telemetry = {
+                "mode": "output_aggregation_diversity",
+                "output_supports": list(serialize_output_supports(supports)),
+                "output_uncertainty": round(output_uncertainty(supports), 6),
+                "output_entropy": round(output_entropy(supports), 6),
+                "output_margin": round(output_margin(supports), 6),
+                "winner_changed_vs_single_best": bool(
+                    ranked and first_hypothesis and ranked[0].description != first_hypothesis.description
+                ),
+            }
+        elif config.use_output_aggregation:
+            first_hypothesis, second_hypothesis, supports = select_top_two_output_classes(ranked, test_case.input)
+            selection_telemetry = {
+                "mode": "output_aggregation",
+                "output_supports": list(serialize_output_supports(supports)),
+                "output_uncertainty": round(output_uncertainty(supports), 6),
+                "output_entropy": round(output_entropy(supports), 6),
+                "output_margin": round(output_margin(supports), 6),
+                "winner_changed_vs_single_best": bool(
+                    ranked and first_hypothesis and ranked[0].description != first_hypothesis.description
+                ),
+            }
+        else:
+            first_hypothesis, second_hypothesis = select_top_two(ranked, test_case.input)
         if first_hypothesis is None:
             fallback = test_case.input.copy()
             predictions.append((fallback, fallback))
@@ -65,6 +100,7 @@ def solve_task_with_diagnostics(task: Task, config: SolverConfig = FULL_COAGENCY
         ranked_hypotheses=ranked,
         loop_diagnostics=loop_result.diagnostics,
         selected_hypotheses=tuple(selected_hypotheses),
+        selection_telemetry=selection_telemetry,
         run_fingerprint=_fingerprint(predictions, ranked),
     )
 

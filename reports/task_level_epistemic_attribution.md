@@ -1,0 +1,40 @@
+# Task-Level Epistemic Attribution
+
+| Task | Family | Category | Frozen M0→M2 disagree | Frozen M2→M3 disagree |
+| --- | --- | --- | --- | --- |
+| holdout_v5_control_01_task | control | all_agree_correct | no | no |
+| holdout_v5_control_02_task | control | all_agree_correct | no | no |
+| holdout_v5_control_03_task | control | all_agree_correct | no | no |
+| holdout_v5_control_04_task | control | all_agree_correct | no | no |
+| holdout_v5_control_05_task | control | all_agree_correct | no | no |
+| holdout_v5_control_06_task | control | refinement_anchor_best | no | no |
+| holdout_v5_control_07_task | control | refinement_anchor_best | no | no |
+| holdout_v5_control_08_task | control | refinement_anchor_best | no | no |
+| holdout_v5_diversity_sensitive_01_task | diversity_sensitive | diversity_aware_only_gain | no | yes |
+| holdout_v5_diversity_sensitive_02_task | diversity_sensitive | diversity_aware_only_gain | no | yes |
+| holdout_v5_diversity_sensitive_03_task | diversity_sensitive | diversity_aware_only_gain | no | yes |
+| holdout_v5_diversity_sensitive_04_task | diversity_sensitive | diversity_aware_only_gain | no | yes |
+| holdout_v5_diversity_sensitive_05_task | diversity_sensitive | diversity_aware_only_gain | no | yes |
+| holdout_v5_diversity_sensitive_06_task | diversity_sensitive | diversity_aware_only_gain | no | yes |
+| holdout_v5_diversity_sensitive_07_task | diversity_sensitive | diversity_aware_only_gain | no | yes |
+| holdout_v5_diversity_sensitive_08_task | diversity_sensitive | diversity_aware_only_gain | no | yes |
+| holdout_v5_refinement_composition_01_task | refinement_composition | diversity_hurt | no | yes |
+| holdout_v5_refinement_composition_02_task | refinement_composition | diversity_hurt | no | yes |
+| holdout_v5_refinement_composition_03_task | refinement_composition | diversity_hurt | no | yes |
+| holdout_v5_refinement_composition_04_task | refinement_composition | diversity_hurt | no | yes |
+| holdout_v5_refinement_composition_05_task | refinement_composition | diversity_hurt | no | yes |
+| holdout_v5_refinement_composition_06_task | refinement_composition | diversity_hurt | no | yes |
+| holdout_v5_refinement_composition_07_task | refinement_composition | diversity_hurt | no | yes |
+| holdout_v5_refinement_composition_08_task | refinement_composition | diversity_hurt | no | yes |
+| holdout_v5_selector_divergence_01_task | selector_divergence | epistemic_package_gain | yes | no |
+| holdout_v5_selector_divergence_02_task | selector_divergence | epistemic_package_gain | yes | no |
+| holdout_v5_selector_divergence_03_task | selector_divergence | epistemic_package_gain | yes | no |
+| holdout_v5_selector_divergence_04_task | selector_divergence | output_mass_only_gain | yes | yes |
+| holdout_v5_selector_divergence_05_task | selector_divergence | output_mass_only_gain | yes | yes |
+| holdout_v5_selector_divergence_06_task | selector_divergence | epistemic_package_gain | yes | no |
+| holdout_v5_selector_divergence_07_task | selector_divergence | epistemic_package_gain | yes | no |
+| holdout_v5_selector_divergence_08_task | selector_divergence | epistemic_package_gain | yes | no |
+| holdout_v5_selector_divergence_09_task | selector_divergence | epistemic_package_gain | yes | no |
+| holdout_v5_selector_divergence_10_task | selector_divergence | epistemic_package_gain | yes | no |
+| holdout_v5_selector_divergence_11_task | selector_divergence | epistemic_package_gain | yes | no |
+| holdout_v5_selector_divergence_12_task | selector_divergence | epistemic_package_gain | yes | no |

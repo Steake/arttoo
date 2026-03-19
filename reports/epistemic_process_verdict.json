@@ -1,0 +1,20 @@
+{
+  "conviction_level": "high",
+  "diversity_changed_answer": 18,
+  "efficiency_gain": "proven_strongly",
+  "falsified": [
+    "diversity-aware selection is not a generally safe replacement for refinement-composition tasks on this benchmark"
+  ],
+  "generated_at_utc": "2026-03-19T05:59:56.014734+00:00",
+  "output_selection_changed_answer": 12,
+  "proven_strongly": [
+    "output-level selection has an independent causal effect on selector_divergence tasks",
+    "diversity-aware coalition support has an independent causal effect on diversity_sensitive tasks",
+    "margin-gated refinement reduces compute while preserving accuracy"
+  ],
+  "selector_divergence_exercised": true,
+  "status": "proven_strongly",
+  "suggestive": [],
+  "summary": "blind_holdout_v5 passed the mechanism-exercise gates. Uncertainty verdict: proven_strongly. Efficiency verdict: proven_strongly.",
+  "uncertainty_causal_effect": "proven_strongly"
+}

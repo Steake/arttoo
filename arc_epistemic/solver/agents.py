@@ -9,6 +9,11 @@ from arc_epistemic.solver.arbiter import rank_hypotheses
 from arc_epistemic.solver.epistemic import derive_epistemic_state
 from arc_epistemic.solver.executor import evaluate_hypothesis
 from arc_epistemic.solver.hypotheses import Hypothesis, composed_hypothesis, primitive_hypothesis
+from arc_epistemic.solver.output_competition import (
+    aggregate_output_support,
+    select_contested_hypotheses,
+    serialize_output_supports,
+)
 from arc_epistemic.solver.parser import Task
 from arc_epistemic.solver.transforms import (
     color_map_transform,
@@ -32,11 +37,17 @@ class SolverConfig:
     name: str
     use_epistemic_scoring: bool
     use_refinement: bool
+    use_output_aggregation: bool = False
+    use_diversity_aware_output_selection: bool = False
+    use_margin_gated_refinement: bool = False
     first_pass_keep: int = FIRST_PASS_KEEP
     second_pass_keep: int = SECOND_PASS_KEEP
     max_generated_hypotheses: int = MAX_GENERATED_HYPOTHESES
     max_refined_hypotheses: int = MAX_REFINED_HYPOTHESES
     max_total_evaluations: int = MAX_TOTAL_EVALUATIONS
+    contested_margin_threshold: float = 0.25
+    contested_entropy_threshold: float = 0.55
+    contested_output_keep: int = 2
 
 
 @dataclass(frozen=True)
@@ -59,6 +70,8 @@ class LoopDiagnostics:
     first_pass_pruned: tuple[dict[str, str], ...]
     final_pruned: tuple[dict[str, str], ...]
     agent_disagreements: dict[str, object]
+    first_pass_output_competition: tuple[dict[str, object], ...]
+    refinement_gate: dict[str, object]
 
 
 @dataclass(frozen=True)
@@ -320,6 +333,7 @@ def refine_hypotheses(task: Task, survivors: list[Hypothesis], config: SolverCon
 def run_coagency_loop(task: Task, config: SolverConfig = FULL_COAGENCY_CONFIG) -> LoopResult:
     guardrail_messages: list[str] = []
     train_count = len(task.train)
+    output_strategy = "diversity" if config.use_diversity_aware_output_selection else "mass"
 
     generated = generate_hypotheses(task, config=config)
     if len(generated) > config.max_generated_hypotheses:
@@ -328,6 +342,28 @@ def run_coagency_loop(task: Task, config: SolverConfig = FULL_COAGENCY_CONFIG) -
 
     first_pass, first_crashes, first_shape_mismatches = score_hypotheses(task, generated, config=config)
     survivors, first_pruned = critic_prune(first_pass, keep=config.first_pass_keep, config=config)
+    first_pass_output_competition: tuple[dict[str, object], ...] = tuple()
+    refinement_gate: dict[str, object] = {
+        "mode": "broad_refinement",
+        "contested": False,
+        "selected_outputs": 0,
+        "selected_hypotheses": len(survivors),
+    }
+    refine_source = survivors
+    if task.test:
+        first_pass_supports = serialize_output_supports(
+            aggregate_output_support(survivors, task.test[0].input) if survivors else tuple()
+        )
+        first_pass_output_competition = first_pass_supports
+        if config.use_margin_gated_refinement and survivors:
+            refine_source, refinement_gate = select_contested_hypotheses(
+                survivors,
+                task.test[0].input,
+                margin_threshold=config.contested_margin_threshold,
+                entropy_threshold=config.contested_entropy_threshold,
+                keep_outputs=config.contested_output_keep,
+                strategy=output_strategy,
+            )
 
     refined: list[Hypothesis] = []
     if config.use_refinement:
@@ -336,7 +372,7 @@ def run_coagency_loop(task: Task, config: SolverConfig = FULL_COAGENCY_CONFIG) -
         remaining_budget = config.max_total_evaluations - first_pass_evals
         max_refined_by_budget = max(0, remaining_budget // max(train_count, 1)) - len(survivors)
         budget_cap = min(config.max_refined_hypotheses, max(0, max_refined_by_budget))
-        refined = refine_hypotheses(task, survivors, config=config)
+        refined = refine_hypotheses(task, refine_source, config=config)
         if len(refined) > budget_cap:
             refined = refined[:budget_cap]
             guardrail_messages.append("refined hypothesis cap enforced")
@@ -366,5 +402,7 @@ def run_coagency_loop(task: Task, config: SolverConfig = FULL_COAGENCY_CONFIG) -
         first_pass_pruned=tuple(asdict(record) for record in first_pruned),
         final_pruned=tuple(asdict(record) for record in final_pruned),
         agent_disagreements=_agent_disagreements(first_pass),
+        first_pass_output_competition=first_pass_output_competition,
+        refinement_gate=refinement_gate,
     )
     return LoopResult(ranked_hypotheses=final_survivors, diagnostics=diagnostics)
