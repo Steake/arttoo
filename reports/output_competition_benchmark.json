@@ -1,6 +1,6 @@
 {
   "frozen": {
-    "generated_at_utc": "2026-03-19T05:05:27.874881+00:00",
+    "generated_at_utc": "2026-03-19T05:06:27.343577+00:00",
     "output_aggregation_solve_rate": 1.0,
     "single_best_solve_rate": 1.0,
     "solve_rate_lift": 0.0,
@@ -96,7 +96,7 @@
     "baseline_solve_rate": 1.0,
     "gated_compute_savings_vs_aggregated": 12.0,
     "gated_output_aggregation_solve_rate": 1.0,
-    "generated_at_utc": "2026-03-19T05:05:27.993484+00:00",
+    "generated_at_utc": "2026-03-19T05:06:27.458211+00:00",
     "mean_aggregated_evaluations": 60.0,
     "mean_aggregated_refined": 18.0,
     "mean_baseline_evaluations": 60.0,

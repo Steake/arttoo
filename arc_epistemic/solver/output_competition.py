@@ -165,6 +165,7 @@ def select_contested_hypotheses(
 
 
 def serialize_output_supports(supports: tuple[OutputSupport, ...]) -> tuple[dict[str, object], ...]:
+    aggregate_uncertainty = round(output_uncertainty(supports), 6)
     return tuple(
         {
             "representative_hypothesis": support.best_hypothesis.description,
@@ -173,7 +174,7 @@ def serialize_output_supports(supports: tuple[OutputSupport, ...]) -> tuple[dict
             "total_mass": round(support.total_mass, 6),
             "normalized_mass": round(support.normalized_mass, 6),
             "margin_to_runner_up": round(support.margin_to_runner_up, 6),
-            "output_uncertainty": round(output_uncertainty(supports), 6),
+            "output_uncertainty": aggregate_uncertainty,
         }
         for support in supports
     )
