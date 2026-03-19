@@ -1,0 +1,198 @@
+{
+  "split": "blind_holdout_v3",
+  "task_count": 24,
+  "entries": [
+    {
+      "task_id": "holdout_v3_refine_crop_flip_h_01_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Requires crop_to_content composed with flip_horizontal. Pure crop and pure flip are both wrong on the padded inputs."
+    },
+    {
+      "task_id": "holdout_v3_refine_crop_flip_h_02_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Requires crop_to_content composed with flip_horizontal. Pure crop and pure flip are both wrong on the padded inputs."
+    },
+    {
+      "task_id": "holdout_v3_refine_crop_flip_h_03_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Requires crop_to_content composed with flip_horizontal. Pure crop and pure flip are both wrong on the padded inputs."
+    },
+    {
+      "task_id": "holdout_v3_refine_crop_rotate90_01_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Requires crop_to_content composed with rotate90. Primitive baseline fails because crop alone preserves orientation and rotate90 alone preserves padding."
+    },
+    {
+      "task_id": "holdout_v3_refine_crop_rotate90_02_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Requires crop_to_content composed with rotate90. Primitive baseline fails because crop alone preserves orientation and rotate90 alone preserves padding."
+    },
+    {
+      "task_id": "holdout_v3_refine_crop_rotate90_03_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Requires crop_to_content composed with rotate90. Primitive baseline fails because crop alone preserves orientation and rotate90 alone preserves padding."
+    },
+    {
+      "task_id": "holdout_v3_refine_largest_rotate180_01_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Requires extracting the largest connected object and then rotating it 180 degrees. The distractor pixel prevents crop_to_content from being correct."
+    },
+    {
+      "task_id": "holdout_v3_refine_largest_rotate180_02_task",
+      "family": "refinement_composition",
+      "intended_primary_mechanism": "refinement_composition",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Requires extracting the largest connected object and then rotating it 180 degrees. The distractor pixel prevents crop_to_content from being correct."
+    },
+    {
+      "task_id": "holdout_v3_control_flip_horizontal_01_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_competing_candidates_expected": "no",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Pure flip_horizontal control task. No refinement or uncertainty effect is intended."
+    },
+    {
+      "task_id": "holdout_v3_control_flip_horizontal_02_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_competing_candidates_expected": "no",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Pure flip_horizontal control task. No refinement or uncertainty effect is intended."
+    },
+    {
+      "task_id": "holdout_v3_control_flip_horizontal_03_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_competing_candidates_expected": "no",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Pure flip_horizontal control task. No refinement or uncertainty effect is intended."
+    },
+    {
+      "task_id": "holdout_v3_control_translate_to_origin_01_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_competing_candidates_expected": "no",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Pure translate_to_origin control task. No first-pass disagreement is intended."
+    },
+    {
+      "task_id": "holdout_v3_control_translate_to_origin_02_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_competing_candidates_expected": "no",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Pure translate_to_origin control task. No first-pass disagreement is intended."
+    },
+    {
+      "task_id": "holdout_v3_control_translate_to_origin_03_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_competing_candidates_expected": "no",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Pure translate_to_origin control task. No first-pass disagreement is intended."
+    },
+    {
+      "task_id": "holdout_v3_control_tile_1x2_01_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_competing_candidates_expected": "no",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Pure tiling control task with repeat factor 1x2."
+    },
+    {
+      "task_id": "holdout_v3_control_tile_1x2_02_task",
+      "family": "control",
+      "intended_primary_mechanism": "control",
+      "intended_competing_candidates_expected": "no",
+      "intended_first_pass_disagreement_expected": "no",
+      "notes": "Pure tiling control task with repeat factor 1x2."
+    },
+    {
+      "task_id": "holdout_v3_ranking_conflict_01_task",
+      "family": "ranking_conflict",
+      "intended_primary_mechanism": "ranking_conflict",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "yes",
+      "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal."
+    },
+    {
+      "task_id": "holdout_v3_ranking_conflict_02_task",
+      "family": "ranking_conflict",
+      "intended_primary_mechanism": "ranking_conflict",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "yes",
+      "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal."
+    },
+    {
+      "task_id": "holdout_v3_ranking_conflict_03_task",
+      "family": "ranking_conflict",
+      "intended_primary_mechanism": "ranking_conflict",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "yes",
+      "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal."
+    },
+    {
+      "task_id": "holdout_v3_ranking_conflict_04_task",
+      "family": "ranking_conflict",
+      "intended_primary_mechanism": "ranking_conflict",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "yes",
+      "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal."
+    },
+    {
+      "task_id": "holdout_v3_ranking_conflict_05_task",
+      "family": "ranking_conflict",
+      "intended_primary_mechanism": "ranking_conflict",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "yes",
+      "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal."
+    },
+    {
+      "task_id": "holdout_v3_ranking_conflict_06_task",
+      "family": "ranking_conflict",
+      "intended_primary_mechanism": "ranking_conflict",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "yes",
+      "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal."
+    },
+    {
+      "task_id": "holdout_v3_ranking_conflict_07_task",
+      "family": "ranking_conflict",
+      "intended_primary_mechanism": "ranking_conflict",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "yes",
+      "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal."
+    },
+    {
+      "task_id": "holdout_v3_ranking_conflict_08_task",
+      "family": "ranking_conflict",
+      "intended_primary_mechanism": "ranking_conflict",
+      "intended_competing_candidates_expected": "yes",
+      "intended_first_pass_disagreement_expected": "yes",
+      "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal."
+    }
+  ]
+}

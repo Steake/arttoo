@@ -10,6 +10,7 @@ Task membership is defined in [data/splits](data/splits):
 - `regression`: regression-focused fixtures, including retained failure-family coverage — **safe for tuning**.
 - `blind_holdout`: isolated holdout fixtures for less gameable evaluation — **not tuning-safe**.
 - `blind_holdout_v2`: second holdout cohort of 5 discriminative tasks used in the 2×2 factorial causal attribution experiment — **not tuning-safe**.
+- `blind_holdout_v3`: 24-task frozen attribution-v2 holdout (8 ranking_conflict, 8 refinement_composition, 8 control) and the **primary inferential target** for current causal claims — **not tuning-safe**.
 - `all`: every fixture under [data/fixtures](data/fixtures) — **not tuning-safe**.
 
 ## Run Tests
@@ -17,6 +18,7 @@ Task membership is defined in [data/splits](data/splits):
 ```bash
 python -m unittest discover -s tests -p 'test_*.py'
 python -m unittest tests.test_regressions
+python -m unittest tests.test_causal_factorial_v2
 ```
 
 ## Run The Full Validation Battery
@@ -31,6 +33,12 @@ It also generates:
 - `reports/multi_split_summary.md` — one-glance split comparison table
 - `reports/final_split_diagnostics.json` / `.md` — machine-readable diagnostics with blind holdout verdict
 - `reports/uncertainty_audit.json` / `.md` — uncertainty calibration and decision-relevance analysis
+- `reports/blind_holdout_v3_freeze_manifest.json` / `.md` — frozen task manifest hash and timestamp
+- `reports/causal_factorial_v2.json` — full attribution-v2 machine-readable bundle
+- `reports/task_level_attribution_v2.json` / `.md` — richer per-task attribution and audit telemetry
+- `reports/uncertainty_causal_analysis.json` / `.md` — uncertainty-specific causal analysis on the frozen benchmark
+- `reports/causal_verdict_v2.json` / `.md` — explicit factor verdicts (`proven` / `supported but not isolated` / `still inconclusive`)
+- `reports/thesis_final_attribution_summary.json` / `.md` — final blind_holdout_v3 thesis summary
 
 Per-split outputs go to `reports/dev/`, `reports/regression/`, `reports/blind_holdout/`. Aggregate outputs go to `reports/`.
 
@@ -246,6 +254,77 @@ The five new discriminative tasks in `blind_holdout_v2`:
 
 The dominant causal factor on `blind_holdout_v2` is **Refinement**: ME_R ≈ +0.60, ME_E ≈ 0.00, interaction ≈ 0.00.
 
+## Attribution v2: blind_holdout_v3
+
+`blind_holdout_v3` is now the primary causal benchmark because it freezes intended task mechanisms before solver evaluation. Labels come from the manifest, **not** from observed solver outcomes.
+
+### Freeze protocol
+
+After authoring or editing the v3 split, freeze it immediately:
+
+```bash
+python tools/generate_freeze_manifest.py
+```
+
+This writes:
+- `reports/blind_holdout_v3_freeze_manifest.json`
+- `reports/blind_holdout_v3_freeze_manifest.md`
+
+The freeze manifest records timestamp plus SHA-256 hashes for both:
+- `data/splits/blind_holdout_v3.json`
+- `data/splits/blind_holdout_v3_manifest.json`
+
+Do not relabel tasks after freezing based on solver outcomes.
+
+### Run attribution v2
+
+```bash
+python tools/run_causal_factorial_v2.py --tasks data/fixtures --reports-dir reports
+python tools/generate_uncertainty_causal_analysis.py --input reports/causal_factorial_v2.json
+python tools/generate_thesis_final_attribution_summary.py --causal-input reports/causal_factorial_v2.json --freeze-input reports/blind_holdout_v3_freeze_manifest.json
+```
+
+### Required validation order
+
+```bash
+python -m unittest tests.test_causal_factorial_v2
+python -m unittest discover -s tests -p 'test_*.py'
+python tools/generate_freeze_manifest.py
+python tools/run_causal_factorial_v2.py --tasks data/fixtures --reports-dir reports
+python tools/generate_uncertainty_causal_analysis.py --input reports/causal_factorial_v2.json
+python tools/generate_thesis_final_attribution_summary.py --causal-input reports/causal_factorial_v2.json --freeze-input reports/blind_holdout_v3_freeze_manifest.json
+```
+
+### v3 subset interpretation
+
+- `all_blind_holdout_v3`: overall benchmark, reported honestly but not used to relabel mechanism.
+- `ranking_conflict`: intended uncertainty-sensitive tasks. Positive uncertainty evidence is assessed **here**, not on the aggregate alone.
+- `refinement_composition`: intended bounded-composition tasks. Positive refinement evidence is assessed **here**.
+- `control`: sanity-check tasks where all conditions should usually agree.
+
+### Evidence rules encoded in attribution v2
+
+**Strong evidence that uncertainty is causal** requires all of:
+1. positive uncertainty effect on the `ranking_conflict` subset,
+2. materially one-sided evidence (`95% CI` excludes 0 **or** exact paired wins are one-sided, with an honest caveat if only the latter holds),
+3. nonzero successful uncertainty-driven reorderings,
+4. at least one `uncertainty_only_gain` or `synergy_gain`,
+5. directional consistency between frozen-pool and native-pipeline analyses.
+
+**Strong evidence that refinement is causal** uses the analogous rule on the `refinement_composition` subset.
+
+Final factor verdicts must explicitly distinguish:
+- `proven`
+- `supported but not isolated`
+- `still inconclusive`
+
+Each verdict also reports conviction:
+- `high`
+- `moderate`
+- `low`
+
+An honestly null or inconclusive uncertainty result is acceptable. The benchmark goal is a fair frozen test with an explicit verdict, not a forced positive claim.
+
 ## Snapshot A Frozen Baseline
 
 ```bash
@@ -322,6 +401,10 @@ Fields that might be expected but are **not currently available**:
 | `reports/regression/scorecard.json` | ✅ yes |
 | `reports/blind_holdout/scorecard.json` | ❌ no — holdout numbers |
 | `reports/blind_holdout_v2/causal_factorial.json` | ❌ no — holdout numbers |
+| `reports/causal_factorial_v2.json` | ❌ no — frozen blind_holdout_v3 attribution benchmark |
+| `reports/task_level_attribution_v2.md` | ❌ no — frozen blind_holdout_v3 task-level evidence |
+| `reports/uncertainty_causal_analysis.md` | ❌ no — frozen blind_holdout_v3 uncertainty verdict |
+| `reports/thesis_final_attribution_summary.md` | ❌ no — frozen blind_holdout_v3 final thesis verdict |
 | `reports/scorecard.json` (all) | ❌ no — includes holdout |
 | `reports/final_split_diagnostics.md` | ⚠️ read all columns; blind_holdout column is marked |
 | `reports/uncertainty_audit.md` | ⚠️ read split labels; holdout rows are marked |

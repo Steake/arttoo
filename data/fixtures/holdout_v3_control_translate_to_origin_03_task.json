@@ -1,0 +1,143 @@
+{
+  "task_id": "holdout_v3_control_translate_to_origin_03_task",
+  "train": [
+    {
+      "input": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          4
+        ]
+      ],
+      "output": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          0
+        ]
+      ],
+      "output": [
+        [
+          7,
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "test": [
+    {
+      "input": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          9
+        ],
+        [
+          0,
+          0,
+          9
+        ]
+      ]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [
+        [
+          9,
+          9,
+          0
+        ],
+        [
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    ],
+    "ranking_prefix": [
+      "translate_to_origin"
+    ],
+    "notes": "Pure translate_to_origin control task. No first-pass disagreement is intended.",
+    "expect_exact": true,
+    "failure_tags": []
+  }
+}
