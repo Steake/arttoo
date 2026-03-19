@@ -1,0 +1,23 @@
+{
+  "task_id": "holdout_v2_flip_h_task",
+  "train": [
+    {
+      "input": [[1,2,3],[4,5,6],[7,8,9]],
+      "output": [[3,2,1],[6,5,4],[9,8,7]]
+    },
+    {
+      "input": [[1,1,2],[3,4,5],[6,7,8]],
+      "output": [[2,1,1],[5,4,3],[8,7,6]]
+    }
+  ],
+  "test": [
+    {"input": [[9,8,7],[6,5,4],[3,2,1]]}
+  ],
+  "golden": {
+    "expected_test_outputs": [[[7,8,9],[4,5,6],[1,2,3]]],
+    "ranking_prefix": ["flip_horizontal"],
+    "notes": "Pure flip_horizontal (reverse each row). No padding or composition needed. Primitive baseline should solve this directly via the flip_horizontal named transform.",
+    "expect_exact": true,
+    "failure_tags": []
+  }
+}

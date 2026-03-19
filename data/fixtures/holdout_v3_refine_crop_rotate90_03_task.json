@@ -1,0 +1,133 @@
+{
+  "task_id": "holdout_v3_refine_crop_rotate90_03_task",
+  "train": [
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "output": [
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          7,
+          0
+        ],
+        [
+          0,
+          8,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "output": [
+        [
+          7,
+          9
+        ],
+        [
+          6,
+          8
+        ]
+      ]
+    }
+  ],
+  "test": [
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0
+        ],
+        [
+          0,
+          5,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    ],
+    "ranking_prefix": [
+      "crop_to_content -> rotate90"
+    ],
+    "notes": "Requires crop_to_content composed with rotate90. Primitive baseline fails because crop alone preserves orientation and rotate90 alone preserves padding.",
+    "expect_exact": true,
+    "failure_tags": [
+      "composition_failure"
+    ]
+  }
+}

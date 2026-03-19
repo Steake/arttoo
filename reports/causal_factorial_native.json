@@ -1,0 +1,184 @@
+{
+  "condition_solve_rates": {
+    "C00": {
+      "config_name": "primitive_baseline_only",
+      "solve_count": 2,
+      "solve_rate": 0.4,
+      "task_count": 5
+    },
+    "C01": {
+      "config_name": "epistemic_no_refinement",
+      "solve_count": 2,
+      "solve_rate": 0.4,
+      "task_count": 5
+    },
+    "C10": {
+      "config_name": "primitive_plus_bounded_compositions",
+      "solve_count": 5,
+      "solve_rate": 1.0,
+      "task_count": 5
+    },
+    "C11": {
+      "config_name": "full_epistemic_coagency",
+      "solve_count": 5,
+      "solve_rate": 1.0,
+      "task_count": 5
+    }
+  },
+  "contrasts": [
+    {
+      "ci_lower": 0.2,
+      "ci_upper": 1.0,
+      "condition_a": "C00",
+      "condition_b": "C10",
+      "description": "Refinement without epistemic scoring (C10 \u2212 C00)",
+      "estimate": 0.6,
+      "mcnemar_p": 0.248213,
+      "mcnemar_statistic": 1.333333,
+      "n_ab": 0,
+      "n_ba": 3,
+      "n_concordant": 2,
+      "name": "c10_vs_c00",
+      "solve_rate_a": 0.4,
+      "solve_rate_b": 1.0
+    },
+    {
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "condition_a": "C00",
+      "condition_b": "C01",
+      "description": "Epistemic scoring without refinement (C01 \u2212 C00)",
+      "estimate": 0.0,
+      "mcnemar_p": null,
+      "mcnemar_statistic": null,
+      "n_ab": 0,
+      "n_ba": 0,
+      "n_concordant": 5,
+      "name": "c01_vs_c00",
+      "solve_rate_a": 0.4,
+      "solve_rate_b": 0.4
+    },
+    {
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "condition_a": "C10",
+      "condition_b": "C11",
+      "description": "Epistemic scoring given refinement (C11 \u2212 C10)",
+      "estimate": 0.0,
+      "mcnemar_p": null,
+      "mcnemar_statistic": null,
+      "n_ab": 0,
+      "n_ba": 0,
+      "n_concordant": 5,
+      "name": "c11_vs_c10",
+      "solve_rate_a": 1.0,
+      "solve_rate_b": 1.0
+    },
+    {
+      "ci_lower": 0.2,
+      "ci_upper": 1.0,
+      "condition_a": "C01",
+      "condition_b": "C11",
+      "description": "Refinement given epistemic scoring (C11 \u2212 C01)",
+      "estimate": 0.6,
+      "mcnemar_p": 0.248213,
+      "mcnemar_statistic": 1.333333,
+      "n_ab": 0,
+      "n_ba": 3,
+      "n_concordant": 2,
+      "name": "c11_vs_c01",
+      "solve_rate_a": 0.4,
+      "solve_rate_b": 1.0
+    },
+    {
+      "ci_lower": 0.2,
+      "ci_upper": 1.0,
+      "condition_a": "C00",
+      "condition_b": "C11",
+      "description": "Full co-agency vs primitive baseline (C11 \u2212 C00)",
+      "estimate": 0.6,
+      "mcnemar_p": 0.248213,
+      "mcnemar_statistic": 1.333333,
+      "n_ab": 0,
+      "n_ba": 3,
+      "n_concordant": 2,
+      "name": "c11_vs_c00",
+      "solve_rate_a": 0.4,
+      "solve_rate_b": 1.0
+    }
+  ],
+  "generated_at_utc": "2026-03-19T03:39:57.288915+00:00",
+  "interaction": {
+    "ci_lower": 0.0,
+    "ci_upper": 0.0,
+    "condition_a": "C01",
+    "condition_b": "C10",
+    "description": "R\u00d7E interaction: (C11 \u2212 C01) \u2212 (C10 \u2212 C00)",
+    "estimate": 0.0,
+    "mcnemar_p": null,
+    "mcnemar_statistic": null,
+    "n_ab": 0,
+    "n_ba": 0,
+    "n_concordant": 5,
+    "name": "interaction_RxE",
+    "solve_rate_a": 0.4,
+    "solve_rate_b": 1.0
+  },
+  "split": "blind_holdout_v2",
+  "task_attributions": [
+    {
+      "c00": false,
+      "c01": false,
+      "c10": true,
+      "c11": true,
+      "category": "refinement_resolves",
+      "task_id": "holdout_v2_crop_flip_v_task"
+    },
+    {
+      "c00": false,
+      "c01": false,
+      "c10": true,
+      "c11": true,
+      "category": "refinement_resolves",
+      "task_id": "holdout_v2_crop_rotate90_task"
+    },
+    {
+      "c00": true,
+      "c01": true,
+      "c10": true,
+      "c11": true,
+      "category": "all_solve",
+      "task_id": "holdout_v2_flip_h_task"
+    },
+    {
+      "c00": false,
+      "c01": false,
+      "c10": true,
+      "c11": true,
+      "category": "refinement_resolves",
+      "task_id": "holdout_v2_largest_rotate180_task"
+    },
+    {
+      "c00": true,
+      "c01": true,
+      "c10": true,
+      "c11": true,
+      "category": "all_solve",
+      "task_id": "holdout_v2_rotate270_task"
+    }
+  ],
+  "task_ids": [
+    "holdout_v2_crop_flip_v_task",
+    "holdout_v2_crop_rotate90_task",
+    "holdout_v2_flip_h_task",
+    "holdout_v2_largest_rotate180_task",
+    "holdout_v2_rotate270_task"
+  ],
+  "verdict": {
+    "conclusion": "Refinement (R) is the dominant causal factor (ME_R=+0.600 vs ME_E=+0.000). Adding bounded composition explains most of the +0.600 full-vs-primitive lift.",
+    "dominant_factor": "refinement",
+    "epistemic_main_effect": 0.0,
+    "interaction_effect": 0.0,
+    "refinement_main_effect": 0.6
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "task_ids": [
+    "holdout_v3_refine_crop_flip_h_01_task",
+    "holdout_v3_refine_crop_flip_h_02_task",
+    "holdout_v3_refine_crop_flip_h_03_task",
+    "holdout_v3_refine_crop_rotate90_01_task",
+    "holdout_v3_refine_crop_rotate90_02_task",
+    "holdout_v3_refine_crop_rotate90_03_task",
+    "holdout_v3_refine_largest_rotate180_01_task",
+    "holdout_v3_refine_largest_rotate180_02_task",
+    "holdout_v3_control_flip_horizontal_01_task",
+    "holdout_v3_control_flip_horizontal_02_task",
+    "holdout_v3_control_flip_horizontal_03_task",
+    "holdout_v3_control_translate_to_origin_01_task",
+    "holdout_v3_control_translate_to_origin_02_task",
+    "holdout_v3_control_translate_to_origin_03_task",
+    "holdout_v3_control_tile_1x2_01_task",
+    "holdout_v3_control_tile_1x2_02_task",
+    "holdout_v3_ranking_conflict_01_task",
+    "holdout_v3_ranking_conflict_02_task",
+    "holdout_v3_ranking_conflict_03_task",
+    "holdout_v3_ranking_conflict_04_task",
+    "holdout_v3_ranking_conflict_05_task",
+    "holdout_v3_ranking_conflict_06_task",
+    "holdout_v3_ranking_conflict_07_task",
+    "holdout_v3_ranking_conflict_08_task"
+  ]
+}

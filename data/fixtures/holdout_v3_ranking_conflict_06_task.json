@@ -1,0 +1,185 @@
+{
+  "task_id": "holdout_v3_ranking_conflict_06_task",
+  "train": [
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          8,
+          8,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0
+        ]
+      ],
+      "output": [
+        [
+          8,
+          8,
+          8
+        ],
+        [
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          5,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0
+        ]
+      ],
+      "output": [
+        [
+          5,
+          5,
+          5
+        ],
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ]
+    }
+  ],
+  "test": [
+    {
+      "input": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          4,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0
+        ]
+      ]
+    }
+  ],
+  "golden": {
+    "expected_test_outputs": [
+      [
+        [
+          4,
+          4,
+          4
+        ],
+        [
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ]
+    ],
+    "ranking_prefix": [
+      "largest_object -> flip_horizontal"
+    ],
+    "notes": "Intended ranking-conflict task: largest_object and crop_to_content both remain plausible in the first pass, but the intended program is largest_object -> flip_horizontal.",
+    "expect_exact": true,
+    "failure_tags": []
+  }
+}

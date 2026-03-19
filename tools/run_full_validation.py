@@ -81,7 +81,7 @@ def main(argv: list[str] | None = None) -> int:
         "--splits",
         nargs="*",
         default=["all"],
-        help="Splits to evaluate. Use all, dev, regression, blind_holdout, or omit for all.",
+        help="Splits to evaluate. Use all, dev, regression, blind_holdout, blind_holdout_v2, blind_holdout_v3, or omit for all.",
     )
     args = parser.parse_args(argv)
 
@@ -174,6 +174,34 @@ def main(argv: list[str] | None = None) -> int:
     )
     if thesis_validation["returncode"] != 0:
         print(f"[WARN] generate_thesis_validation_summary failed: {thesis_validation['stderr']}")
+
+    freeze_manifest = _run(
+        ["python", "tools/generate_freeze_manifest.py"],
+        repo_root,
+    )
+    if freeze_manifest["returncode"] != 0:
+        print(f"[WARN] generate_freeze_manifest failed: {freeze_manifest['stderr']}")
+
+    causal_v2 = _run(
+        ["python", "tools/run_causal_factorial_v2.py", "--tasks", args.tasks, "--reports-dir", str(reports_dir)],
+        repo_root,
+    )
+    if causal_v2["returncode"] != 0:
+        print(f"[WARN] run_causal_factorial_v2 failed: {causal_v2['stderr']}")
+
+    uncertainty_causal = _run(
+        ["python", "tools/generate_uncertainty_causal_analysis.py", "--input", str(reports_dir / "causal_factorial_v2.json"), "--json", str(reports_dir / "uncertainty_causal_analysis.json"), "--markdown", str(reports_dir / "uncertainty_causal_analysis.md")],
+        repo_root,
+    )
+    if uncertainty_causal["returncode"] != 0:
+        print(f"[WARN] generate_uncertainty_causal_analysis failed: {uncertainty_causal['stderr']}")
+
+    thesis_final = _run(
+        ["python", "tools/generate_thesis_final_attribution_summary.py", "--causal-input", str(reports_dir / "causal_factorial_v2.json"), "--freeze-input", str(reports_dir / "blind_holdout_v3_freeze_manifest.json"), "--json", str(reports_dir / "thesis_final_attribution_summary.json"), "--markdown", str(reports_dir / "thesis_final_attribution_summary.md")],
+        repo_root,
+    )
+    if thesis_final["returncode"] != 0:
+        print(f"[WARN] generate_thesis_final_attribution_summary failed: {thesis_final['stderr']}")
 
     failed = any(results[name]["returncode"] != 0 for name in ("unit_and_integration", "regressions"))
     for suite in results["split_runs"].values():

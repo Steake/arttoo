@@ -1,0 +1,23 @@
+{
+  "task_id": "holdout_v2_crop_flip_v_task",
+  "train": [
+    {
+      "input": [[0,0,0,0],[0,1,2,0],[0,3,4,0],[0,0,0,0]],
+      "output": [[3,4],[1,2]]
+    },
+    {
+      "input": [[0,0,0,0],[0,5,6,0],[0,7,8,0],[0,0,0,0]],
+      "output": [[7,8],[5,6]]
+    }
+  ],
+  "test": [
+    {"input": [[0,0,0,0],[0,2,1,0],[0,4,3,0],[0,0,0,0]]}
+  ],
+  "golden": {
+    "expected_test_outputs": [[[4,3],[2,1]]],
+    "ranking_prefix": ["crop_to_content -> flip_vertical"],
+    "notes": "Requires crop_to_content composed with flip_vertical (reverse row order). Primitive baseline fails: crop_to_content alone gets wrong row order, flip_vertical alone gets wrong shape. Full config recovers the composition.",
+    "expect_exact": true,
+    "failure_tags": ["composition_failure"]
+  }
+}

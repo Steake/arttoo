@@ -1,0 +1,42 @@
+{
+  "family_counts": {
+    "control": 8,
+    "ranking_conflict": 8,
+    "refinement_composition": 8
+  },
+  "generated_at_utc": "2026-03-19T04:23:51.250544+00:00",
+  "manifest_hash_sha256": "db98c4fbcd2d27fafda7de11c43734965eb703d24ce9a1a184a46658bd8237fd",
+  "source_paths": {
+    "manifest": "data/splits/blind_holdout_v3_manifest.json",
+    "split": "data/splits/blind_holdout_v3.json"
+  },
+  "split": "blind_holdout_v3",
+  "split_hash_sha256": "62acb1893546787827428a150ee7bbc4cbe541f1221b97b07f8751a100878741",
+  "task_count": 24,
+  "task_ids": [
+    "holdout_v3_refine_crop_flip_h_01_task",
+    "holdout_v3_refine_crop_flip_h_02_task",
+    "holdout_v3_refine_crop_flip_h_03_task",
+    "holdout_v3_refine_crop_rotate90_01_task",
+    "holdout_v3_refine_crop_rotate90_02_task",
+    "holdout_v3_refine_crop_rotate90_03_task",
+    "holdout_v3_refine_largest_rotate180_01_task",
+    "holdout_v3_refine_largest_rotate180_02_task",
+    "holdout_v3_control_flip_horizontal_01_task",
+    "holdout_v3_control_flip_horizontal_02_task",
+    "holdout_v3_control_flip_horizontal_03_task",
+    "holdout_v3_control_translate_to_origin_01_task",
+    "holdout_v3_control_translate_to_origin_02_task",
+    "holdout_v3_control_translate_to_origin_03_task",
+    "holdout_v3_control_tile_1x2_01_task",
+    "holdout_v3_control_tile_1x2_02_task",
+    "holdout_v3_ranking_conflict_01_task",
+    "holdout_v3_ranking_conflict_02_task",
+    "holdout_v3_ranking_conflict_03_task",
+    "holdout_v3_ranking_conflict_04_task",
+    "holdout_v3_ranking_conflict_05_task",
+    "holdout_v3_ranking_conflict_06_task",
+    "holdout_v3_ranking_conflict_07_task",
+    "holdout_v3_ranking_conflict_08_task"
+  ]
+}
