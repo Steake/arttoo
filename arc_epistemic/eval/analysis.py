@@ -192,6 +192,7 @@ def _telemetry(result: SolveResult, expected: Grid, runtime_ms: float = 0.0) -> 
             "attempt_1_hypothesis": winning.description if winning else "",
             "attempt_2_hypothesis": second.description if second else "",
             "selected_hypotheses": list(result.selected_hypotheses),
+            "selection_telemetry": result.selection_telemetry,
         },
         # confidence: epistemic values for the winning hypothesis
         "confidence": {
@@ -199,6 +200,12 @@ def _telemetry(result: SolveResult, expected: Grid, runtime_ms: float = 0.0) -> 
             "disbelief": winning.disbelief if winning else 0.0,
             "uncertainty": winning.uncertainty if winning else 1.0,
             "score": winning.score if winning else -1.0,
+        },
+        "output_confidence": {
+            "selection_mode": result.selection_telemetry.get("mode", "single_best_hypothesis"),
+            "output_uncertainty": result.selection_telemetry.get("output_uncertainty", 1.0),
+            "winner_changed_vs_single_best": result.selection_telemetry.get("winner_changed_vs_single_best", False),
+            "output_supports": result.selection_telemetry.get("output_supports", []),
         },
         # step_counts: search breadth and depth statistics
         "step_counts": {
@@ -210,6 +217,8 @@ def _telemetry(result: SolveResult, expected: Grid, runtime_ms: float = 0.0) -> 
             "final_survivor_count": result.loop_diagnostics.final_survivor_count,
             "evaluation_count": result.loop_diagnostics.evaluation_count,
         },
+        "first_pass_output_competition": list(result.loop_diagnostics.first_pass_output_competition),
+        "refinement_gate": result.loop_diagnostics.refinement_gate,
     }
 
 

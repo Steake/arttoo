@@ -39,6 +39,7 @@ It also generates:
 - `reports/uncertainty_causal_analysis.json` / `.md` — uncertainty-specific causal analysis on the frozen benchmark
 - `reports/causal_verdict_v2.json` / `.md` — explicit factor verdicts (`proven` / `supported but not isolated` / `still inconclusive`)
 - `reports/thesis_final_attribution_summary.json` / `.md` — final blind_holdout_v3 thesis summary
+- `reports/output_competition_benchmark.json` / `.md` — output-level evidential aggregation vs single-best selection on ranking-conflict tasks, plus contested-refinement efficiency
 
 Per-split outputs go to `reports/dev/`, `reports/regression/`, `reports/blind_holdout/`. Aggregate outputs go to `reports/`.
 
@@ -218,6 +219,17 @@ Runs all four factorial conditions (C00, C10, C01, C11) on every task in the spe
 | `c11_vs_c01` | Does refinement help given epistemic scoring? (simple effect of R at E=1) |
 | `c11_vs_c00` | Full co-agency vs primitive baseline (overall lift) |
 | `interaction_RxE` | R×E synergy: (C11 − C01) − (C10 − C00) |
+
+## Run The Output Competition Benchmark
+
+```bash
+python tools/run_output_competition_benchmark.py --tasks data/fixtures --split blind_holdout_v3 --reports-dir reports
+```
+
+This benchmark keeps the current attribution infrastructure intact while adding the next hypothesis test:
+
+- **Frozen candidate pool**: compare single-best-hypothesis selection against output-level evidential aggregation on the sealed `ranking_conflict` subset.
+- **Native pipeline**: compare the current broad refinement loop against output aggregation with and without contested-output gating, and report compute savings.
 
 Each contrast reports:
 - Solve rate in each condition
